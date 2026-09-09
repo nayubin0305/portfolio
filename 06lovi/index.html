@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- 부트스트랩 : 모바일 우선 / 화면이 달라져도 강제로 확대를 안 시키겠다 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!-- 폰트어썸CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+    <!-- 부트스트랩css 연결 -->
+    <link rel="stylesheet" href="bootstrap.css">
+
+    <!-- 스와이퍼 연결 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <!-- 공통스타일 -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
+    
+    <!-- 아이콘 -->
+    <link rel="icon" href="icon.png">
+
+    <title>로비 메인</title>
+    <style>
+        @media(max-width:992px){
+          .item{padding: 0 25px 50px;}
+          .section5 h1{padding-bottom: 20px;}
+       }
+    </style>
+</head>
+<body>
+
+    <div class="cursor"></div>
+
+    <a href="#" class="top-btn cur-over">
+        <img src="img/top.png" alt="top">
+        <p>top</p>
+    </a>
+
+    <header>
+        <div class="container-fluid">
+            <div class="logo col-md-2 col-sm-12">
+                <a href="index.html"><img src="img/logo.png" alt="logo"><a >
+            </div>
+            <ul class="menu col-md-10 hidden-sm hidden-xs">
+                <li class="menu-li active"><a href="index.html">home<span></span></a></li>
+                <li class="menu-li"><a href="about.html">about us<span></span></a></li>
+                <li class="menu-li"><a href="shop.html">shop<span></span></a></li>
+                <li class="menu-li"><a href="write.html">WRITE US<span></span></a></li>
+            </ul>
+            <div class="ham-btn hidden-md hidden-lg"><i class="fa-solid fa-bars"></i></div>
+        </div>
+    </header>
+
+    <!-- 사이트맵 -->
+    <div class="site-map">
+        <div class="x-btn cur-over"><i class="fa-solid fa-xmark"></i></div>
+        <ul class="menu">
+            <li class="menu-li active"><a href="index.html">home<span></span></a></li>
+            <li class="menu-li"><a href="about.html">about us<span></span></a></li>
+            <li class="menu-li"><a href="shop.html">shop<span></span></a></li>
+            <li class="menu-li"><a href="write.html">WRITE US<span></span></a></li>
+        </ul>
+    </div>
+
+    <section class="main">
+        <div class="container-fluid">
+            <div class="item clo-md-12">
+                <div class="img-box">
+                    <img src="img/main01.jpg" alt="main" class="img">
+                    <img src="img/main02.jpg" alt="main" class="img next-img">
+                    <img src="img/main03.jpg" alt="main" class="img next-img">
+                </div >
+                <div class="text-box">
+                    <div class="text">
+                        <h1>생태적이고 기능적인 생산 및 재료</h1>
+                        <h6>SHOP NOW</h6>
+                    </div>
+                    <div class="text next-text">
+                        <h1>자연을 존중하며 제품을 제조</h1>
+                        <h6>SHOP NOW</h6>
+                    </div>
+                    <div class="text next-text">
+                        <h1>생활 공간을 내 집처럼</h1>
+                        <h6>SHOP NOW</h6>
+                    </div>
+                </div>
+                <div class="indi-box">
+                    <span class="indi"></span>
+                    <span class="indi"></span>
+                    <span class="indi"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section1">
+        <div class="container">
+            <div class="item col-md-6 .col-sm-12">
+                <div class="img-box">
+                    <img src="img/banner01.jpg" alt="banner">
+                    <img src="img/banner01_1.jpg" alt="banner" class="ban-bg">
+                </div>
+                <div class="text">
+                    <h4>무민과의 콜라보레이션</h4>
+                    <p>이야기 속의 무민과 다른 친구들이 찾아왔습니다.</p>
+                    <button class="btn">만나러 가기</button>
+                </div>
+            </div>
+            <div class="item col-md-6 .col-sm-12">
+                <div class="img-box">
+                    <img src="img/banner02.jpg" alt="banner">
+                    <img src="img/banner02_1.jpg" alt="banner" class="ban-bg">
+                </div>
+                <div class="text">
+                    <h4>미피와의 콜라보레이션</h4>
+                    <p>작은 예술가를 위한 귀엽고 작은 토끼가 찾아왔어요.</p>
+                    <button class="btn">만나러 가기</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section2">
+        <div class="container">
+            <h1>about</h1>
+            <div class="container">
+                <div class="item col-md-8 col-sm-12 col-md-offset-2">
+                    <p>나만의 작품을 조립하거나 사랑하는 사람에게 친환경 선물로 보내세요. 우리는 항상 다시 심어지는 숲의 핀란드 목재를 사용하며 Lovi 상품에는 플라스틱이 사용되지 않습니다. 우리의 상품은 핀란드 북부에 있는 Lovi의 작은 공장에서 제조되고 있습니다.</p>
+                    <button class="btn cur-over"><a href="about.html">더 읽어보기</a></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section3">
+        <div class="container">
+            <div class="item col-md-4 col-sm-6 col-xs-12 cur-over pick">
+                <a href="shop2.html">
+                    <div class="img-group">
+                        <img src="img/ani01.jpg" alt="product">
+                        <img src="img/black768x768.jpg" alt="product" class="hov">
+                    </div>
+                    <div class="text-group">
+                        <a href="#"><h4>로비 래브라도</h4><a >
+                        <p>15,90 €</p>
+                    </div>
+                </a>
+            </div>
+            <div class="item col-md-4 col-sm-6 col-xs-12">
+                <div class="img-group">
+                    <img src="img/product01.jpg" alt="product">
+                    <img src="img/product01_b.jpg" alt="product" class="hov">
+                </div>
+                <div class="text-group">
+                    <a href="#"><h4>로비 고슴도치</h4><a >
+                    <p>12,90 €</p>
+                </div>
+            </div>
+            <div class="item col-md-4 col-sm-6 col-xs-12">
+                <div class="img-group">
+                    <img src="img/product02.jpg" alt="product">
+                    <img src="img/product02_b.jpg" alt="product" class="hov">
+                </div>
+                <div class="text-group">
+                    <a href="#"><h4>로비 올빼미</h4><a >
+                    <p>12,90 €</p>
+                </div>
+            </div>
+            <div class="item col-md-4 col-sm-6 col-xs-12">
+                <div class="img-group">
+                    <img src="img/product03.jpg" alt="product">
+                    <img src="img/product03_b.jpg" alt="product" class="hov">
+                </div>
+                <div class="text-group">
+                    <a href="#"><h4>로비 고양이</h4><a >
+                    <p>12,90 €</p>
+                </div>
+            </div>
+            <div class="item col-md-4 col-sm-6 col-xs-12">
+                <div class="img-group">
+                    <img src="img/product04.jpg" alt="product">
+                    <img src="img/product04_b.jpg" alt="product" class="hov">
+                </div>
+                <div class="text-group">
+                    <a href="#"><h4>로비 토끼</h4><a >
+                    <p>12,90 €</p>
+                </div>
+            </div>
+            <div class="item col-md-4 col-sm-6 col-xs-12">
+                <div class="img-group">
+                    <img src="img/product06.jpg" alt="product">
+                    <img src="img/product06_b.jpg" alt="product" class="hov">
+                </div>
+                <div class="text-group">
+                    <a href="#"><h4>작은새가 있는 로비 트리</h4><a >
+                    <p>69,00 €</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section4">
+        <div class="container">
+            <div class="video clo-md-12">
+                <video src="img/lovi.mp4" muted loop class="vod"><img src="img/video_bg.png" alt="video"></video>
+                <div class="btn-group cur-over">
+                    <img src="img/play.png" alt="btn" class="btn-play">
+                    <img src="img/stop.png" alt="btn" class="btn-stop">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section5">
+        <div class="container">
+            <h1>발렌타인 시즌 상품</h1>
+        </div>
+        <div class="container">
+            <div class="item col-md-4 col-sm-6 col-xs-12">
+                <img src="img/special01.jpg" alt="special">
+                <h4>발렌타인 세트 빅 로비 하트</h4>
+                <p>59,50 €</p>
+            </div>
+            <div class="item col-md-4 col-sm-6 col-xs-12">
+                <img src="img/special02.jpg" alt="special">
+                <h4>로비 체리 트리</h4>
+                <p>59,00 €</p>
+            </div>
+            <div class="item col-md-4 col-sm-6 col-xs-12">
+                <img src="img/special03.jpg" alt="special">
+                <h4>로비 트라와 하트 3개</h4>
+                <p>119,00 €</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section6">
+        <div class="container">
+            <div class="item col-md-8 col-sm-12 col-md-offset-2">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="img/icon.png" alt="icon" class="icon">
+                            <h5>ANNE PASO</h5>
+                            <p>설립자</p>
+                            <p>Anne은 Lovi의 설립자이자 소유주이자 디자이너이며 마음이자 영혼입니다. Anne의 펜은 Lovi 피규어를 스케치하고 숙련된 생산 팀과 협력하여 완제품으로 발전시킵니다. 자연과의 강한 연결, 숙련된 3차원적 사고 및 사용된 재료에 대한 지식은 브레인스토밍, 디자인 및 개발 작업에 도움이 됩니다. Anne은 모든 것이 제대로 작동하고 결과가 항상 Lovi처럼 보이도록 합니다.</p>
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/icon.png" alt="icon" class="icon">
+                            <h5>MIKKO PASO</h5>
+                            <p>CEO</p>
+                            <p>Lovi의 두 번째 주인이자 Anne의 남편인 Mikko는 처음부터 배경 지원을 해왔습니다. 그는 2015년에 CEO의 역할을 맡았습니다. Lovi의 수치, 통계, 판매 및 재정은 Mikko의 영역입니다. 필요한 경우 그의 전문 지식은 생산 작업 및 기계 유지 관리에도 적용됩니다. 소규모 회사에서는 직무 설명이 상당히 광범위해질 수 있습니다.</p>
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/icon.png" alt="icon" class="icon">
+                            <h5>MERI PENNANEN</h5>
+                            <p>생산&배송</p>
+                            <p>Meri는 당사 공장의 생산과 Lovi 제품의 배송을 책임지고 있습니다. 그녀는 합판 도착부터 완제품 출시까지 생산 체인의 모든 단계를 알고 있습니다. Meri는 새로운 생산 직원을 교육하고 일상적인 집안일을 지원합니다. 할 일 목록은 다양하며 예를 들어 상품 수령 및 배송, 페인팅, 포장 및 전체 관리와 같은 날이 포함될 수 있습니다.</p>
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/icon.png" alt="icon" class="icon">
+                            <h5>ULRIKA MEHTALA</h5>
+                            <p>프로덕션</p>
+                            <p>Ulrika는 Meri와 함께 프로덕션 작업을 진행하고 있습니다. Ulle의 하루에는 제품 제작 및 배송, 절단, 페인팅 및 온라인 주문 처리가 포함됩니다. Ulrika는 이러한 작업에 대한 적절한 양의 기쁨과 열정을 가지고 있습니다!</p>
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/icon.png" alt="icon" class="icon">
+                            <h5>IIDA METTOVAARA</h5>
+                            <p>프로덕션</p>
+                            <p>Iida는 Lovi Team의 최신 멤버입니다! 그녀는 이번 가을 프로덕션에 합류했으며 이미 갱단의 필수적인 부분입니다.</p>
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/icon.png" alt="icon" class="icon">
+                            <h5>SANNA VALKONEN</h5>
+                            <p>웹사이트 관리자</p>
+                            <p>Sanna는 현재 온라인 상점에서 소셜 미디어 및 웹사이트용 콘텐츠를 제작하고 사진을 찍고 글을 쓰고 있습니다. 가끔 영업도 하고, 필요하면 공장에 들러 도와주기도 합니다. 내 직업 설명은 다재다능하고 다양하며 나에게 맞는 것입니다.</p>
+                      </div>
+                    </div>
+                </div>
+                <div class="next"><i class="fa-solid fa-chevron-right"></i></div>
+                <div class="prev"><i class="fa-solid fa-chevron-left"></i></div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="item col-md-4 col-sm-12">
+                <h4>LOVI FACTORY SHOP</h4>
+                <a href="#">Taito Shop Oulu
+                    Rautatienkatu 11 B</a><br>
+                <a href="#">+358 (0)40 3522082</a><br>
+                <a href="#">info@lovi.fi</a><br>
+            </div>
+            <div class="item col-md-4 col-sm-12">
+                <a href="#"><img src="img/logo.png" alt="logo" class="logo"></a>
+                <p class="c">© 2023 Lovi</p>
+            </div>
+            <div class="item col-md-4 col-sm-12">
+                <h4>SUBSCRIBE</h4>
+                <div class="input-box">
+                    <input type="text" placeholder="E-Mail Adress">
+                    <button><i class="fa-regular fa-paper-plane"></i></button>
+                </div>
+                <div class="sns-box">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+     var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".next",
+        prevEl: ".prev",
+      },
+     });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="index.js"></script>
+    <script>
+        // 메인
+        var i , timer
+        i=-1
+        timer()
+        setInterval(timer,5000)
+
+        $(".main .indi").click(function(){
+            i = $(this).index()
+            main()
+        })
+
+        function timer(){
+            i++
+            i=i%3
+            main()
+        }
+
+        // 공통 함수
+        function main(){
+            $(".main .img").eq(i).stop().fadeIn()
+            $(".main .img").not($(".main .img").eq(i)).stop().fadeOut()
+            $(".main .text").eq(i).stop().fadeIn()
+            $(".main .text").not($(".main .text").eq(i)).stop().fadeOut()
+            $(".main .indi").css({
+                transform: "scale(1)",
+                backgroundColor:"#ffffff"
+            })
+            $(".main .indi").eq(i).css({
+                transform: "scale(1.3)",
+                backgroundColor:"#F05013"})
+        }
+
+        // 비디오
+        $(".btn-play").click(function(){
+            $(".vod").get(0).play()
+            $(".btn-play").hide()
+            $(".btn-stop").show()
+        })
+        $(".btn-stop").click(function(){
+            $(".vod").get(0).pause()
+            $(".btn-play").show()
+            $(".btn-stop").hide()
+        })
+    </script>
+</body>
+</html>

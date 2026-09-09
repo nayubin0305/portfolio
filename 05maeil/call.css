@@ -1,0 +1,252 @@
+html,body{scroll-behavior: smooth;}
+.sub-title .bg{background-image: url(img/sub_title_5.jpg);}
+
+/* 페이지 타이틀 구분 탭 */
+.contents .tab{
+    display: flex; gap: 20px;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+.contents .tab-li{
+    width: 300px;height: 75px;
+    background-color: white;
+    color: #666666;
+    border: 1px solid #dddddd;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px;
+    cursor: pointer;
+    font-family: 'Jua', sans-serif;
+}
+.contents .tab-li.active{
+    background-color: #194e92;
+    color: white;
+    font-weight: 500;
+}
+
+/* 내부메뉴바 */
+@media(max-width:1024px){
+    .sub-nav{height: 60px;}
+    .sub-nav .container{display: flex;}
+    .sub-nav .item1{flex: 1;}
+    .sub-nav .item2{flex: 2;}
+}
+
+/* 서브페이지-섹션 타이틀 */
+.sub-con .section-title p{
+    text-align: right;
+    margin: 40px 0 20px;
+}
+
+/* 작성표 */
+.sub-con .container{
+    border-top: 2px solid #333333;
+    border-bottom: 2px solid #333333;
+    white-space: nowrap;
+}
+.sub-con .box{
+    display: flex;
+    border-bottom: 1px solid #dddddd;
+}
+.sub-con .item{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+.sub-con .item1{
+    width: 200px;
+}
+.sub-con .item2{
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.sub-con .item2 .cla{
+    background-color: #f8f8f8;
+    padding: 0 20px;
+    width: 400px; height: 60px;
+    /* border: 1px solid blue; */
+    font-size: 16px;
+    box-sizing: border-box;
+    display: flex; align-items: center;
+    justify-content: space-between;
+}
+.sub-con .item2 .fa-caret-up{display: none;}
+.sub-con .item2 .cla-ul, .mail-ul{
+    position: absolute; top: 60px; left: 0; z-index: 10;
+    /* border: 1px solid red; */
+    background-color: white;
+    width: 100%;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+    display: none;
+}
+.sub-con .item2 .cla-ul li, .mail-ul li{
+    line-height: 40px;
+    padding: 0 20px; box-sizing: border-box;
+    cursor: pointer;
+}
+.sub-con .item2 .cla-ul li:hover,
+.sub-con .item2 .mail-ul li:hover
+{background-color: #dee6f0;}
+
+.sub-con .item2 label{color: #666666;}
+.sub-con .item2 input[type="text"],
+.sub-con .item2 select, textarea{
+    background-color: #f8f8f8;
+    padding: 0 20px;
+    width: 400px; height: 60px;
+    border: none;
+    font-size: 16px;
+    outline: none;
+    box-sizing: border-box;
+}
+.sub-con .item2 input[type="text"]::placeholder{
+    color: #aaaaaa; font-weight: 100;
+}
+.sub-con .item2 input[type="text"]:focus, textarea:focus{
+    background-color: #dee6f0;
+    box-sizing: border-box;
+}
+.sub-con .box.mail-e input,
+.sub-con .box.mail-e select{
+    width: 235px;
+}
+.sub-con .item2 .mail{
+    padding: 0 20px;
+    width: 235px; height: 60px;
+    box-sizing: border-box;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    display: flex; align-items: center;
+    justify-content: space-between;
+}
+
+.sub-con .item2 textarea{
+    padding: 20px;
+    height: 240px; width: 100%;
+    box-sizing: border-box;
+}
+
+.sub-con .ch-box label{
+    cursor: pointer;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    white-space: nowrap;
+}
+.sub-con .ch-box label .ch{
+    width: 20px; height: 20px;
+    border: 1px solid #194e92;
+    border-radius: 50%;
+    /*display: flex;
+    align-items: center; justify-content: center; */
+}
+.sub-con .ch-box label .ch span{
+    display: block;
+    width: 10px; height: 10px;
+    background-color: #194e92;
+    border-radius: 50%;
+    opacity: 0;
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+}
+.sub-con .ch-box input:checked+label span{opacity: 1;}
+.sub-con .ch-box input{display: none;}
+
+
+.sub-con .tit-box input{width: 100% !important;}
+.sub-con .file-box{height: 132px;}
+.sub-con .file-box .tip{
+    position: absolute;
+    bottom: 5px; left: 200px;
+    color: #666666;
+    font-size: 12px;
+}
+
+@media(max-width:1024px){
+    body{overflow-x: hidden;}
+    header{width: 100%;}
+    .sub-con .container{
+        padding-bottom: 150px;
+    }
+    .sub-con .box{
+        display: block;
+        border: none;
+    }
+    .sub-con .item{
+        border-bottom: 1px solid #dddddd;
+        width: 100%;
+        padding: 15px;
+        font-size: 14px;
+    }
+    .sub-con .ch-box .item2{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .sub-con .box.mail-e .item2{
+        display: grid;
+        grid-template-columns: repeat(3,auto);
+    }
+    .sub-con .item2 input[type="text"]{width: 100%;}
+    .sub-con .box.mail-e .item2 input{
+        width: 100%;
+    }
+    .sub-con .box.mail-e .item2 .bar{
+        text-align: center;
+    }
+    .sub-con .box.mail-e .item2 .mail{
+        grid-column: span 3;
+        width: 100%;
+    }
+    .sub-con .file-box .item2{
+        display: block !important;
+        padding-bottom: 100px;
+        border: none;
+    }
+    .sub-con .file-box input{box-sizing: border-box;}
+    .sub-con .file-box .btn-1{
+        display: block;
+        width: 100%;
+        margin-top: 15px;
+    }
+    .sub-con .file-box .tip{
+        position: relative;
+        top: -90px; left: 0;
+        white-space: normal;
+        font-size: 14px;
+    }
+    .sub-con .ch-box label{
+        gap: 5px;
+    }
+    .sub-con .ch-box label .ch{
+        width: 15px; height: 15px;
+    }
+    .sub-con .ch-box label .ch span{
+        width: 8px; height: 8px;
+    }
+}
+
+.pribox{
+    padding-bottom: 100px;
+}
+.pribox h2{
+    font-size: 22px;
+    color: #222222;
+    width: 90%; max-width: 1400px; margin: 0 auto;
+    padding: 55px 0 35px;
+}
+.pribox .container{
+    color: #999999;
+    border: 1px solid #dddddd;
+    background-color: #f8f8f8;
+    padding: 30px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+.pribox .b{color: #222222;}
+.pribox .check{
+    padding: 50px 0;
+    text-align: center;
+}

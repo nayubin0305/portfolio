@@ -1,0 +1,85 @@
+.section1 .item{
+    display: flex;
+    align-items: center; justify-content: space-between;
+    height: 500px;
+}
+.section1 .img-box{
+    position: absolute; 
+    top: 100px;  
+    z-index: 1;
+    transition: 0.5s;
+    width: 600px; height: 400px;
+}
+.section1 .img-box img{
+    width: 100%; height: 100%; object-fit: cover;
+}
+.section1 .item .box{
+    width: 30%; height: 400px;
+}
+
+.section1 .item-1 .text-box{
+    text-align: center;
+    width: 40%;
+}
+.section1 .item-1 .text-box h3{color: #322826;padding-bottom: 20px;}
+.section1 .item-1 .text-box p{padding-bottom: 40px;}
+
+.section1 .item-1, .section1 .item-3{
+    flex-direction: row-reverse;
+}
+.section1 .item-2 .text-box{
+    text-align: center;
+    width: 40%;
+}
+.section1 .item-2 .text-box h3{color: #322826;padding-bottom: 20px;}
+.section1 .item-2 .text-box p{padding-bottom: 40px;}
+
+.section1 .item-1 .img-box{right: 100px;}
+.section1 .item-2 .img-box{left: 100px;}
+
+.section1 .item-1 .box{background-color: rgb(201, 171, 40);}
+.section1 .item-2 .box{background-color: #ede4c5;}
+.section1 .item-3 .box{background-color: #322826;}
+
+.section1 .mask-left{clip-path: inset(0 100% 0 0);}
+.section1 .mask-right{clip-path: inset(0 0 0 100%);}
+
+@media(max-width:1300px){
+    .section1 .item-1 .img-box{
+        right: 0; width: 400px;
+    }
+    .section1 .item-2 .img-box{
+        left: 0; width: 400px;
+    }
+}
+
+@media(max-width:800px){
+    .section1 .item{
+        height: auto; 
+        display: block;
+        padding-bottom: 100px;
+    }
+    .section1 .item:first-child{
+        padding-top: 0;
+    }
+    .section1 .item .img-box{
+        position: relative;
+        top: 0; width: 100%;
+        transform: translate(0,0);
+        padding-bottom: 20px;
+    }
+    .section1 .item-1 .text-box{
+        text-align: left;
+        width: 100%;
+    }
+    .section1 .item-2 .text-box{
+        text-align: left;
+        width: 100%;
+    }
+    .section1 .item .text-box p{
+        padding: 0;
+    }
+    .section1 .box{
+        display: none;
+    }
+}

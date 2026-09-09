@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>나유빈 포트폴리오:써브웨이</title>
+
+    <link rel="stylesheet" href="com.css">
+    <link rel="icon" href="icon.png">
+
+    <style>
+        h2{font-family: 'SUIT', sans-serif;}
+        .fix-btn{color: white;}
+        .fix-btn img{transform: translate(-23%, -48%);}
+
+        .row2{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            background-image: linear-gradient( #ffffff , #ffce32 , #009223);
+            padding-bottom: 100px;
+        }
+
+        .container video{
+            width: 570px;
+            position: absolute; top: 20px; left: 115px;
+        }
+        .container .mockup{
+            width: 600px;
+            padding-left: 100px;
+        }
+        .container .text-box h2{
+            padding-top: 30px;
+            font-size: 30px; font-weight: 500;
+        }
+        .text-box span{font-weight: 700;}
+        .text-box .span2{color: #009223;}
+        .text-box .span1{color: #ffce32;}
+
+        :root {
+            --bg: #3C465C;
+            --primary: #009223;
+            --solid: #fff;
+            --btn-w: 150px;
+            --dot-w: calc(var(--btn-w)*.2);
+            --tr-X: calc(var(--btn-w) - var(--dot-w));
+        }
+        .hover-btn {
+            position: absolute;
+            bottom: 200px; left: 500px;
+            width: var(--btn-w);
+            color: var(--primary);
+            border: .15em solid var(--primary);
+            border-radius: 5em;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 14px;
+            line-height: 2em;
+            cursor: pointer;  
+        }
+        .hover-btn  .dot {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: var(--dot-w);
+            height: 100%;
+            border-radius: 100%;
+            transition: all 300ms ease;
+            animation: atom 2s infinite linear;
+        }
+        .hover-btn  .dot:after {
+            content: '';
+            box-sizing: border-box;
+            position: absolute;
+            left: calc(50% - .4em);
+            top: -.4em;
+            height: .8em;
+            width: .8em;
+            background: var(--primary);
+            border-radius: 1em;
+            border: .25em solid var(--solid);
+            box-shadow: 0 0 .7em var(--solid),
+                0 0 2em var(--primary);
+        }
+        .btn:hover .dot,
+        .btn:focus .dot {
+        animation: atom 2s infinite linear;
+        display: block;
+        }
+
+        @keyframes atom {
+            0% {transform: translateX(0) rotate(0);}
+            30%{transform: translateX(var(--tr-X)) rotate(0);}
+            50% {transform: translateX(var(--tr-X)) rotate(180deg);}
+            80% {transform: translateX(0) rotate(180deg);}
+            100% {transform: translateX(0) rotate(360deg);}
+        }
+    </style>
+
+</head>
+<body>
+
+    <h1 class="none">나유빈 포트폴리오:써브웨이</h1>
+
+    <div class="clone-notice">
+        학습/시연 목적의 클론 코딩입니다
+    </div>
+
+    <div class="fix-btn">
+        <a href="07subway/index.html" target="_blank">
+            퍼블리싱
+            <img src="sub_img/subway_btn.png" alt="바로가기 아이콘">
+        </a>
+    </div>
+
+    <header>
+        <nav aria-label="주메뉴">
+            <ul>
+                <li><a href="index.html">인트로</a></li>
+                <li><a href="jomalone.html">조말론</a></li>
+                <li><a href="gentlemonster.html">젠틀몬스터</a></li>
+                <li><a href="danha.html">단하</a></li>
+                <li><a href="tangleangel.html">탱글엔젤</a></li>
+                <li><a href="maeil.html">매일유업</a></li>
+                <li><a href="lovi.html">로비</a></li>
+                <li><a href="subway.html" class="on">써브웨이</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <div class="container">
+                <div class="row row1"><img src="sub_img/subway_01.jpg" alt="써브웨이 프로젝트 가이드 1"></div>
+                <div class="row row2">
+                    <div class="mockup-box">
+                        <video src="sub_img/mockup.mp4" muted loop poster="sub_img/subway_img.png" class="mockup-vod"></video>
+                        <img src="sub_img/mockup.png" alt="써브웨이 프로젝트 가이드 2" class="mockup">
+                    </div>
+                    <div class="text-box">
+                        <h2>css를 이용한 역동적인 <span class="span1">애니메이션</span>과</h2>
+                        <h2>다양한 방향으로 움직이는 <span class="span2">스크롤 플러그인</span></h2>
+                    </div>
+                    <div class="hover-btn">
+                        <span>마우스를 올려보세요!</span>
+                        <div class="dot"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+</body>
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+<script>
+    $(".mockup , .hover-btn").mouseenter(function(){
+        document.querySelector(".mockup-vod").play();
+    });
+    $(".mockup , .hover-btn").mouseleave(function(){
+        document.querySelector(".mockup-vod").pause();
+    });
+</script>
+</html>

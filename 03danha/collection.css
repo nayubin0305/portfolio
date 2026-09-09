@@ -1,0 +1,123 @@
+body{
+    background-color: #000;
+    height: 9500px;
+    scroll-behavior: smooth;
+}
+html{scroll-behavior: smooth;}
+
+/* section{position: fixed;} */
+
+.sc-box{
+    position: fixed; top: 0; left: 0;
+    /* border: 10px solid red; */
+    font-size: 100px;
+    z-index: 100;
+}
+
+section{
+    width: 100%; height: 100vh;
+    box-sizing: border-box;
+    text-transform: uppercase;
+}
+
+section h2{padding-bottom: 20px;}
+
+.text-box{
+    background-color: white;
+    width: 500px;
+    height: 100vh;
+    padding: 100px 50px;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+
+.img-box{
+    position: absolute;
+    width: 300px;
+}
+
+.section1{display: flex; z-index: 10;}
+.section1 img{width: 50%;}
+
+.sectoin2{
+    /* border: 10px solid red; */
+    width: 3000px;
+}
+
+.sectoin2 .img-box1{top: 0%; left: 700px;}
+.sectoin2 .img-box2{top: 30%; left: 1100px;}
+.sectoin2 .img-box3{top: 10%; left: 1500px;}
+.sectoin2 .img-box4{top: 40%; left: 2000px;}
+.sectoin2 .img-box5{top: 20%; left: 2500px;}
+
+.sectoin3{
+    width: 5000px;
+    /* border: 10px solid red; */
+}
+
+.sectoin3 .img-box1{top: 0; left: 700px;}
+.sectoin3 .img-box2{top: 20%; left: 1200px;}
+.sectoin3 .img-box3{top: 50%; left: 1700px;}
+.sectoin3 .img-box4{top: 40%; left: 2300px;}
+.sectoin3 .img-box5{top: 50%; left: 2700px;}
+.sectoin3 .img-box6{top: 10%; left: 3200px;}
+.sectoin3 .img-box7{top: 50%; left: 3600px;}
+.sectoin3 .img-box8{top: 30%; left: 4100px;}
+.sectoin3 .img-box9{top: 50%; left: 4500px;}
+
+.sectoin4{
+    width: 4500px;
+    /* border: 10px solid red; */
+}
+
+.sectoin4 .img-box1{top: 0; left: 700px;}
+.sectoin4 .img-box2{top: 20%; left: 1200px;}
+.sectoin4 .img-box3{top: 50%; left: 1700px;}
+.sectoin4 .img-box4{top: 40%; left: 2300px;}
+.sectoin4 .img-box5{top: 50%; left: 2700px;}
+.sectoin4 .img-box6{top: 10%; left: 3200px;}
+.sectoin4 .img-box7{top: 50%; left: 3600px;}
+.sectoin4 .img-box8{top: 30%; left: 4100px;}
+
+section{
+    position: fixed;left: 0;top: 100%;
+}
+.end a{
+    position: fixed;
+    top: 50%; left: 50%; z-index: 10;
+    transform: translate(-50%,-50%);
+    color: white;
+    cursor: pointer;
+}
+.end a::after{
+    content: '';
+    display: block;
+    width: 100%; height: 1px;
+    background-color: white;
+    transform: scaleX(0);
+    transition: 0.5s;
+}
+.end a:hover::after{transform: scaleX(1);}
+
+.scroll{
+    position: fixed; bottom: 50px; left: 50%;
+    transform: translateX(-50%);
+    width: 30px; height: 50px;
+    border: 5px solid white;
+    border-radius: 20px;
+    z-index: 20;
+    animation: scroll 1s infinite;
+}
+.scroll span{
+    width: 5px; height: 20px;
+    background-color: white;
+    border-radius: 5px;
+    position: absolute;
+    top: 10%; left: 50%;
+    transform: translateX(-50%);
+}
+
+@keyframes scroll{
+    0%{bottom: 50px}
+    100%{bottom: 30px}
+}

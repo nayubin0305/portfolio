@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>contact</title>
+
+    <!-- 부트스트랩 : 모바일 우선 / 화면이 달라져도 강제로 확대를 안 시키겠다 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!-- 폰트어썸CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+    <!-- 부트스트랩css 연결 -->
+    <link rel="stylesheet" href="bootstrap.css">
+
+    <!-- 공통스타일 -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- 아이콘 -->
+    <link rel="icon" href="icon.png">
+
+    <title>연락하기</title>
+    <style>
+        /* CONTACT */
+        .item.cont p{color: black;}
+        .section2.cont{padding-bottom: 100px;}
+        .item{padding: 10px;}
+        .item img{width: 100px; margin: 0 auto;}
+        .item h3{text-transform: uppercase;}
+
+        .map{padding-bottom: 100px;}
+    </style>
+</head>
+<body>
+    <div class="cursor"></div>
+
+    <a href="#" class="top-btn cur-over">
+        <img src="img/top.png" alt="top">
+        <p>top</p>
+    </a>
+
+    <header>
+        <div class="container-fluid">
+            <div class="logo col-md-2 col-sm-12">
+                <a href="index.html"><img src="img/logo.png" alt="logo"><a >
+            </div>
+            <ul class="menu col-md-10 hidden-sm hidden-xs">
+                <li class="menu-li"><a href="index.html">home<span></span></a></li>
+                <li class="menu-li"><a href="about.html">about us<span></span></a></li>
+                <li class="menu-li"><a href="shop.html">shop<span></span></a></li>
+                <li class="menu-li active"><a href="write.html">WRITE US<span></span></a></li>
+            </ul>
+            <div class="ham-btn hidden-md hidden-lg"><i class="fa-solid fa-bars"></i></div>
+        </div>
+    </header>
+
+    <!-- 사이트맵 -->
+    <div class="site-map">
+        <div class="x-btn cur-over"><i class="fa-solid fa-xmark"></i></div>
+        <ul class="menu">
+            <li class="menu-li"><a href="index.html">home<span></span></a></li>
+            <li class="menu-li"><a href="about.html">about us<span></span></a></li>
+            <li class="menu-li"><a href="shop.html">shop<span></span></a></li>
+            <li class="menu-li active"><a href="write.html">WRITE US<span></span></a></li>
+        </ul>
+    </div>
+    
+    <section class="sub-title">
+        <div class="container-fluid">
+            <img src="img/contact_title.jpg" alt="img">
+            <h1>WRITE US</h1>
+        </div>
+    </section>
+
+    <section class="section1">
+        <div class="container">
+            <div class="item col-md-4 col-sm-12 cont">
+                <img src="img/icon01.jpg" alt="img">
+                <h3>Office and Factory</h3>
+                <p>
+                    <a href="#">Hallitie 3<br>
+                        FI-90940 Jääli<br>
+                        Finland</a>
+                    <a href="#">+358 40 745 5002</a>
+                    <a href="#">info@lovi.fi</a>
+                </p>
+            </div>
+            <div class="item col-md-4 col-sm-12 cont">
+                <img src="img/icon02.png" alt="img">
+                <h3>Open</h3>
+                <p>
+                    Mon - Fri 10 am - 5 pm<br>
+                    Sat 10 am - 2 pm
+                </p>
+            </div>
+            <div class="item col-md-4 col-sm-12 cont">
+                <img src="img/icon03.png" alt="img">
+                <h3>LOVI FACTORY SHOP</h3>
+                <p>
+                    <a href="#">Taito Shop Oulu<br>
+                        Rautatienkatu 11 B<br>
+                        90100 Oulu</a>
+                    <a href="#">+358 (0)40 3522082</a>
+                    
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section2 cont">
+        <div class="container"><h1>문의하기</h1></div>
+        <div class="container">
+            <div class="item-in col-md-8 col-sm-12 col-md-offset-2">
+                <div class="row">
+                    <div class="col-sm-6 col-xs-12 box">
+                        <input type="text" placeholder="Name">
+                    </div>
+                    <div class="col-sm-6 col-xs-12 box">
+                        <input type="text" placeholder="Emali">
+                    </div>
+                </div>
+            </div>
+            <div class="item-in col-md-8 col-sm-12 col-md-offset-2">
+                <div class="row">
+                    <div class="col-sm-6 col-xs-12 box">
+                        <input type="text" placeholder="제목">
+                    </div>
+                    <div class="col-sm-6 col-xs-12 box">
+                        <input type="text" placeholder="문의종류">
+                    </div>
+                </div>
+            </div>
+            <div class="item-in col-md-8 col-sm-12 col-md-offset-2">
+                <textarea placeholder="문의사항"></textarea>
+            </div>
+            <div class="item col-md-8 col-sm-12 col-md-offset-2">
+                <button class="btn">submit</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1685.4712249326058!2d25.480820016293606!3d65.01107295015608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x468032ac41ceaca3%3A0xb0a0ea63d3672338!2sTaito%20Shop%20Maakari!5e0!3m2!1sko!2skr!4v1677425258860!5m2!1sko!2skr" width="60%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="item col-md-4 col-sm-12">
+                <h4>LOVI FACTORY SHOP</h4>
+                <a href="#">Taito Shop Oulu
+                    Rautatienkatu 11 B</a><br>
+                <a href="#">+358 (0)40 3522082</a><br>
+                <a href="#">info@lovi.fi</a><br>
+            </div>
+            <div class="item col-md-4 col-sm-12">
+                <a href="#"><img src="img/logo.png" alt="logo" class="logo"></a>
+                <p class="c">© 2023 Lovi</p>
+            </div>
+            <div class="item col-md-4 col-sm-12">
+                <h4>SUBSCRIBE</h4>
+                <div class="input-box">
+                    <input type="text" placeholder="E-Mail Adress">
+                    <button><i class="fa-regular fa-paper-plane"></i></button>
+                </div>
+                <div class="sns-box">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="index.js"></script>
+    <script>
+    
+    </script>
+</body>
+</html>

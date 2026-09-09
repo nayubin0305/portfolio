@@ -1,0 +1,83 @@
+.section1{height: auto;padding-top: 30px;}
+.section1 .cont1{padding-bottom: 0; text-align: center;}
+.section1 .cont2{
+    display: block;
+    padding: 0 20px 100px;
+}
+.section1 .item{height: 50vh; margin-top: 20px;}
+.section1 .item2{transform: translate(0,0);}
+.section1 .popup .pop{
+    width: 90%; height: 80vh;
+}
+.section1 .popup .pop img{max-width: 90%; height: auto;}
+
+.section2{
+    display: flex; align-items: center; justify-content: center;
+}
+.section2 .item{
+    width: 100%;
+    text-align: center;
+}
+.section2 .item1{
+    z-index: 1;
+    padding: 50px;
+    color: white;
+}
+.section2 .item2{
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%;
+    filter: brightness(0.3);
+}
+.section2 .btn{margin: 30px auto 0;}
+
+.section3 h2{text-align: center;}
+.section3 .swiper{width: 80%;}
+.section3 .btn-left{left: -5px;}
+.section3 .btn-right{right: -5px;}
+
+.section4{}
+.section4 .text-box{
+    width: 90%;
+    right: 50%;
+    transform: translate(50%,-50%);
+    text-align: center;
+}
+.section4 .btn{margin: 30px auto 0;}
+
+.section5{}
+.section5 .container{
+    text-align: center;
+    display: block;
+}
+.section5 h2{font-size: 30px;}
+.section5 .item-img{padding-bottom: 0px; padding-top: 80px;}
+.section5 .item-text{padding-top: 20px;}
+.section5 .item1{padding-top: 30px;}
+.section5 .item-text .row1{margin-bottom: 20px;}
+.section5 .item4.item-text .row1,
+.section5 .item8.item-text .row1{
+    text-align: center;
+}
+
+.section5 .line{display: none;}
+.section5 .line .color{display: none;}
+.section5 .item-text .row1::before,
+.section5 .item-text .row1::after{display: none;}
+
+.section6{padding: 20px;}
+.section6 .container{padding: 20px; text-align: center;}
+.section6 .row2{display: block;}
+
+.section7{text-align: center; padding-top: 100px;}
+.section7 .row2{
+    columns: 1;
+    column-gap: 0;
+    margin-bottom: 30px;
+}
+.section7 .k2{padding-top: 10px;}
+
+.section9 .container{text-align: center;}
+.section9 .swiper{width: 80%;}
+.section9 .btn-left{left: -5px;}
+.section9 .btn-right{right: -5px;}

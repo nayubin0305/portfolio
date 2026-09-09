@@ -1,0 +1,55 @@
+.section1 .list{
+    line-height: 80px;
+    border-bottom: 1px solid #ede4c5;
+    cursor: pointer;
+}
+.section1 .q-1{
+    font-size: 22px; font-weight: 700;
+}
+.section1 .q-2{
+    padding-left: 10px;
+    font-size: 16px;
+}
+.section1 .q-3{
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 100%;
+}
+.section1 .q-3 .st{
+    display: block;
+    position: absolute; top: 50%; right: 0;
+    transform: translate(0,-50%);
+    width: 20px; height: 20px;
+    cursor: pointer;
+}
+.section1 .q-3 .st-1{
+    display: block;
+    background-color: #322826;
+    width: 20px; height: 2px;
+    border-radius: 10px;
+    position: absolute; top: 50%; right: 0;
+    transform: translate(0,-50%) rotate(45deg);
+    transition: 0.5s;
+}
+.section1 .q-3 .st-2{
+    display: block;
+    background-color: #322826;
+    width: 20px; height: 2px;
+    border-radius: 10px;
+    position: absolute; top: 50%; right: 0;
+    transform: translate(0,-50%) rotate(-45deg);
+    opacity: 1;
+    transition: 0.5s;
+}
+.section1 .a{
+    background-color: white;
+    padding: 20px;
+    display: none;
+}
+
+/* 액티브 */
+.section1 .list.active .st-1{
+    transform: translate(0,-50%) rotate(0deg);
+}
+.section1 .list.active .st-2{
+    transform: translate(0,-50%) rotate(0deg); opacity: 0;
+}

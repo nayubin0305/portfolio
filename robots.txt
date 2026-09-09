@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /01jomalone/
+Disallow: /02gentlemonster/
+Disallow: /03danha/
+Disallow: /04tangleangel/
+Disallow: /05maeil/
+Disallow: /06lovi/
+Disallow: /07subway/

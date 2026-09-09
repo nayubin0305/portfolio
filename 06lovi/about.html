@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>about</title>
+    <!-- 부트스트랩 : 모바일 우선 / 화면이 달라져도 강제로 확대를 안 시키겠다 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!-- 폰트어썸CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+    <!-- 부트스트랩css 연결 -->
+    <link rel="stylesheet" href="bootstrap.css">
+
+    <!-- 스와이퍼 연결 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <!-- 공통스타일 -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- 아이콘 -->
+    <link rel="icon" href="icon.png">
+
+    <style>
+        .btn{margin-top: 20px;}
+        .section2 .item{overflow: hidden;cursor: pointer;}
+        .section2 .item::after{
+            content: '';
+            display: block;
+            background-color: white;
+            width: 400px; height: 200px;
+            transform: rotate(-45deg);
+            z-index: 10;
+            position: absolute;
+            top: -200px; left: -250px;
+            display: flex;
+            align-items: end;
+            justify-content: center;
+            padding: 30px; box-sizing: border-box;
+            transition: 0.5s;
+        }
+        .section2 .item:nth-child(1)::after{
+            content: '사랑을 운반하는 카드';
+        }
+        .section2 .item:nth-child(2)::after{
+            content: '2023년 봄 신제품';
+        }
+        .section2 .item:hover::after{
+            top: -50px; left: -150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="cursor"></div>
+
+    <a href="#" class="top-btn cur-over">
+        <img src="img/top.png" alt="top">
+        <p>top</p>
+    </a>
+
+    <header>
+        <div class="container-fluid">
+            <div class="logo col-md-2 col-sm-12">
+                <a href="index.html"><img src="img/logo.png" alt="logo"><a >
+            </div>
+            <ul class="menu col-md-10 hidden-sm hidden-xs">
+                <li class="menu-li"><a href="index.html">home<span></span></a></li>
+                <li class="menu-li active"><a href="about.html">about us<span></span></a></li>
+                <li class="menu-li"><a href="shop.html">shop<span></span></a></li>
+                <li class="menu-li"><a href="write.html">WRITE US<span></span></a></li>
+            </ul>
+            <div class="ham-btn hidden-md hidden-lg"><i class="fa-solid fa-bars"></i></div>
+        </div>
+    </header>
+
+    <!-- 사이트맵 -->
+    <div class="site-map">
+        <div class="x-btn cur-over"><i class="fa-solid fa-xmark"></i></div>
+        <ul class="menu">
+            <li class="menu-li"><a href="index.html">home<span></span></a></li>
+            <li class="menu-li active"><a href="about.html">about us<span></span></a></li>
+            <li class="menu-li"><a href="shop.html">shop<span></span></a></li>
+            <li class="menu-li"><a href="write.html">WRITE US<span></span></a></li>
+        </ul>
+    </div>
+    
+    <section class="sub-title">
+        <img src="img/about_title.jpg" alt="title">
+        <h1>about</h1>
+    </section>
+
+    <section class="section1">
+        <div class="container"><h1>핀란드 북부에 있는 우리의 작은 공장</h1></div>
+        <div class="container">
+            <div class="item col-md-8 col-sm-12 col-md-offset-2">
+                <p>첫 번째 Lovi 제품은 반타아에 있는 작은 아파트의 사우나 벤치에서 완성되었습니다. 핀란드 남부에서 수년을 보낸 후 우리는 북부에 있는 우리의 뿌리로 돌아왔습니다. 우리의 작업은 잔디 깎는 기계 창고에서 실제 생산 시설에 이르기까지 단계적으로 성장했습니다. 오늘날 설계에서 생산 및 판매에 이르기까지 Lovi의 모든 작업은 핀란드에 있는 자체 작은 공장에서 한 지붕 아래 그룹화됩니다.<br>
+                <br>
+                Lovi에서는 핀란드 북부에서 사업을 운영하는 것이 매우 중요합니다. 자연에 둘러싸여 있으면 생각할 공간과 시간이 있습니다. 자연은 우리 작업에 영감과 에너지를 줍니다. Lovi만의 책임 있는 제품과 지속 가능한 미학을 개발하는 데 도움이 됩니다.<br>
+                <br>
+                시각은 우리 모두에게 중요합니다. 아름다운 환경을 만들고자 하는 마음은 사람에게 내재되어 있습니다. 생활 공간을 내 집처럼 꾸미는 것이 자연스러워집니다. 동시에 손으로 일을 하는 것은 사람들에게 기쁨을 가져다주고 손과 눈의 작은 협력조차도 기쁨을 불러일으킨다. 우리는 항상 자연, 오래 지속되는 아름다움, 손으로 작업하는 즐거움과 같은 것들을 제품에 결합하고 싶었습니다.
+                </p>
+                <button class="btn">더 알아보기</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="section2">
+        <div class="container">
+            <div class="item col-md-6 col-sm-12"><img src="img/about1.jpg" alt="img"></div>
+            <div class="item col-md-6 col-sm-12"><img src="img/about2.jpg" alt="img"></div>
+        </div>
+    </section>
+
+    <section class="section3">
+        <div class="container">
+            <div class="item col-md-8 col-sm-12 col-md-offset-2">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="img/icon.png" alt="icon" class="icon">
+                            <h5>ANNE PASO</h5>
+                            <p>설립자</p>
+                            <p>Anne은 Lovi의 설립자이자 소유주이자 디자이너이며 마음이자 영혼입니다. Anne의 펜은 Lovi 피규어를 스케치하고 숙련된 생산 팀과 협력하여 완제품으로 발전시킵니다. 자연과의 강한 연결, 숙련된 3차원적 사고 및 사용된 재료에 대한 지식은 브레인스토밍, 디자인 및 개발 작업에 도움이 됩니다. Anne은 모든 것이 제대로 작동하고 결과가 항상 Lovi처럼 보이도록 합니다.</p>
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/icon.png" alt="icon" class="icon">
+                            <h5>MIKKO PASO</h5>
+                            <p>CEO</p>
+                            <p>Lovi의 두 번째 주인이자 Anne의 남편인 Mikko는 처음부터 배경 지원을 해왔습니다. 그는 2015년에 CEO의 역할을 맡았습니다. Lovi의 수치, 통계, 판매 및 재정은 Mikko의 영역입니다. 필요한 경우 그의 전문 지식은 생산 작업 및 기계 유지 관리에도 적용됩니다. 소규모 회사에서는 직무 설명이 상당히 광범위해질 수 있습니다.</p>
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/icon.png" alt="icon" class="icon">
+                            <h5>MERI PENNANEN</h5>
+                            <p>생산&배송</p>
+                            <p>Meri는 당사 공장의 생산과 Lovi 제품의 배송을 책임지고 있습니다. 그녀는 합판 도착부터 완제품 출시까지 생산 체인의 모든 단계를 알고 있습니다. Meri는 새로운 생산 직원을 교육하고 일상적인 집안일을 지원합니다. 할 일 목록은 다양하며 예를 들어 상품 수령 및 배송, 페인팅, 포장 및 전체 관리와 같은 날이 포함될 수 있습니다.</p>
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/icon.png" alt="icon" class="icon">
+                            <h5>ULRIKA MEHTALA</h5>
+                            <p>프로덕션</p>
+                            <p>Ulrika는 Meri와 함께 프로덕션 작업을 진행하고 있습니다. Ulle의 하루에는 제품 제작 및 배송, 절단, 페인팅 및 온라인 주문 처리가 포함됩니다. Ulrika는 이러한 작업에 대한 적절한 양의 기쁨과 열정을 가지고 있습니다!</p>
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/icon.png" alt="icon" class="icon">
+                            <h5>IIDA METTOVAARA</h5>
+                            <p>프로덕션</p>
+                            <p>Iida는 Lovi Team의 최신 멤버입니다! 그녀는 이번 가을 프로덕션에 합류했으며 이미 갱단의 필수적인 부분입니다.</p>
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/icon.png" alt="icon" class="icon">
+                            <h5>SANNA VALKONEN</h5>
+                            <p>웹사이트 관리자</p>
+                            <p>Sanna는 현재 온라인 상점에서 소셜 미디어 및 웹사이트용 콘텐츠를 제작하고 사진을 찍고 글을 쓰고 있습니다. 가끔 영업도 하고, 필요하면 공장에 들러 도와주기도 합니다. 내 직업 설명은 다재다능하고 다양하며 나에게 맞는 것입니다.</p>
+                      </div>
+                    </div>
+                </div>
+                <div class="next"><i class="fa-solid fa-chevron-right"></i></div>
+                    <div class="prev"><i class="fa-solid fa-chevron-left"></i></div>
+            </div>
+        </div >
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="item col-md-4 col-sm-12">
+                <h4>LOVI FACTORY SHOP</h4>
+                <a href="#">Taito Shop Oulu
+                    Rautatienkatu 11 B</a><br>
+                <a href="#">+358 (0)40 3522082</a><br>
+                <a href="#">info@lovi.fi</a><br>
+            </div>
+            <div class="item col-md-4 col-sm-12">
+                <a href="#"><img src="img/logo.png" alt="logo" class="logo"></a>
+                <p class="c">© 2023 Lovi</p>
+            </div>
+            <div class="item col-md-4 col-sm-12">
+                <h4>SUBSCRIBE</h4>
+                <div class="input-box">
+                    <input type="text" placeholder="E-Mail Adress">
+                    <button><i class="fa-regular fa-paper-plane"></i></button>
+                </div>
+                <div class="sns-box">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+     <!-- Swiper JS -->
+     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+     <!-- Initialize Swiper -->
+     <script>
+      var swiper = new Swiper(".mySwiper", {
+       slidesPerView: 1,
+       spaceBetween: 30,
+       loop: true,
+       pagination: {
+         el: ".swiper-pagination",
+         clickable: true,
+       },
+       navigation: {
+         nextEl: ".next",
+         prevEl: ".prev",
+       },
+      });
+     </script>
+
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+<script src="index.js"></script>
+<script>
+    
+</script>
+</body>
+</html>
