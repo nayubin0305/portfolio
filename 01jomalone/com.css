@@ -191,6 +191,7 @@ input:focus, textarea:focus{
     position: relative;
     border: none;
     transition: all 250ms ease;
+    cursor: pointer;
 }
 .btn2:before, .btn2:after {
     content: '';
@@ -431,6 +432,9 @@ header{
     transition: 1s;
     /* display: none; */
 }
+header.hide{
+    transform: translateY(-100%);
+}
 header.top{
     background-color: transparent;
     box-shadow: 0 0 0 rgba(0,0,0,0);
@@ -503,6 +507,11 @@ header .icon-group i{}
 .ham-btn .bar1{transform: translate(0,-7px);}
 .ham-btn .bar3{transform: translate(0,7px);}
 
+@media(max-width:1100px){
+    header .logo{left: 15px;}
+    header .menu-li{padding: 0 10px;}
+    header .menu{font-size: 12px;}
+}
 @media(max-width:800px){
     header .menu{display: none;}
     .ham-btn{display: block;}

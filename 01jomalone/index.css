@@ -324,7 +324,12 @@
     grid-column: span 3;
     width: 250px;
     position: absolute; 
-    bottom: -100px; left: calc(50% - 125px);
+    bottom: -100px; 
+    left: calc(50% - 125px);
+}
+.section3 .btn1:active{
+    top: auto;
+    bottom: -102px;
 }
 
 @media(max-width:1100px){
@@ -398,6 +403,9 @@
     clip-path: inset(0 100% 0 0);
     overflow: hidden;
     transition: 2s;
+}
+.section5 .mask-left.is-open{
+    clip-path: inset(0 0 0 0); 
 }
 .section5 .img-box img{
     max-height: 80vh;
@@ -605,6 +613,9 @@
     width: 50vw; height: 40vh;
     clip-path: inset(0 0 0 100%);
     transition: 1s;
+}
+.section8 .mask-right.is-open{
+    clip-path: inset(0 0 0 0); 
 }
 .section8 .img-group img{
     position: absolute; top: 0; left: 0;

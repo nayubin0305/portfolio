@@ -6,6 +6,9 @@
     
 }
 .section1 .container .mask-left{clip-path: inset(0 100% 0 0); transition: 1s;}
+.section1 .container .mask-left.is-open{
+    clip-path: inset(0 0 0 0); 
+}
 .section1 .container .img-box img{transform: scale(1); transition: 0.5s;}
 .section1 .container .img-box:hover img{transform: scale(1.1);}
 .section1 .section-title{
@@ -15,7 +18,7 @@
     width: 400px;
     padding: 50px;
 }
-.section1 .section-title h1{
+.section1 .section-title h2{
     margin-bottom: 30px;
 }
 .section1 .text-box{
@@ -72,6 +75,7 @@
 .section-input .right textarea{
     height: 100px;
     margin-top: 10px;
+    resize: none;
 }
 
 @media(max-width:800px){

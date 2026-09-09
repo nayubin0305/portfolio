@@ -1,47 +1,30 @@
 // 헤더
-var sc = $(window).scrollTop();
-var sc_ing = $(window).scrollTop();
-    if(sc<=100){
-        $("header").css({top:"0"});
-    }else if(sc-sc_ing < 0){
-        $("header").css({top:"100%"});
-    }else if(sc-sc_ing > 0){
-        $("header").css({top:"0"});
+// 2026-09-09 느린 반응 수정
+var lastScroll = 0;
+
+$(window).scroll(function() {
+    var currentScroll = $(window).scrollTop();
+
+    // 헤더 표시/숨김
+    if (currentScroll <= 100) {
+        $("header").removeClass("hide");
+    } else if (currentScroll > lastScroll) {
+        $("header").addClass("hide");
+    } else {
+        $("header").removeClass("hide");
     }
-    
-    sc=sc_ing
 
-if(sc<100){
-    $(".top-btn").stop().fadeOut();
-    $("header").addClass("top");
-}else{
-    $(".top-btn").stop().fadeIn();
-    $("header").removeClass("top");
-}
-
-$(window).scroll(function(){
-    sc_ing = $(window).scrollTop();
-    if(sc<=100){
-        $("header").css({top:"0"});
-    }else if(sc-sc_ing < 0){
-        $("header").css({top:"-100%"});
-    }else if(sc-sc_ing > 0){
-        $("header").css({top:"0"});
-    }
-    sc=sc_ing
-});
-
-// 탑버튼
-$(window).scroll(function(){
-    sc=$(window).scrollTop();
-    if(sc<100){
+    // 탑버튼 / top 클래스
+    if (currentScroll < 100) {
         $(".top-btn").stop().fadeOut();
         $("header").addClass("top");
-    }else{
+    } else {
         $(".top-btn").stop().fadeIn();
         $("header").removeClass("top");
     }
-});
+
+    lastScroll = currentScroll;
+}); 
 
 // 사이트맵
 $(".ham-btn").click(function(){
@@ -51,8 +34,8 @@ $(".ham-btn").click(function(){
 
 // 커서
 $(window).mousemove(function(event){
-    _x = event.clientX
-    _y = event.clientY
+    var _x = event.clientX;
+    var _y = event.clientY;
     $(".cursor").css({left:_x, top:_y});
 });
 $(".pick").mouseenter(function(){
@@ -65,8 +48,8 @@ $(".pick_").mouseenter(function(){
     $(".cursor").addClass("over");
 });
 $(".pick_").mouseleave(function(){
-    $(".cursor").removeClass("over")
-})
+    $(".cursor").removeClass("over");
+});
 $(".ham-btn").mouseenter(function(){
     $(".cursor").addClass("over");
 });

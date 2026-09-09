@@ -31,8 +31,13 @@
     <link rel="stylesheet" href="info.css">
 </head>
 <body>
+    <h1 class="none">나유빈 포트폴리오 jomalone</h1>
 
     <div class="cursor"></div>
+
+    <div class="clone-notice">
+        학습/시연 목적의 클론 코딩입니다
+    </div>
 
     <!-- 탑버튼 -->
     <a href="#" class="top-btn">
@@ -41,29 +46,27 @@
     </a>
 
     <!-- 헤더 -->
-    <header>
-
+    <header class="top">
         <div class="logo">
             <a href="index.html"><img src="img/logo.png" alt="조말론 로고"></a>
         </div>
-
-        <ul class="menu">
-            <li class="menu-li pick_"><a href="index.html">home</a></li>
-            <li class="menu-li pick_"><a href="shop.html">shop</a></li>
-            <li class="menu-li pick_"><a href="project.html">project</a></li>
-            <li class="menu-li pick_"><a href="info.html">info</a></li>
-            <li class="menu-li pick_"><a href="service.html">service</a></li>
-            <li class="menu-li pick_"><a href="about.html">about</a></li>
-            <li class="menu-li pick_"><a href="faq.html">FAQ</a></li>
-            <li class="menu-li pick_"><a href="contact.html">contact</a></li>
-        </ul>
-
+        <nav aria-label="주메뉴">
+            <ul class="menu">
+                <li class="menu-li pick_"><a href="index.html">home</a></li>
+                <li class="menu-li pick_"><a href="shop.html">shop</a></li>
+                <li class="menu-li pick_"><a href="project.html">project</a></li>
+                <li class="menu-li pick_"><a href="info.html">info</a></li>
+                <li class="menu-li pick_"><a href="service.html">service</a></li>
+                <li class="menu-li pick_"><a href="about.html">about</a></li>
+                <li class="menu-li pick_"><a href="faq.html">FAQ</a></li>
+                <li class="menu-li pick_"><a href="contact.html">contact</a></li>
+            </ul>
+        </nav>
         <div class="icon-group">
-            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-            <a href="#"><i class="fa-solid fa-user"></i></a>
-            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="#" aria-label="검색"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a href="#" aria-label="마이페이지"><i class="fa-solid fa-user"></i></a>
+            <a href="#" aria-label="장바구니"><i class="fa-solid fa-cart-shopping"></i></a>
         </div>
-
     </header>
 
     <div class="ham-btn">
@@ -75,16 +78,18 @@
     <!-- 사이트맵 -->
     <div class="site-map">
         <div class="bg"></div>
-        <ul class="menu">
-            <li class="menu-li"><a href="index.html">home</a></li>
-            <li class="menu-li"><a href="shop.html">shop</a></li>
-            <li class="menu-li"><a href="project.html">project</a></li>
-            <li class="menu-li"><a href="info.html">info</a></li>
-            <li class="menu-li"><a href="service.html">service</a></li>
-            <li class="menu-li"><a href="about.html">about</a></li>
-            <li class="menu-li"><a href="faq.html">FAQ</a></li>
-            <li class="menu-li"><a href="contact.html">contact</a></li>
-        </ul>
+        <nav aria-label="모바일 메뉴">
+            <ul class="menu">
+                <li class="menu-li"><a href="index.html">home</a></li>
+                <li class="menu-li"><a href="shop.html">shop</a></li>
+                <li class="menu-li"><a href="project.html">project</a></li>
+                <li class="menu-li"><a href="info.html">info</a></li>
+                <li class="menu-li"><a href="service.html">service</a></li>
+                <li class="menu-li"><a href="about.html">about</a></li>
+                <li class="menu-li"><a href="faq.html">FAQ</a></li>
+                <li class="menu-li"><a href="contact.html">contact</a></li>
+            </ul>
+        </nav>
     </div>
 
     <!-- 현대 페이지 타이틀 -->
@@ -93,137 +98,135 @@
         <div class="bg">INFO</div>
     </div>
 
-    <section class=" section1">
-        <div class="section-title">
-            <h5>GLOBAL HEAD OF FRAGRANCE</h5>
-            <h1>향수를 바르는 것은 옷을 고르는 것과 같습니다.</h1>
-            <p>사람들이 당신을 칭찬하면 당연히 힘이 됩니다. 향수를 뿌리는 것은 옷을 고르는 것과 같습니다. 편안하고 자신감이 있으면 효과가 있는 것입니다. 향기 선택에 관한 다양한 지적 이론이 있지만 우리는 성격과 본능을 선호합니다. 당사의 글로벌 향수 개발 책임자인 Celine Roux는 향수 발견에 대한 그녀의 생각을 공유합니다.</p>
-        </div>
-        <div class="container">
-            <div class="item item-1">
-                <div class="img-box">
-                    <img src="img/info01.jpg" alt="조말론 컨셉 이미지">
-                    <div class="bg-1"></div>
-                </div>
-            </div>
-            <div class="item item-2" data-aos="fade-up"
-            data-aos-duration="1000">
-                <div class="text-box">
-                    <div class="blit"></div>
-                    <div class="text1">01</div>
-                    <h5>Do You Have A Type?</h5>
-                    <p>당신은 아마도 특정 향수 계열에 대한 성향이 있을 것입니다. 그러나 아무도 조판되는 것을 좋아하지 않습니다. Celine이 말했듯이 '향은 기분을 바꾸고 진술을 할 수 있으므로 우디 또는 스파이시와 같은 친숙한 단 하나의 향수 제품군에 집착하여 자신을 제한하지 마십시오. 위험을 감수하는 것은 재미있다.</p>
-                </div>
-                <div class="text-box" data-aos="fade-up"
-                data-aos-duration="1000" data-aos-delay="300">
-                    <div class="blit"></div>
-                    <div class="text1">02</div>
-                    <h5>Double Up</h5>
-                    <p>하나의 향기만 선택할 필요는 없습니다. 조말론은 향기를 레이어링하여 실험적으로 나만의 것을 만들 수 있도록 합니다. 한 가지 향을 뿌린 다음 다른 향을 뿌릴 수도 있고, 바디 크림과 코롱을 섞을 수도 있습니다.</p>
-                </div>
-                <div class="text-box" data-aos="fade-up"
-                data-aos-duration="1000" data-aos-delay="600">
-                    <div class="blit"></div>
-                    <div class="text1">03</div>
-                    <h5>Head Vs Heart</h5>
-                    <p>탑 노트, 하트 노트, 베이스 노트, 그리고 모든 재즈에 대해 알면 향의 즉각적인 영향과 피부에 지속되는 방식을 파악하는 데 도움이 될 수 있습니다. 하지만 너무 얽매일 필요는 없습니다. 향기와 감정은 본질적으로 연결되어 있습니다.'</p>
-                </div>
-                <div class="text-box" data-aos="fade-up"
-                data-aos-duration="1000" data-aos-delay="900">
-                    <div class="blit"></div>
-                    <div class="text1">04</div>
-                    <h5>Feminine Vs Masculine</h5>
-                    <p>조 말론 런던의 모든 향수는 남성과 여성 모두를 위해 만들어집니다. 우리의 전제는 경계를 넓히는 것입니다. 우리는 예측할 수 없고 착용할 수 있는 새로운 후각 영역에서 향기를 개발합니다.</p>
-                </div>
-                <button class="btn2">자세히 보기</button>
-            </div>
-        </div>
-    </section>
-
-    <section class="section2">
-        <div class="container cont1">
+    <main>
+        <section class=" section1">
             <div class="section-title">
-                <h5>pairing</h5>
-                <h1>향기 페어링</h1>
+                <h5>GLOBAL HEAD OF FRAGRANCE</h5>
+                <h2>향수를 바르는 것은 옷을 고르는 것과 같습니다.</h2>
+                <p>사람들이 당신을 칭찬하면 당연히 힘이 됩니다. 향수를 뿌리는 것은 옷을 고르는 것과 같습니다. 편안하고 자신감이 있으면 효과가 있는 것입니다. 향기 선택에 관한 다양한 지적 이론이 있지만 우리는 성격과 본능을 선호합니다. 당사의 글로벌 향수 개발 책임자인 Celine Roux는 향수 발견에 대한 그녀의 생각을 공유합니다.</p>
             </div>
-            <div class="text-group">
-                <div class="text-box">
-                    <div class="blit"></div>
-                    <h5>향기 페어링이란?</h5>
-                    <p>하나 이상의 향기를 레이어링하는 것을 의미합니다. 새로운 매력적인 조합을 실험하고 좋아하는 향수와 다른 향수를 레이어링하여 나만의 향기를 만들어 보세요.</p>
+            <div class="container">
+                <div class="item item-1">
+                    <div class="img-box">
+                        <img src="img/info01.jpg" alt="조말론 컨셉 이미지">
+                        <div class="bg-1"></div>
+                    </div>
                 </div>
-                <div class="text-box">
-                    <div class="blit"></div>
-                    <h5>얼마나 많은 향수를 겹칠 수 있습니까?</h5>
-                    <p>향을 조합하는 데 있어 규칙은 없습니다. 평소에 생각하지 않는 것을 시도해보세요.</p>
+                <div class="item item-2" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="text-box">
+                        <div class="blit"></div>
+                        <div class="text1">01</div>
+                        <h5>Do You Have A Type?</h5>
+                        <p>당신은 아마도 특정 향수 계열에 대한 성향이 있을 것입니다. 그러나 아무도 조판되는 것을 좋아하지 않습니다. Celine이 말했듯이 '향은 기분을 바꾸고 진술을 할 수 있으므로 우디 또는 스파이시와 같은 친숙한 단 하나의 향수 제품군에 집착하여 자신을 제한하지 마십시오. 위험을 감수하는 것은 재미있다.</p>
+                    </div>
+                    <div class="text-box" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                        <div class="blit"></div>
+                        <div class="text1">02</div>
+                        <h5>Double Up</h5>
+                        <p>하나의 향기만 선택할 필요는 없습니다. 조말론은 향기를 레이어링하여 실험적으로 나만의 것을 만들 수 있도록 합니다. 한 가지 향을 뿌린 다음 다른 향을 뿌릴 수도 있고, 바디 크림과 코롱을 섞을 수도 있습니다.</p>
+                    </div>
+                    <div class="text-box" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+                        <div class="blit"></div>
+                        <div class="text1">03</div>
+                        <h5>Head Vs Heart</h5>
+                        <p>탑 노트, 하트 노트, 베이스 노트, 그리고 모든 재즈에 대해 알면 향의 즉각적인 영향과 피부에 지속되는 방식을 파악하는 데 도움이 될 수 있습니다. 하지만 너무 얽매일 필요는 없습니다. 향기와 감정은 본질적으로 연결되어 있습니다.'</p>
+                    </div>
+                    <div class="text-box" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="900">
+                        <div class="blit"></div>
+                        <div class="text1">04</div>
+                        <h5>Feminine Vs Masculine</h5>
+                        <p>조 말론 런던의 모든 향수는 남성과 여성 모두를 위해 만들어집니다. 우리의 전제는 경계를 넓히는 것입니다. 우리는 예측할 수 없고 착용할 수 있는 새로운 후각 영역에서 향기를 개발합니다.</p>
+                    </div>
+                    <button class="btn2">자세히 보기</button>
                 </div>
             </div>
-        </div>
-        <div class="container cont2">
-            <div class="img-box">
-                <video src="img/info.mp4" muted autoplay loop controls>향기 페어링 설명 영상</video>
-            </div>
-            <button class="btn1">
-                <span>나만의 향 찾으러 가기</span>
-                <span> <i class="fa-solid fa-chevron-right"></i> </span>
-                <span class="line1"></span>
-                <span class="line2"></span>
-            </button>
-        </div>
-    </section>
-
-    <section class="section3">
-        <div class="container">
-            <div class="cont1">
+        </section>
+    
+        <section class="section2">
+            <div class="container cont1">
                 <div class="section-title">
-                    <h5>reservation</h5>
-                    <h1>매장 내 체험 예약 상담</h1>
-                    <p>무료 상담을 통해 어떤 향기가 당신에게 가장 잘 어울리는지 테스트 할 수 있어요.</p>
+                    <h5>pairing</h5>
+                    <h2>향기 페어링</h2>
                 </div>
                 <div class="text-group">
                     <div class="text-box">
-                        <div class="icon"><i class="fa-solid fa-star"></i></div>
-                        <span>예약 버튼을 사용하여 원하는 시간에 서비스를 선택하세요.</span>
+                        <div class="blit"></div>
+                        <h5>향기 페어링이란?</h5>
+                        <p>하나 이상의 향기를 레이어링하는 것을 의미합니다. 새로운 매력적인 조합을 실험하고 좋아하는 향수와 다른 향수를 레이어링하여 나만의 향기를 만들어 보세요.</p>
                     </div>
                     <div class="text-box">
-                        <div class="icon"><i class="fa-solid fa-star"></i></div>
-                        <span>이메일을 통한 초대 링크와 알림 이메일로 약속을 확인합니다.</span>
+                        <div class="blit"></div>
+                        <h5>얼마나 많은 향수를 겹칠 수 있습니까?</h5>
+                        <p>향을 조합하는 데 있어 규칙은 없습니다. 평소에 생각하지 않는 것을 시도해보세요.</p>
                     </div>
-                    <div class="text-box">
-                        <div class="icon"><i class="fa-solid fa-star"></i></div>
-                        <span>예약 시간 15분 전에 도착해주세요.</span>
-                    </div>
-                    <div class="text-box">
-                        <div class="icon"><i class="fa-solid fa-star"></i></div>
-                        <span>예약 후 스타일리스트가 검토할 개인 제품 권장 사항을 공유합니다.</span>
-                    </div>                    
-                </div>
-                <button class="btn2">무료 예약하기</button>
-            </div>
-            <div class="cont2">
-                <div class="item item1" data-aos="fade-right">
-                    <div class="img-box"><img src="img/info03.jpg" alt="조말론 홍보 이미지"></div>
-                </div>
-                <div class="item item2" data-aos="fade-left">
-                    <div class="img-box"><img src="img/info04.jpg" alt="조말론 홍보 이미지"></div>
-                </div>
-                <div class="item item3" data-aos="fade-up">
-                    <div class="img-box"><img src="img/info05.jpg" alt="조말론 홍보 이미지"></div>
                 </div>
             </div>
-        </div>
-    </section>
+            <div class="container cont2">
+                <div class="img-box">
+                    <video src="img/info.mp4" muted autoplay loop controls>향기 페어링 설명 영상</video>
+                </div>
+                <button class="btn1">
+                    <span>나만의 향 찾으러 가기</span>
+                    <span> <i class="fa-solid fa-chevron-right"></i> </span>
+                    <span class="line1"></span>
+                    <span class="line2"></span>
+                </button>
+            </div>
+        </section>
+    
+        <section class="section3">
+            <div class="container">
+                <div class="cont1">
+                    <div class="section-title">
+                        <h5>reservation</h5>
+                        <h2>매장 내 체험 예약 상담</h2>
+                        <p>무료 상담을 통해 어떤 향기가 당신에게 가장 잘 어울리는지 테스트 할 수 있어요.</p>
+                    </div>
+                    <div class="text-group">
+                        <div class="text-box">
+                            <div class="icon"><i class="fa-solid fa-star"></i></div>
+                            <span>예약 버튼을 사용하여 원하는 시간에 서비스를 선택하세요.</span>
+                        </div>
+                        <div class="text-box">
+                            <div class="icon"><i class="fa-solid fa-star"></i></div>
+                            <span>이메일을 통한 초대 링크와 알림 이메일로 약속을 확인합니다.</span>
+                        </div>
+                        <div class="text-box">
+                            <div class="icon"><i class="fa-solid fa-star"></i></div>
+                            <span>예약 시간 15분 전에 도착해주세요.</span>
+                        </div>
+                        <div class="text-box">
+                            <div class="icon"><i class="fa-solid fa-star"></i></div>
+                            <span>예약 후 스타일리스트가 검토할 개인 제품 권장 사항을 공유합니다.</span>
+                        </div>                    
+                    </div>
+                    <button class="btn2">무료 예약하기</button>
+                </div>
+                <div class="cont2">
+                    <div class="item item1" data-aos="fade-right">
+                        <div class="img-box"><img src="img/info03.jpg" alt="조말론 홍보 이미지" loading="lazy"></div>
+                    </div>
+                    <div class="item item2" data-aos="fade-left">
+                        <div class="img-box"><img src="img/info04.jpg" alt="조말론 홍보 이미지" loading="lazy"></div>
+                    </div>
+                    <div class="item item3" data-aos="fade-up">
+                        <div class="img-box"><img src="img/info05.jpg" alt="조말론 홍보 이미지" loading="lazy"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-       <!-- footer -->
+    <!-- footer -->
     <footer class="foot1">
         <div class="container">
             <div class="row row1">
                 <div class="item item-1"><img src="img/logo.png" class="logo" alt="조말론 로고"></div>
                 <div class="item item-2 icon-group">
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" aria-label="인스타그램"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="페이스북"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="트위터"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" aria-label="유튜브"><i class="fa-brands fa-youtube"></i></a>
                 </div>
             </div>
             <div class="row row2">
@@ -239,19 +242,19 @@
                     </ul>
                     <div class="group2">
                         <span>이엘씨에이한국(유)</span>
-                        <span>대표: Teng, Hsiao-Hua (Catherine),</span>
+                        <span>대표: 홍길동,</span>
                         <span>주소: 서울시 강남구 강남대로 382 (역삼동) 메리츠타워, 06232</span>
-                        <span>사업자등록번호: 211-81-71889</span>
-                        <span>통신판매업 신고번호: 강남-15737호</span>
+                        <span>사업자등록번호: 000-00-00000</span>
+                        <span>통신판매업 신고번호: 00-00000호</span>
                         <span>사업자정보조회</span>
-                        <span>고객관리지원팀: (02) 6971-322</span>
-                        <span>consumercare-kr@jomalone.com</span>
+                        <span>고객관리지원팀: (02) 0000-000</span>
+                        <span>jomalone@jomalone.com</span>
                     </div>
                 </div>
                 <div class="item item-2">
                     <h4>HELP DESK</h4>
                     <div class="text-box">
-                        <a href="#" class="help-1">6971-322</a>
+                        <a href="#" class="help-1">0000-000</a>
                         <a href="#" class="help-2">실시간 상담 채팅</a>
                         <span> / </span>
                         <a href="#" class="help-3">이메일 상담 신청</a>
@@ -266,7 +269,7 @@
     </footer>
     <footer class="foot2">
         <div class="container">
-            © Jo Malone London 2021
+            © Jo Malone London 0000 학습/시연 목적의 클론 코딩 홈페이지입니다
         </div>
     </footer>
 

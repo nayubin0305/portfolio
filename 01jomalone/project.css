@@ -21,7 +21,7 @@
     text-align: center;
     width: 40%;
 }
-.section1 .item-1 .text-box h3{color: #322826;padding-bottom: 20px;}
+.section1 .item-1 .text-box h4{color: #322826;padding-bottom: 20px;}
 .section1 .item-1 .text-box p{padding-bottom: 40px;}
 
 .section1 .item-1, .section1 .item-3{
@@ -31,7 +31,7 @@
     text-align: center;
     width: 40%;
 }
-.section1 .item-2 .text-box h3{color: #322826;padding-bottom: 20px;}
+.section1 .item-2 .text-box h4{color: #322826;padding-bottom: 20px;}
 .section1 .item-2 .text-box p{padding-bottom: 40px;}
 
 .section1 .item-1 .img-box{right: 100px;}
@@ -43,6 +43,9 @@
 
 .section1 .mask-left{clip-path: inset(0 100% 0 0);}
 .section1 .mask-right{clip-path: inset(0 0 0 100%);}
+.mask-left.is-open, .mask-right.is-open{
+    clip-path: inset(0 0 0 0); 
+}
 
 @media(max-width:1300px){
     .section1 .item-1 .img-box{

@@ -31,8 +31,13 @@
     <link rel="stylesheet" href="contact.css">
 </head>
 <body>
+    <h1 class="none">나유빈 포트폴리오 jomalone</h1>
 
     <div class="cursor"></div>
+
+    <div class="clone-notice">
+        학습/시연 목적의 클론 코딩입니다
+    </div>
 
     <!-- 탑버튼 -->
     <a href="#" class="top-btn">
@@ -41,29 +46,27 @@
     </a>
 
     <!-- 헤더 -->
-    <header>
-
+    <header class="top">
         <div class="logo">
             <a href="index.html"><img src="img/logo.png" alt="조말론 로고"></a>
         </div>
-
-        <ul class="menu">
-            <li class="menu-li pick_"><a href="index.html">home</a></li>
-            <li class="menu-li pick_"><a href="shop.html">shop</a></li>
-            <li class="menu-li pick_"><a href="project.html">project</a></li>
-            <li class="menu-li pick_"><a href="info.html">info</a></li>
-            <li class="menu-li pick_"><a href="service.html">service</a></li>
-            <li class="menu-li pick_"><a href="about.html">about</a></li>
-            <li class="menu-li pick_"><a href="faq.html">FAQ</a></li>
-            <li class="menu-li pick_"><a href="contact.html">contact</a></li>
-        </ul>
-
+        <nav aria-label="주메뉴">
+            <ul class="menu">
+                <li class="menu-li pick_"><a href="index.html">home</a></li>
+                <li class="menu-li pick_"><a href="shop.html">shop</a></li>
+                <li class="menu-li pick_"><a href="project.html">project</a></li>
+                <li class="menu-li pick_"><a href="info.html">info</a></li>
+                <li class="menu-li pick_"><a href="service.html">service</a></li>
+                <li class="menu-li pick_"><a href="about.html">about</a></li>
+                <li class="menu-li pick_"><a href="faq.html">FAQ</a></li>
+                <li class="menu-li pick_"><a href="contact.html">contact</a></li>
+            </ul>
+        </nav>
         <div class="icon-group">
-            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-            <a href="#"><i class="fa-solid fa-user"></i></a>
-            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="#" aria-label="검색"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a href="#" aria-label="마이페이지"><i class="fa-solid fa-user"></i></a>
+            <a href="#" aria-label="장바구니"><i class="fa-solid fa-cart-shopping"></i></a>
         </div>
-
     </header>
 
     <div class="ham-btn">
@@ -75,16 +78,18 @@
     <!-- 사이트맵 -->
     <div class="site-map">
         <div class="bg"></div>
-        <ul class="menu">
-            <li class="menu-li"><a href="index.html">home</a></li>
-            <li class="menu-li"><a href="shop.html">shop</a></li>
-            <li class="menu-li"><a href="project.html">project</a></li>
-            <li class="menu-li"><a href="info.html">info</a></li>
-            <li class="menu-li"><a href="service.html">service</a></li>
-            <li class="menu-li"><a href="about.html">about</a></li>
-            <li class="menu-li"><a href="faq.html">FAQ</a></li>
-            <li class="menu-li"><a href="contact.html">contact</a></li>
-        </ul>
+        <nav aria-label="모바일 메뉴">
+            <ul class="menu">
+                <li class="menu-li"><a href="index.html">home</a></li>
+                <li class="menu-li"><a href="shop.html">shop</a></li>
+                <li class="menu-li"><a href="project.html">project</a></li>
+                <li class="menu-li"><a href="info.html">info</a></li>
+                <li class="menu-li"><a href="service.html">service</a></li>
+                <li class="menu-li"><a href="about.html">about</a></li>
+                <li class="menu-li"><a href="faq.html">FAQ</a></li>
+                <li class="menu-li"><a href="contact.html">contact</a></li>
+            </ul>
+        </nav>
     </div>
 
     <!-- 현대 페이지 타이틀 -->
@@ -93,74 +98,85 @@
         <div class="bg">Contact</div>
     </div>
 
-    <section class="section1">
-        <div class="container">
-            <div class="img-box mask-left">
-                <img src="img/Contact01.jpg" alt="조말론 컨셉 이미지">
-            </div>
-            <div class="section-title">
-                <div class="box" data-aos="fade-up" data-aos-delay="300">
-                    <h5>boutique</h5>
-                    <h1>전국 28개의 부티크</h1> 
-                    <div class="text-box">
-                        <h5>이엘씨에이한국(유) 대표</h5>
-                        <p>서울시 강남구 강남대로 382 (역삼동) 메리츠타워, 06232</p>
+    <main>
+        <section class="section1">
+            <div class="container">
+                <div class="img-box mask-left">
+                    <img src="img/Contact01.jpg" alt="조말론 컨셉 이미지">
+                </div>
+                <div class="section-title">
+                    <div class="box" data-aos="fade-up" data-aos-delay="300">
+                        <h5>boutique</h5>
+                        <h2>전국 28개의 부티크</h2> 
+                        <div class="text-box">
+                            <h5>이엘씨에이한국(유) 대표</h5>
+                            <p>서울시 강남구 강남대로 382 (역삼동) 메리츠타워, 06232</p>
+                        </div>
+                        <div class="text-box">
+                            <h5>OPENING HOURS</h5>
+                            <p>
+                                Monday to Saturday: 09:00 – 17:30<br>
+                                Sunday: Closed
+                            </p>
+                        </div>
+                        <div class="text-box">
+                            <h5>고객관리지원팀</h5>
+                            <p>
+                                (02) 0000-0000<br>
+                                jomalone@jomalone.com
+                            </p>
+                        </div>
                     </div>
-                    <div class="text-box">
-                        <h5>OPENING HOURS</h5>
-                        <p>
-                            Monday to Saturday: 09:00 – 17:30<br>
-                            Sunday: Closed
-                        </p>
+                </div>
+            </div>
+        </section>
+    
+        <section class="section-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1582.0705072833557!2d127.03984870822754!3d37.52817304495127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca39418a6650d%3A0x9d95066a5bc9858d!2z6rCk65-s66as7JWE67Cx7ZmU7KCQIOuqhe2SiOq0gCBXRVNU!5e0!3m2!1sko!2skr!4v1677569032559!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+    
+        <section class="section-input">
+            <div class="container">
+                <div class="section-title">
+                    <h5>Contact</h5>
+                    <h2>문의글 보내기</h2>
+                    <P>
+                        자주 찾는 질문 이외에 더 궁금하신 부분이 있으신가요? <br>
+                        문의글을 보내주시면 정중하고 신속한 답변을 드리고 있습니다.
+                    </P>
+                </div>
+                <div class="right">
+                    <div class="box box1">
+                        <label for="name">이름</label>
+                        <input type="text" id="name" name="name" required autocomplete="name">
                     </div>
-                    <div class="text-box">
-                        <h5>고객관리지원팀</h5>
-                        <p>
-                            (02) 6971-3228<br>
-                            consumercare-kr@jomalone.com
-                        </p>
+                    <div class="box box2">
+                        <label for="userId">아이디</label>
+                        <input type="text" id="userId" name="userId" required autocomplete="username">
                     </div>
+                    <div class="box box3">
+                        <label for="email">이메일</label>
+                        <input type="email" id="email" name="email" required autocomplete="email">
+                    </div>
+                    <div class="box box4">
+                        <label for="tel">전화번호</label>
+                        <input type="tel" id="tel" name="tel" required autocomplete="tel">
+                    </div>
+                    <div class="box box5">
+                        <label for="subject">제목</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="box box6">
+                        <label for="content">내용</label>
+                        <textarea id="content" name="content" required></textarea>
+                    </div>
+                    <button class="box btn2">
+                        SEND MESSAGE
+                    </button>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section class="section-map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1582.0705072833557!2d127.03984870822754!3d37.52817304495127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca39418a6650d%3A0x9d95066a5bc9858d!2z6rCk65-s66as7JWE67Cx7ZmU7KCQIOuqhe2SiOq0gCBXRVNU!5e0!3m2!1sko!2skr!4v1677569032559!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </section>
-
-    <section class="section-input">
-        <div class="container">
-            <div class="section-title">
-                <h5>Contact</h5>
-                <h1>문의글 보내기</h1>
-                <P>자주 찾는 질문 이외에 더 궁금하신 부분이 있으신가요? 문의글을 보내주시면 정중하고 신속한 답변을 드리고 있습니다.</P>
-            </div>
-            <div class="right">
-                <div class="box box1">이름
-                    <input type="text">
-                </div>
-                <div class="box box2">아이디
-                    <input type="text">
-                </div>
-                <div class="box box3">이메일
-                    <input type="text">
-                </div>
-                <div class="box box4">전화번호
-                    <input type="text">
-                </div>
-                <div class="box box5">제목
-                    <input type="text">
-                </div>
-                <div class="box box6">내용
-                    <textarea></textarea>
-                </div>
-                <button class="box btn2">
-                    SEND MESSAGE
-                </button>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- 푸터 -->
     <footer class="foot1">
@@ -168,10 +184,10 @@
             <div class="row row1">
                 <div class="item item-1"><img src="img/logo.png" class="logo" alt="조말론 로고"></div>
                 <div class="item item-2 icon-group">
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" aria-label="인스타그램"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="페이스북"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="트위터"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" aria-label="유튜브"><i class="fa-brands fa-youtube"></i></a>
                 </div>
             </div>
             <div class="row row2">
@@ -187,19 +203,19 @@
                     </ul>
                     <div class="group2">
                         <span>이엘씨에이한국(유)</span>
-                        <span>대표: Teng, Hsiao-Hua (Catherine),</span>
+                        <span>대표: 홍길동,</span>
                         <span>주소: 서울시 강남구 강남대로 382 (역삼동) 메리츠타워, 06232</span>
-                        <span>사업자등록번호: 211-81-71889</span>
-                        <span>통신판매업 신고번호: 강남-15737호</span>
+                        <span>사업자등록번호: 000-00-00000</span>
+                        <span>통신판매업 신고번호: 00-00000호</span>
                         <span>사업자정보조회</span>
-                        <span>고객관리지원팀: (02) 6971-322</span>
-                        <span>consumercare-kr@jomalone.com</span>
+                        <span>고객관리지원팀: (02) 0000-000</span>
+                        <span>jomalone@jomalone.com</span>
                     </div>
                 </div>
                 <div class="item item-2">
                     <h4>HELP DESK</h4>
                     <div class="text-box">
-                        <a href="#" class="help-1">6971-322</a>
+                        <a href="#" class="help-1">0000-000</a>
                         <a href="#" class="help-2">실시간 상담 채팅</a>
                         <span> / </span>
                         <a href="#" class="help-3">이메일 상담 신청</a>
@@ -214,7 +230,7 @@
     </footer>
     <footer class="foot2">
         <div class="container">
-            © Jo Malone London 2021
+            © Jo Malone London 0000 학습/시연 목적의 클론 코딩 홈페이지입니다
         </div>
     </footer>
 
@@ -222,26 +238,27 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="com.js"></script>
     <script>
-        mask_l();
-
-        $(window).scroll(function(){
-            mask_l();
-        });
-
-        function mask_l(){
+        // 2026-09-09 중복 스크립트 정리 
+        function mask(selector) {
             var sc_ = $(window).scrollTop();
             var win_h = $(window).height();
-            
-            $(".mask-left").each(function(){
-                if ($(this).hasClass("is-open")) return;
 
-                var item_top_l = $(this).offset().top;
-                if(item_top_l < sc_ + win_h - 200){
-                    $(this).css({clipPath: "inset(0 0 0 0)"});
+            $(selector).each(function() {
+                var item_top = $(this).offset().top;
+                
+                if(item_top < sc_ + win_h - 200) {
                     $(this).addClass("is-open");
+                } else {
+                    $(this).removeClass("is-open");
                 }
             });
         }
+
+        mask(".mask-left");
+
+        $(window).scroll(function() {
+            mask(".mask-left");
+        });
         
         AOS.init();
       </script>

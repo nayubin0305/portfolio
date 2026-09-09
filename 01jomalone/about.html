@@ -31,8 +31,13 @@
     <link rel="stylesheet" href="about.css">
 </head>
 <body>
+    <h1 class="none">나유빈 포트폴리오 jomalone</h1>
 
     <div class="cursor"></div>
+
+    <div class="clone-notice">
+        학습/시연 목적의 클론 코딩입니다
+    </div>
 
     <!-- 탑버튼 -->
     <a href="#" class="top-btn">
@@ -41,29 +46,27 @@
     </a>
 
     <!-- 헤더 -->
-    <header>
-
+    <header class="top">
         <div class="logo">
             <a href="index.html"><img src="img/logo.png" alt="조말론 로고"></a>
         </div>
-
-        <ul class="menu">
-            <li class="menu-li pick_"><a href="index.html">home</a></li>
-            <li class="menu-li pick_"><a href="shop.html">shop</a></li>
-            <li class="menu-li pick_"><a href="project.html">project</a></li>
-            <li class="menu-li pick_"><a href="info.html">info</a></li>
-            <li class="menu-li pick_"><a href="service.html">service</a></li>
-            <li class="menu-li pick_"><a href="about.html">about</a></li>
-            <li class="menu-li pick_"><a href="faq.html">FAQ</a></li>
-            <li class="menu-li pick_"><a href="contact.html">contact</a></li>
-        </ul>
-
+        <nav aria-label="주메뉴">
+            <ul class="menu">
+                <li class="menu-li pick_"><a href="index.html">home</a></li>
+                <li class="menu-li pick_"><a href="shop.html">shop</a></li>
+                <li class="menu-li pick_"><a href="project.html">project</a></li>
+                <li class="menu-li pick_"><a href="info.html">info</a></li>
+                <li class="menu-li pick_"><a href="service.html">service</a></li>
+                <li class="menu-li pick_"><a href="about.html">about</a></li>
+                <li class="menu-li pick_"><a href="faq.html">FAQ</a></li>
+                <li class="menu-li pick_"><a href="contact.html">contact</a></li>
+            </ul>
+        </nav>
         <div class="icon-group">
-            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-            <a href="#"><i class="fa-solid fa-user"></i></a>
-            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="#" aria-label="검색"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a href="#" aria-label="마이페이지"><i class="fa-solid fa-user"></i></a>
+            <a href="#" aria-label="장바구니"><i class="fa-solid fa-cart-shopping"></i></a>
         </div>
-
     </header>
 
     <div class="ham-btn">
@@ -75,16 +78,18 @@
     <!-- 사이트맵 -->
     <div class="site-map">
         <div class="bg"></div>
-        <ul class="menu">
-            <li class="menu-li"><a href="index.html">home</a></li>
-            <li class="menu-li"><a href="shop.html">shop</a></li>
-            <li class="menu-li"><a href="project.html">project</a></li>
-            <li class="menu-li"><a href="info.html">info</a></li>
-            <li class="menu-li"><a href="service.html">service</a></li>
-            <li class="menu-li"><a href="about.html">about</a></li>
-            <li class="menu-li"><a href="faq.html">FAQ</a></li>
-            <li class="menu-li"><a href="contact.html">contact</a></li>
-        </ul>
+        <nav aria-label="모바일 메뉴">
+            <ul class="menu">
+                <li class="menu-li"><a href="index.html">home</a></li>
+                <li class="menu-li"><a href="shop.html">shop</a></li>
+                <li class="menu-li"><a href="project.html">project</a></li>
+                <li class="menu-li"><a href="info.html">info</a></li>
+                <li class="menu-li"><a href="service.html">service</a></li>
+                <li class="menu-li"><a href="about.html">about</a></li>
+                <li class="menu-li"><a href="faq.html">FAQ</a></li>
+                <li class="menu-li"><a href="contact.html">contact</a></li>
+            </ul>
+        </nav>
     </div>
 
     <!-- 현대 페이지 타이틀 -->
@@ -93,74 +98,76 @@
         <div class="bg">about</div>
     </div>
 
-    <section class="section1">
-        <div class="container">
-            <div class="section-title">
-                <h5>Our Foundations</h5>
-                <h1>우리의 사람 & 우리의 일터</h1>
-                <p>
-                    조 말론 런던 안에서 우리는 모두 서로에 대한 친절을 가장 중요하게 여기는 하나의 가족이라고 생각합니다. 포용성과 다양성을 기반으로, 서로 협업하고 따뜻하게 맞이하는 환경에서 창의성과 개방성을 높일 수 있는 일터를 만들기 위해 최선을 다하고 있습니다.<br>
-                    <br>
-                    조 말론 런던은 직원 가족에 대한 지원과 유연한 근무제도, 여성 리더십에 대한 적극적인 지지 그리고 정신 건강에 관한 사내 이니셔티브로 뒷받침되는 다양한 직원 보호 제도를 토대로 인재를 양성하고 팀의 복지를 돕는 것을 자랑스럽게 여기고 있습니다. 이로써 모든 사람이 자신의 개성을 있는 그대로 존중받을 수 있는 커뮤니티를 만들어가고자 합니다.
-                </p>
+    <main>
+        <section class="section1">
+            <div class="container">
+                <div class="section-title">
+                    <h5>Our Foundations</h5>
+                    <h2>우리의 사람 & 우리의 일터</h2>
+                    <p>
+                        조 말론 런던 안에서 우리는 모두 서로에 대한 친절을 가장 중요하게 여기는 하나의 가족이라고 생각합니다. 포용성과 다양성을 기반으로, 서로 협업하고 따뜻하게 맞이하는 환경에서 창의성과 개방성을 높일 수 있는 일터를 만들기 위해 최선을 다하고 있습니다.<br>
+                        <br>
+                        조 말론 런던은 직원 가족에 대한 지원과 유연한 근무제도, 여성 리더십에 대한 적극적인 지지 그리고 정신 건강에 관한 사내 이니셔티브로 뒷받침되는 다양한 직원 보호 제도를 토대로 인재를 양성하고 팀의 복지를 돕는 것을 자랑스럽게 여기고 있습니다. 이로써 모든 사람이 자신의 개성을 있는 그대로 존중받을 수 있는 커뮤니티를 만들어가고자 합니다.
+                    </p>
+                </div>
+                <div class="right">
+                    <div class="img-box item1" data-aos="fade-up-left" data-aos-duration="1000">
+                        <img src="img/about01.jpg" alt="조말론 컨셉 이미지">
+                        <div class="bg-1"></div>
+                    </div>
+                    <div class="img-box item2" data-aos="fade-up" data-aos-duration="1000">
+                        <img src="img/about02.PNG" alt="조말론 컨셉 이미지">
+                        <div class="bg-1"></div>
+                    </div>
+                    <div class="item btn6">
+                        <span class="text1">CONTACT US TODAY</span>
+                        <span class="text2"><i class="fa-solid fa-chevron-right"></i></span>
+                    </div>
+                </div>
             </div>
-            <div class="right">
-                <div class="img-box item1" data-aos="fade-up-left" data-aos-duration="1000">
-                    <img src="img/about01.jpg" alt="조말론 컨셉 이미지">
-                    <div class="bg-1"></div>
-                </div>
-                <div class="img-box item2" data-aos="fade-up" data-aos-duration="1000">
-                    <img src="img/about02.PNG" alt="조말론 컨셉 이미지">
-                    <div class="bg-1"></div>
-                </div>
-                <div class="item btn6">
-                    <span class="text1">CONTACT US TODAY</span>
-                    <span class="text2"><i class="fa-solid fa-chevron-right"></i></span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section2">
-        <div class="container">
-            <div class="left">
-                <div class="img-box item1" data-aos="fade-down" data-aos-duration="1000">
-                    <img src="img/about03.jpg" alt="조말론 컨셉 이미지">
-                    <div class="bg-1"></div>
-                </div>
-                <div class="item2" data-aos="fade-left" data-aos-duration="1000">
-                    <div class="img-box">
-                        <img src="img/about04.jpg" alt="조말론 컨셉 이미지">
+        </section>
+    
+        <section class="section2">
+            <div class="container">
+                <div class="left">
+                    <div class="img-box item1" data-aos="fade-down" data-aos-duration="1000">
+                        <img src="img/about03.jpg" alt="조말론 컨셉 이미지" loading="lazy">
+                        <div class="bg-1"></div>
+                    </div>
+                    <div class="item2" data-aos="fade-left" data-aos-duration="1000">
+                        <div class="img-box">
+                            <img src="img/about04.jpg" alt="조말론 컨셉 이미지" loading="lazy">
+                            <div class="bg-1"></div>
+                        </div>
+                    </div>
+                    <div class="img-box item3" data-aos="fade-up" data-aos-duration="1000">
+                        <img src="img/about05.jpg" alt="조말론 컨셉 이미지" loading="lazy">
                         <div class="bg-1"></div>
                     </div>
                 </div>
-                <div class="img-box item3" data-aos="fade-up" data-aos-duration="1000">
-                    <img src="img/about05.jpg" alt="조말론 컨셉 이미지">
-                    <div class="bg-1"></div>
-                </div>
-            </div>
-            <div class="section-title">
-                <h5>Our Charity Mission</h5>
-                <h1>
-                    정신건강 관련 활동 지원
-                    10주년을 기념하며
-                </h1>
-                <p>조 말론 런던은 그 어느 때보다 정신건강 관련 활동에 적극 나서고 있습니다. 그리고 이런 와중에 조 말론 런던이 후원하는 정신건강 문제 해결을 위한 재단(Shining A Light On Mental Health Foundation) 설립 소식을 발표하게 되어 매우 기쁘게 생각합니다. 본 재단은 다양한 영감을 선사하는 자선단체들과 함께 진행하는 특별 프로젝트를 통해 정신건강 관련 문제를 겪고 있는 개인과 가정에 필요한 도움을 지원합니다.</p>
-                <div class="group">
-                    <div class="box">
-                        <div class="blit"></div>
-                        <h6>조 말론 런던의 글로벌 채러티 파트너</h6>
-                        <p>조 말론 런던은 현재 본국인 영국에서 11개의 자선단체를 후원하고 있습니다. 2021년부터는 세계 곳곳에 채러티 파트너들과 협업하고 있습니다. 정신 건강과 관련된 인식 제고, 예방 및 치료에 초점을 맞춘 프로젝트 등을 지원하고 있습니다.</p>
-                    </div>
-                    <div class="box">
-                        <div class="blit"></div>
-                        <h6>영국에서 온 러브레터</h6>
-                        <p>영국에서 온 러브레터(Love Letters from Britain)는 럭셔리 브랜드들이 가져온 긍정적인 변화 그 이면에 숨겨진 이야기들을 다룹니다. BBC 스토리웍스 (BBC StoryWorks)라는 상업 프로덕션이 제작한 영상은 조 말론 런던이 정신 건강이라는 주제를 어떻게 다루고 있는지, 관련 문제를 겪는 이들을 어떻게 지원하고, 또 어떻게 이들이 회복하고 서로 소통하고 성장할 수 있도록 힘을 실어주고 있는지에 대해 조명하고 있습니다.</p>
+                <div class="section-title">
+                    <h5>Our Charity Mission</h5>
+                    <h2>
+                        정신건강 관련 활동 지원
+                        10주년을 기념하며
+                    </h2>
+                    <p>조 말론 런던은 그 어느 때보다 정신건강 관련 활동에 적극 나서고 있습니다. 그리고 이런 와중에 조 말론 런던이 후원하는 정신건강 문제 해결을 위한 재단(Shining A Light On Mental Health Foundation) 설립 소식을 발표하게 되어 매우 기쁘게 생각합니다. 본 재단은 다양한 영감을 선사하는 자선단체들과 함께 진행하는 특별 프로젝트를 통해 정신건강 관련 문제를 겪고 있는 개인과 가정에 필요한 도움을 지원합니다.</p>
+                    <div class="group">
+                        <div class="box">
+                            <div class="blit"></div>
+                            <h6>조 말론 런던의 글로벌 채러티 파트너</h6>
+                            <p>조 말론 런던은 현재 본국인 영국에서 11개의 자선단체를 후원하고 있습니다. 2021년부터는 세계 곳곳에 채러티 파트너들과 협업하고 있습니다. 정신 건강과 관련된 인식 제고, 예방 및 치료에 초점을 맞춘 프로젝트 등을 지원하고 있습니다.</p>
+                        </div>
+                        <div class="box">
+                            <div class="blit"></div>
+                            <h6>영국에서 온 러브레터</h6>
+                            <p>영국에서 온 러브레터(Love Letters from Britain)는 럭셔리 브랜드들이 가져온 긍정적인 변화 그 이면에 숨겨진 이야기들을 다룹니다. BBC 스토리웍스 (BBC StoryWorks)라는 상업 프로덕션이 제작한 영상은 조 말론 런던이 정신 건강이라는 주제를 어떻게 다루고 있는지, 관련 문제를 겪는 이들을 어떻게 지원하고, 또 어떻게 이들이 회복하고 서로 소통하고 성장할 수 있도록 힘을 실어주고 있는지에 대해 조명하고 있습니다.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- footer -->
     <footer class="foot1">
@@ -168,10 +175,10 @@
             <div class="row row1">
                 <div class="item item-1"><img src="img/logo.png" class="logo" alt="조말론 로고"></div>
                 <div class="item item-2 icon-group">
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" aria-label="인스타그램"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="페이스북"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="트위터"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" aria-label="유튜브"><i class="fa-brands fa-youtube"></i></a>
                 </div>
             </div>
             <div class="row row2">
@@ -187,19 +194,19 @@
                     </ul>
                     <div class="group2">
                         <span>이엘씨에이한국(유)</span>
-                        <span>대표: Teng, Hsiao-Hua (Catherine),</span>
+                        <span>대표: 홍길동,</span>
                         <span>주소: 서울시 강남구 강남대로 382 (역삼동) 메리츠타워, 06232</span>
-                        <span>사업자등록번호: 211-81-71889</span>
-                        <span>통신판매업 신고번호: 강남-15737호</span>
+                        <span>사업자등록번호: 000-00-00000</span>
+                        <span>통신판매업 신고번호: 00-00000호</span>
                         <span>사업자정보조회</span>
-                        <span>고객관리지원팀: (02) 6971-322</span>
-                        <span>consumercare-kr@jomalone.com</span>
+                        <span>고객관리지원팀: (02) 0000-000</span>
+                        <span>jomalone@jomalone.com</span>
                     </div>
                 </div>
                 <div class="item item-2">
                     <h4>HELP DESK</h4>
                     <div class="text-box">
-                        <a href="#" class="help-1">6971-322</a>
+                        <a href="#" class="help-1">0000-000</a>
                         <a href="#" class="help-2">실시간 상담 채팅</a>
                         <span> / </span>
                         <a href="#" class="help-3">이메일 상담 신청</a>
@@ -214,7 +221,7 @@
     </footer>
     <footer class="foot2">
         <div class="container">
-            © Jo Malone London 2021
+            © Jo Malone London 0000 학습/시연 목적의 클론 코딩 홈페이지입니다
         </div>
     </footer>
 

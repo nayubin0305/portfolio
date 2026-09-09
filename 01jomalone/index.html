@@ -47,11 +47,9 @@
 
     <!-- 헤더 -->
     <header class="top">
-
         <div class="logo">
             <a href="index.html"><img src="img/logo.png" alt="조말론 로고"></a>
         </div>
-
         <nav aria-label="주메뉴">
             <ul class="menu">
                 <li class="menu-li pick_"><a href="index.html">home</a></li>
@@ -64,13 +62,11 @@
                 <li class="menu-li pick_"><a href="contact.html">contact</a></li>
             </ul>
         </nav>
-
         <div class="icon-group">
             <a href="#" aria-label="검색"><i class="fa-solid fa-magnifying-glass"></i></a>
             <a href="#" aria-label="마이페이지"><i class="fa-solid fa-user"></i></a>
             <a href="#" aria-label="장바구니"><i class="fa-solid fa-cart-shopping"></i></a>
         </div>
-
     </header>
 
     <div class="ham-btn">
@@ -803,44 +799,31 @@
     });
 
     // 섹션 5 클립패스
-    mask_l();
-    mask_r();
+    // 2026-09-09 중복 스크립트 정리 
+    function mask(selector) {
+        var sc_ = $(window).scrollTop();
+        var win_h = $(window).height();
 
-    $(window).scroll(function(){
-        mask_l();
-        mask_r();
+        $(selector).each(function() {
+            var item_top = $(this).offset().top;
+            
+            if(item_top < sc_ + win_h - 200) {
+                $(this).addClass("is-open");
+            } else {
+                $(this).removeClass("is-open");
+            }
+        });
+    }
+
+    mask(".mask-left");
+    mask(".mask-right");
+
+    $(window).scroll(function() {
+        mask(".mask-left");
+        mask(".mask-right");
     });
 
-    function mask_l(){
-        var sc_ = $(window).scrollTop();
-        var win_h = $(window).height();
-
-        $(".mask-left").each(function(){
-            if ($(this).hasClass("is-open")) return;
-
-            var item_top_l = $(this).offset().top;
-            if(item_top_l < sc_ + win_h - 200){
-                $(this).css({clipPath: "inset(0 0 0 0)"});
-                $(this).addClass("is-open");
-            }
-        });
-    }
-
-    function mask_r(){
-        var sc_ = $(window).scrollTop();
-        var win_h = $(window).height();
-
-        $(".mask-right").each(function(){
-            if ($(this).hasClass("is-open")) return;
-            
-            var item_top_r = $(this).offset().top;
-            if(item_top_r < sc_ + win_h - 200){
-                $(this).css({clipPath: "inset(0 0 0 0)"});
-                $(this).addClass("is-open");
-            }
-        });
-    }
-
+    // 섹션 8
     var img_ = 0;
     $(".section8 .img-group img").eq(img_).stop().fadeIn();
     $(".section8 .img-group img").not($(".section8 .img-group img").eq(img_)).stop().fadeOut();

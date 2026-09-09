@@ -1,8 +1,9 @@
 .section1{
     background-image: linear-gradient(90deg, #eeeeee 40%, white 40%);
 }
-.section1 .section-title h1{
+.section1 .section-title h2{
     max-width: 30%;
+    letter-spacing: -0.02em;
 }
 .section1 .section-title p{
     color: #666666;
@@ -34,6 +35,10 @@
 .section1 .btn2{
     position: absolute; bottom: 0; left: 0;
     width: 100%;
+}
+.section1 .btn2:active{
+    top: auto;
+    bottom: -2px;
 }
 
 /* 222 */
@@ -90,6 +95,9 @@
 .section3 .cont1 .btn2{
     top: 5%;
     width: 50%;
+}
+.section3 .cont1 .btn2:active{
+    transform: translateY(2px);
 }
 .section3 .cont2{
     display: grid; grid-template-columns: repeat(2,1fr);
