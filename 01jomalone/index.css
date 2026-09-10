@@ -26,14 +26,12 @@
 .main .text-box h2{
     font-size:70px; font-weight: 600;
     font-family: 'Cinzel', serif;
-
     letter-spacing:5px;
     margin-top: 20px;
     margin-bottom: 50px;
     transform: translate(0, 50px);
     opacity: 0;
     transition: 1s;
-
 }
 .main .text-box .btn3{
     display: table;
@@ -144,7 +142,7 @@
         line-height: 30px;
     }
     .main .text-box h2{
-        font-size: 40px;
+        font-size: 30px;
     }
 }
 
