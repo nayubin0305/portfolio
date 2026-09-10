@@ -56,3 +56,14 @@ $(".ham-btn").mouseenter(function(){
 $(".ham-btn").mouseleave(function(){
     $(".cursor").removeClass("over");
 });
+
+// 2026-09-10 디자인 알럿창 추가
+$(function() {
+    if ($(".alert").length === 0) {
+        $("body").append("<div class='alert'></div>");
+    }
+});
+$(".soon").click(function(e) {
+    e.preventDefault();
+    $(".alert").stop().text("준비중 입니다.").fadeIn().delay(1500).fadeOut();
+});

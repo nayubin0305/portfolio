@@ -677,3 +677,28 @@ footer{}
     background-color: transparent;
     border: 1px solid #e4c841;
 }
+
+/* 2026-09-10 디자인 알럿창 추가 */
+.alert{
+    display: none;
+    position: fixed; 
+    bottom: 40px; 
+    left: 50%; 
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.6); 
+    color: #fff;
+    font-size: 15px;
+    line-height: 1em;
+    padding: 12px 24px; 
+    border-radius: 20px;
+    z-index: 9999;
+}
+
+/* 2026-09-10 스크롤 디자인 추가 */
+html::-webkit-scrollbar{
+    width: 10px;
+    background-color: #ede4c5;
+}
+html::-webkit-scrollbar-thumb{
+    background-color: #322826;
+}

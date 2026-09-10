@@ -643,16 +643,16 @@
                 <p>새로운 컬렉션이나 한정판매 상품의 소식을 빠르게 확인할 수 있습니다. 구독하시고 할인혜택 쿠폰도 받아가세요.</p>
             </div>
             <div class="container">
-                <div class="item">
-                    <input type="text" id="email" autocomplete="off" required>
+                <form class="item" data-type="email">
+                    <input type="text" id="email" name="email" autocomplete="off" required>
                     <label for="email"><span>E-mail</span></label>
-                    <button class="btn6">보내기</button>
-                </div>
-                <div class="item">
-                    <input type="text" id="num" autocomplete="off" required>
-                    <label for="num"><span>전화번호</span></label>
-                    <button class="btn6">보내기</button>
-                </div>
+                    <button type="submit" class="btn6">보내기</button>
+                </form>
+                <form class="item" data-type="tel">
+                    <input type="text" id="tel" name="tel" autocomplete="off" required>
+                    <label for="tel"><span>전화번호</span></label>
+                    <button type="submit" class="btn6">보내기</button>
+                </form>
             </div>
         </section>
     </main>
@@ -661,24 +661,26 @@
     <footer class="foot1">
         <div class="container">
             <div class="row row1">
-                <div class="item item-1"><img src="img/logo.png" class="logo" alt="조말론 로고"></div>
+                <div class="item item-1">
+                    <a href="index.html"><img src="img/logo.png" class="logo" alt="조말론 로고"></a>
+                </div>
                 <div class="item item-2 icon-group">
-                    <a href="#" aria-label="인스타그램"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" aria-label="페이스북"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" aria-label="트위터"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#" aria-label="유튜브"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" class="soon" aria-label="인스타그램"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="soon" aria-label="페이스북"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="soon" aria-label="트위터"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="soon" aria-label="유튜브"><i class="fa-brands fa-youtube"></i></a>
                 </div>
             </div>
             <div class="row row2">
                 <div class="item item-1">
                     <ul class="foot-menu">
-                        <li>이용약관</li>
-                        <li>개인정보 처리방침</li>
-                        <li>전자금융거래약관</li>
-                        <li>제휴/광고</li>
-                        <li>청소년보호정책</li>
-                        <li>안전거래센터</li>
-                        <li>준법경영</li>
+                        <li><a href="#" class="soon">이용약관</a></li>
+                        <li><a href="#" class="soon">개인정보 처리방침</a></li>
+                        <li><a href="#" class="soon">전자금융거래약관</a></li>
+                        <li><a href="#" class="soon">제휴/광고</a></li>
+                        <li><a href="#" class="soon">청소년보호정책</a></li>
+                        <li><a href="#" class="soon">안전거래센터</a></li>
+                        <li><a href="#" class="soon">준법경영</a></li>
                     </ul>
                     <div class="group2">
                         <span>이엘씨에이한국(유)</span>
@@ -836,6 +838,13 @@
         $(".section8 .img-group img").not($(".section8 .img-group img").eq(img_)).stop().fadeOut();
         $(".section8 .text").eq(img_).stop().fadeIn();
         $(".section8 .text").not($(".section8 .text").eq(img_)).stop().fadeOut();
+    });
+
+    // 2026-09-10 섹션 9
+    $(".section9 form").on("submit", function(e) {
+        e.preventDefault();
+        $(".alert").stop().text("구독 신청이 완료되었습니다.").fadeIn().delay(1500).fadeOut();
+        this.reset();
     });
 
     AOS.init();

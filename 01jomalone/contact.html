@@ -136,45 +136,47 @@
         </section>
     
         <section class="section-input">
-            <div class="container">
-                <div class="section-title">
-                    <h5>Contact</h5>
-                    <h2>문의글 보내기</h2>
-                    <P>
-                        자주 찾는 질문 이외에 더 궁금하신 부분이 있으신가요? <br>
-                        문의글을 보내주시면 정중하고 신속한 답변을 드리고 있습니다.
-                    </P>
+            <form>
+                <div class="container">
+                    <div class="section-title">
+                        <h5>Contact</h5>
+                        <h2>문의글 보내기</h2>
+                        <p>
+                            자주 찾는 질문 이외에 더 궁금하신 부분이 있으신가요? <br>
+                            문의글을 보내주시면 정중하고 신속한 답변을 드리고 있습니다.
+                        </p>
+                    </div>
+                    <div class="right">
+                        <div class="box box1">
+                            <label for="name">이름</label>
+                            <input type="text" id="name" name="name" required autocomplete="name">
+                        </div>
+                        <div class="box box2">
+                            <label for="userId">아이디</label>
+                            <input type="text" id="userId" name="userId" required autocomplete="username">
+                        </div>
+                        <div class="box box3">
+                            <label for="email">이메일</label>
+                            <input type="email" id="email" name="email" required autocomplete="email">
+                        </div>
+                        <div class="box box4">
+                            <label for="tel">전화번호</label>
+                            <input type="tel" id="tel" name="tel" required autocomplete="tel">
+                        </div>
+                        <div class="box box5">
+                            <label for="subject">제목</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="box box6">
+                            <label for="content">내용</label>
+                            <textarea id="content" name="content" required></textarea>
+                        </div>
+                        <button type="submit" class="box btn2">
+                            SEND MESSAGE
+                        </button>
+                    </div>
                 </div>
-                <div class="right">
-                    <div class="box box1">
-                        <label for="name">이름</label>
-                        <input type="text" id="name" name="name" required autocomplete="name">
-                    </div>
-                    <div class="box box2">
-                        <label for="userId">아이디</label>
-                        <input type="text" id="userId" name="userId" required autocomplete="username">
-                    </div>
-                    <div class="box box3">
-                        <label for="email">이메일</label>
-                        <input type="email" id="email" name="email" required autocomplete="email">
-                    </div>
-                    <div class="box box4">
-                        <label for="tel">전화번호</label>
-                        <input type="tel" id="tel" name="tel" required autocomplete="tel">
-                    </div>
-                    <div class="box box5">
-                        <label for="subject">제목</label>
-                        <input type="text" id="subject" name="subject" required>
-                    </div>
-                    <div class="box box6">
-                        <label for="content">내용</label>
-                        <textarea id="content" name="content" required></textarea>
-                    </div>
-                    <button class="box btn2">
-                        SEND MESSAGE
-                    </button>
-                </div>
-            </div>
+            </form>
         </section>
     </main>
 
@@ -182,24 +184,26 @@
     <footer class="foot1">
         <div class="container">
             <div class="row row1">
-                <div class="item item-1"><img src="img/logo.png" class="logo" alt="조말론 로고"></div>
+                <div class="item item-1">
+                    <a href="index.html"><img src="img/logo.png" class="logo" alt="조말론 로고"></a>
+                </div>
                 <div class="item item-2 icon-group">
-                    <a href="#" aria-label="인스타그램"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" aria-label="페이스북"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" aria-label="트위터"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#" aria-label="유튜브"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" class="soon" aria-label="인스타그램"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="soon" aria-label="페이스북"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="soon" aria-label="트위터"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="soon" aria-label="유튜브"><i class="fa-brands fa-youtube"></i></a>
                 </div>
             </div>
             <div class="row row2">
                 <div class="item item-1">
                     <ul class="foot-menu">
-                        <li>이용약관</li>
-                        <li>개인정보 처리방침</li>
-                        <li>전자금융거래약관</li>
-                        <li>제휴/광고</li>
-                        <li>청소년보호정책</li>
-                        <li>안전거래센터</li>
-                        <li>준법경영</li>
+                        <li><a href="#" class="soon">이용약관</a></li>
+                        <li><a href="#" class="soon">개인정보 처리방침</a></li>
+                        <li><a href="#" class="soon">전자금융거래약관</a></li>
+                        <li><a href="#" class="soon">제휴/광고</a></li>
+                        <li><a href="#" class="soon">청소년보호정책</a></li>
+                        <li><a href="#" class="soon">안전거래센터</a></li>
+                        <li><a href="#" class="soon">준법경영</a></li>
                     </ul>
                     <div class="group2">
                         <span>이엘씨에이한국(유)</span>
@@ -258,6 +262,13 @@
 
         $(window).scroll(function() {
             mask(".mask-left");
+        });
+
+        // 2026-09-10 form 스크립트 추가
+        $(".section-input form").on("submit", function(e) {
+            e.preventDefault();
+            $(".alert").stop().text("문의글 전송이 완료되었습니다.").fadeIn().delay(1500).fadeOut();
+            this.reset();
         });
         
         AOS.init();
