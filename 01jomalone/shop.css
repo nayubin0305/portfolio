@@ -41,7 +41,7 @@
     transition: 0.5s;
 }
 
-.section1 .item{cursor: pointer;}
+/* .section1 .item{cursor: pointer;} */
 .section1 .img-box .bg{
     position: absolute;
     top: 0; left: 0;
@@ -68,6 +68,7 @@
 .section1 .item .row{display: flex;
     justify-content: center; gap: 10px; margin: 0 auto;}
 .section1 .item .row2{padding-top: 10px;}
+.section1 .item .row3{padding-top: 10px;}
 .section1 .item .name{font-weight: 100;}
 .section1 .item .text button{font-size: 20px; color: #322826; transition: 0.2s; position: relative; background-color: transparent; border: none; outline: none; cursor: pointer;}
 .section1 .item .text .btn-heart{margin-right: 10px;}
@@ -132,7 +133,7 @@
     display: grid; grid-template-columns: repeat(2,1fr);
     gap: 30px;
 }
-.section2 .item{cursor: pointer;}
+/* .section2 .item{cursor: pointer;} */
 .section2 .text-box{
     margin-top: 30px;
     text-align: center;
@@ -141,6 +142,7 @@
 .section2 .item .text .fa-heart{ border-right: 1px solid #322826; padding-right: 10px; transition: 0;}
 .section2 .item .text .fa-clone{padding-left: 10px;} */
 .section2 .item .row2{display: flex; align-items: center; justify-content: center; gap: 10px;}
+.section2 .item .row3{padding-top: 10px;}
 .section2 .item .text button{font-size: 20px; color: #322826; transition: 0.2s; position: relative; background-color: transparent; border: none; outline: none; cursor: pointer;}
 .section2 .item .text .btn-heart{margin-right: 10px;}
 .section2 .item .text .btn-heart::after{ content: ''; display: block; position: absolute; top: 3px; right: -10px; background-color: #322826; width: 1px; height: 15px;}
@@ -228,7 +230,7 @@
 .section4 .container{
     display: grid; grid-template-columns: repeat(4,1fr);
 }
-.section4 .img-box{overflow: hidden; cursor: pointer;}
+.section4 .img-box{overflow: hidden;}
 .section4 .img-box img{transform: scale(1); transition: 1s;}
 .section4 .img-box:hover img{transform: scale(1.1);}
 

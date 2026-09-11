@@ -275,7 +275,7 @@
 .section3 .item{
     text-align: center;
     margin-bottom: 10px;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 .section3 .item h3{
     font-style: italic;
@@ -307,6 +307,7 @@
 .section3 .item .row{display: flex;
     justify-content: center; gap: 10px; margin: 0 auto;}
 .section3 .item .row2{padding-top: 10px;}
+.section3 .item .row3{padding-top: 10px;}
 .section3 .item .name{font-weight: 100;}
 .section3 .item .text button{font-size: 20px; color: #322826; transition: 0.2s; position: relative; background-color: transparent; border: none; outline: none; cursor: pointer;}
 .section3 .item .text .btn-heart{margin-right: 10px;}

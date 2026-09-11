@@ -94,8 +94,12 @@
 .section2 .item h4{padding-bottom: 10px;}
 .section2 .item p{color: white; opacity: 0; transition: 0.5s;}
 .section2 .item .btn4{
-    position: absolute; bottom: 20px; left: 20px;
-    width: 80%;
+    position: absolute; 
+    bottom: 20px; 
+    left: 20px;
+    width: calc(100% - 40px);
+    text-align: center;
+    box-sizing: border-box;
 }
 
 /* 호버 */
@@ -112,6 +116,7 @@
     .section2 .item .icon-box{margin: 0 auto; padding-bottom: 50px;}
     .section2 .item .btn4{
         width: 80%;
-        left: 50%; transform: translate(-50%,0);
+        left: 50%; 
+        transform: translate(-50%,0);
     }
 }

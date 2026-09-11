@@ -35,6 +35,8 @@
 .section1 .btn2{
     position: absolute; bottom: 0; left: 0;
     width: 100%;
+    box-sizing: border-box;
+    text-align: center;
 }
 .section1 .btn2:active{
     top: auto;
@@ -95,6 +97,8 @@
 .section3 .cont1 .btn2{
     top: 5%;
     width: 50%;
+    text-align: center;
+    box-sizing: border-box;
 }
 .section3 .cont1 .btn2:active{
     transform: translateY(2px);
