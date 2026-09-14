@@ -1,565 +1,643 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="robots" content="noindex, nofollow">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    <title>shop</title>
+    <title>shop | 젠틀몬스터</title>
 
     <!-- 패비콘 36~32px -->
     <link rel="icon" href="icon.png">
 
     <!-- 공통스타일 -->
     <link rel="stylesheet" href="com.css">
+
     <!-- 서브스타일 -->
     <link rel="stylesheet" href="sub.css">
     <link rel="stylesheet" media="(max-width:800px)" href="sub-m.css">
-
-    <style>
-        header .menu-li:nth-child(4){
-            text-decoration: var(--color-point) wavy underline;
-            text-underline-offset: 7px;
-        }
-    </style>
-    
 </head>
 <body class="shop">
-    <section class="page-name">
-        <div class="container"><h1>shop</h></div>
-    </section>
-    <section class="section1">
-        <div class="menu-box">
-            <nav>
-                <ul class="shop-ul">
-                    <li class="shop-li pick_" name="all">
-                        <a class="active" href="#home">전체</a>
-                    </li>
-                    <li class="shop-li pick_" name="sho">
-                        <a href="#home">선글라스</a>
-                    </li>
-                    <li class="shop-li pick_" name="gra">
-                        <a href="#home">안경</a>
-                    </li>
-                    <li class="shop-li pick_" name="gif">
-                        <a href="#home">선물추천</a>
-                    </li>
-                </ul>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 977.2 18.2">
-                  <path class="squiggle" fill="none" stroke="currentColor" stroke-dashoffset="1" stroke-miterlimit="10" stroke-linecap="round" stroke-width="4" d="M.8 5.6a13.6 13.6 0 0 1 20.3 0l6.2 7a13.6 13.6 0 0 0 20.3 0l6.2-7a13.6 13.6 0 0 1 20.4 0l6.2 7a13.6 13.6 0 0 0 20.3 0l6.2-7a13.6 13.6 0 0 1 20.4 0l6.1 7a13.6 13.6 0 0 0 20.4 0l6.2-7a13.6 13.6 0 0 1 20.3 0l6.2 7a13.6 13.6 0 0 0 20.4 0l6.1-7a13.6 13.6 0 0 1 20.4 0l6.2 7a13.6 13.6 0 0 0 20.3 0l6.2-7a13.6 13.6 0 0 1 20.4 0l6.2 7a13.6 13.6 0 0 0 20.3 0l6.2-7a13.6 13.6 0 0 1 20.3 0l6.2 7a13.6 13.6 0 0 0 20.4 0l6.2-7a13.6 13.6 0 0 1 20.3 0l6.2 7a13.6 13.6 0 0 0 20.3 0l6.2-7a13.6 13.6 0 0 1 20.4 0l6.2 7a13.6 13.6 0 0 0 20.3 0l6.2-7a13.6 13.6 0 0 1 20.4 0l6.2 7a13.6 13.6 0 0 0 20.3 0l6.2-7a13.6 13.6 0 0 1 20.3 0l6.2 7a13.6 13.6 0 0 0 20.4 0l6.2-7a13.6 13.6 0 0 1 20.3 0l6.2 7a13.6 13.6 0 0 0 20.4 0l6.2-7a13.6 13.6 0 0 1 20.3 0l6.2 7a13.6 13.6 0 0 0 20.3 0l6.2-7a13.6 13.6 0 0 1 20.4 0l6.2 7a13.6 13.6 0 0 0 20.3 0l6.2-7a13.6 13.6 0 0 1 20.4 0l6.1 7a13.6 13.6 0 0 0 20.4 0l6.2-7a13.6 13.6 0 0 1 20.3 0l6.2 7a13.6 13.6 0 0 0 20.4 0l6.2-7a13.6 13.6 0 0 1 20.3 0l6.2 7a13.6 13.6 0 0 0 20.3 0l6.2-7a13.6 13.6 0 0 1 20.4 0l6.2 7a13.6 13.6 0 0 0 20.3 0l6.2-7a13.6 13.6 0 0 1 20.4 0" />
-                </svg>
-            </nav>
-        </div>
-
-        <div class="filter">
-            <img src="icon/filter.png" alt="img">
-            <p class="pick-a">필터</p>
-            <ul class="filter-ul">
-                <li class="filter-li">인기순</li>
-                <li class="filter-li">최신순</li>
-                <li class="filter-li">높은가격순</li>
-                <li class="filter-li">낮은가격순</li>
-            </ul>
-        </div>
-
-        <div class="container">
-            <div class="item all sho pick_">
-                <a href="shop2.html" class="img-box pick-b">
-                    <img src="img/shop01.jpg" alt="img">
-                    <div class="bg">
-                        <div class="color"></div>
-                        <div class="btn">Add cart</div>
-                    </div>
-                </a>
-                <div class="text-box">
-                    <h4><a href="shop2.html">메종 마르지엘라 MM002 W2</a></h4>
-                    <p>550,000원</p>
-                </div>
-            </div>
-            <div class="item all sho">
-                <div class="img-box">
-                    <img src="img/shop02.jpg" alt="img">
-                    <div class="bg">
-                        <div class="color"></div>
-                        <div class="btn">Add cart</div>
-                    </div>
-                </div>
-                <div class="text-box">
-                    <h4>메종 마르지엘라 MM002 01</h4>
-                    <p>550,000원</p>
-                </div>
-            </div>
-            <div class="item sho">
-                <div class="img-box">
-                    <img src="img/shop03.jpg" alt="img">
-                    <div class="bg">
-                        <div class="color"></div>
-                        <div class="btn">Add cart</div>
-                    </div>
-                </div>
-                <div class="text-box">
-                    <h4>메종 마르지엘라 MM005 L2</h4>
-                    <p>550,000원</p>
-                </div>
-            </div>
-            <div class="item sho">
-                <div class="img-box">
-                    <img src="img/shop04.jpg" alt="img">
-                    <div class="bg">
-                        <div class="color"></div>
-                        <div class="btn">Add cart</div>
-                    </div>
-                </div>
-                <div class="text-box">
-                    <h4>메종 마르지엘라 MM005 01</h4>
-                    <p>550,000원</p>
-                </div>
-            </div>
-            <div class="item sho">
-                <div class="img-box">
-                    <img src="img/shop05.jpg" alt="img">
-                    <div class="bg">
-                        <div class="color"></div>
-                        <div class="btn">Add cart</div>
-                    </div>
-                </div>
-                <div class="text-box">
-                    <h4>부스터01</h4>
-                    <p>280,000원</p>
-                </div>
-            </div>
-            <div class="item all sho">
-                <div class="img-box">
-                    <img src="img/shop06.jpg" alt="img">
-                    <div class="bg">
-                        <div class="color"></div>
-                        <div class="btn">Add cart</div>
-                    </div>
-                </div>
-                <div class="text-box">
-                    <h4>디어 클래식X02</h4>
-                    <p>280,000원</p>
-                </div>
-            </div>
-            <div class="item sho">
-                <div class="img-box">
-                    <img src="img/shop07.jpg" alt="img">
-                    <div class="bg">
-                        <div class="color"></div>
-                        <div class="btn">Add cart</div>
-                    </div>
-                </div>
-                <div class="text-box">
-                    <h4>디어 클래식XD01</h4>
-                    <p>280,000원</p>
-                </div>
-            </div>
-            <div class="item sho">
-                <div class="img-box">
-                    <img src="img/shop08.jpg" alt="img">
-                    <div class="bg">
-                        <div class="color"></div>
-                        <div class="btn">Add cart</div>
-                    </div>
-                </div>
-                <div class="text-box">
-                    <h4>로크B4</h4>
-                    <p>298,000원</p>
-                </div>
-            </div>
-            <div class="item all sho">
-                <div class="img-box">
-                    <img src="img/shop09.jpg" alt="img">
-                    <div class="bg">
-                        <div class="color"></div>
-                        <div class="btn">Add cart</div>
-                    </div>
-                </div>
-                <div class="text-box">
-                    <h4>메종 마르지엘라 MM008 01</h4>
-                    <p>550,000원</p>
-                </div>
-            </div>
-            <div class="item gra">
-                <div class="img-box">
-                    <img src="img/gra01.jpg" alt="img">
-                    <div class="bg">
-                        <div class="color"></div>
-                        <div class="btn">Add cart</div>
-                    </div>
-                </div>
-                <div class="text-box">
-                    <h4>해리 C1</h4>
-                    <p>340,000원</p>
-                </div>
-            </div>
-            <div class="item all gra">
-                <div class="img-box">
-                    <img src="img/gra02.jpg" alt="img">
-                    <div class="bg">
-                        <div class="color"></div>
-                        <div class="btn">Add cart</div>
-                    </div>
-                </div>
-                <div class="text-box">
-                    <h4>해리 01</h4>
-                    <p>340,000원</p>
-                </div>
-            </div>
-            <div class="item gra">
-                <div class="img-box">
-                    <img src="img/gra03.jpg" alt="img">
-                    <div class="bg">
-                        <div class="color"></div>
-                        <div class="btn">Add cart</div>
-                    </div>
-                </div>
-                <div class="text-box">
-                    <h4>에디 KC1</h4>
-                    <p>340,000원</p>
-                </div>
-            </div>
-            <div class="item gra">
-                <div class="img-box">
-                    <img src="img/gra04.jpg" alt="img">
-                    <div class="bg">
-                        <div class="color"></div>
-                        <div class="btn">Add cart</div>
-                    </div>
-                </div>
-                <div class="text-box">
-                    <h4>죠죠 BRC4</h4>
-                    <p>340,000원</p>
-                </div>
-            </div>
-            <div class="item gra">
-                <div class="img-box">
-                    <img src="img/gra05.jpg" alt="img">
-                    <div class="bg">
-                        <div class="color"></div>
-                        <div class="btn">Add cart</div>
-                    </div>
-                </div>
-                <div class="text-box">
-                    <h4>래플스 02(G)</h4>
-                    <p>340,000원</p>
-                </div>
-            </div>
-            <div class="item all gra">
-                <div class="img-box">
-                    <img src="img/gra06.jpg" alt="img">
-                    <div class="bg">
-                        <div class="color"></div>
-                        <div class="btn">Add cart</div>
-                    </div>
-                </div>
-                <div class="text-box">
-                    <h4>부스터 BRC3</h4>
-                    <p>340,000원</p>
-                </div>
-            </div>
-            <div class="item all gra">
-                <div class="img-box">
-                    <img src="img/gra07.jpg" alt="img">
-                    <div class="bg">
-                        <div class="color"></div>
-                        <div class="btn">Add cart</div>
-                    </div>
-                </div>
-                <div class="text-box">
-                    <h4>디어 클래식 X D01</h4>
-                    <p>340,000원</p>
-                </div>
-            </div>
-            <div class="item gra">
-                <div class="img-box">
-                    <img src="img/gra08.jpg" alt="img">
-                    <div class="bg">
-                        <div class="color"></div>
-                        <div class="btn">Add cart</div>
-                    </div>
-                </div>
-                <div class="text-box">
-                    <h4>코쿠파 02</h4>
-                    <p>340,000원</p>
-                </div>
-            </div>
-            <div class="item all gra">
-                <div class="img-box">
-                    <img src="img/gra09.jpg" alt="img">
-                    <div class="bg">
-                        <div class="color"></div>
-                        <div class="btn">Add cart</div>
-                    </div>
-                </div>
-                <div class="text-box">
-                    <h4>만투 01</h4>
-                    <p>340,000원</p>
-                </div>
-            </div>
-            <div class="item gif">
-                <div class="img-box">
-                    <img src="img/gift01.jpg" alt="img">
-                    <div class="bg">
-                        <div class="color"></div>
-                        <div class="btn">Add cart</div>
-                    </div>
-                </div>
-                <div class="text-box">
-                    <h4>디어 클래식 X 02</h4>
-                    <p>280,000원</p>
-                </div>
-            </div>
-            <div class="item all gif">
-                <div class="img-box">
-                    <img src="img/gift02.jpg" alt="img">
-                    <div class="bg">
-                        <div class="color"></div>
-                        <div class="btn">Add cart</div>
-                    </div>
-                </div>
-                <div class="text-box">
-                    <h4>사우스사이드 N 01</h4>
-                    <p>280,000원</p>
-                </div>
-            </div>
-            <div class="item gif">
-                <div class="img-box">
-                    <img src="img/gift03.jpg" alt="img">
-                    <div class="bg">
-                        <div class="color"></div>
-                        <div class="btn">Add cart</div>
-                    </div>
-                </div>
-                <div class="text-box">
-                    <h4>안테나.C LVC1</h4>
-                    <p>280,000원</p>
-                </div>
-            </div>
-            <div class="item all gif">
-                <div class="img-box">
-                    <img src="img/gift04.jpg" alt="img">
-                    <div class="bg">
-                        <div class="color"></div>
-                        <div class="btn">Add cart</div>
-                    </div>
-                </div>
-                <div class="text-box">
-                    <h4>이브 BLC6</h4>
-                    <p>280,000원</p>
-                </div>
-            </div>
-            <div class="item gif">
-                <div class="img-box">
-                    <img src="img/gift05.jpg" alt="img">
-                    <div class="bg">
-                        <div class="color"></div>
-                        <div class="btn">Add cart</div>
-                    </div>
-                </div>
-                <div class="text-box">
-                    <h4>빌리 01</h4>
-                    <p>280,000원</p>
-                </div>
-            </div>
-            <div class="item gif">
-                <div class="img-box">
-                    <img src="img/gift06.jpg" alt="img">
-                    <div class="bg">
-                        <div class="color"></div>
-                        <div class="btn">Add cart</div>
-                    </div>
-                </div>
-                <div class="text-box">
-                    <h4>디어 클래식 X 02</h4>
-                    <p>280,000원</p>
-                </div>
-            </div>
-            <div class="item all gif">
-                <div class="img-box">
-                    <img src="img/gift07.jpg" alt="img">
-                    <div class="bg">
-                        <div class="color"></div>
-                        <div class="btn">Add cart</div>
-                    </div>
-                </div>
-                <div class="text-box">
-                    <h4>줄라이 PC6</h4>
-                    <p>280,000원</p>
-                </div>
-            </div>
-            <div class="item gif">
-                <div class="img-box">
-                    <img src="img/gift08.jpg" alt="img">
-                    <div class="bg">
-                        <div class="color"></div>
-                        <div class="btn">Add cart</div>
-                    </div>
-                </div>
-                <div class="text-box">
-                    <h4>디어 클래식 X 02</h4>
-                    <p>280,000원</p>
-                </div>
-            </div>
-            <div class="item all gif">
-                <div class="img-box">
-                    <img src="img/gift09.jpg" alt="img">
-                    <div class="bg">
-                        <div class="color"></div>
-                        <div class="btn">Add cart</div>
-                    </div>
-                </div>
-                <div class="text-box">
-                    <h4>라모드 X 02</h4>
-                    <p>280,000원</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="page-num">
-            <p><i class="fa-solid fa-chevron-left"></i></p>
-            <p class="active">1</p>
-            <p>2</p>
-            <p>3</p>
-            <p>4</p>
-            <p>5</p>
-            <p><i class="fa-solid fa-chevron-right"></i></p>
-        </div>
-    </section>
+    <h1 class="none">나유빈 포트폴리오 젠틀몬스터</h1>
 
     <div class="cursor">
         <div class="bg"></div>
         <p>Click Me</p>
     </div>
 
+    <div class="clone-notice">
+        학습/시연 목적의 클론 코딩입니다
+    </div>
+
     <!-- 해더 -->
-    <header class="">
+    <header class="header">
         <div class="logo">
-            <a href="index.html">
-                <img src="img/logo_b.png" alt="logo" class="logo-b">
-                <img src="img/logo_w.png" alt="logo" class="logo-w">
+            <a href="index.html" aria-label="젠틀몬스터 로고">
+                <img src="img/logo_b.png" alt="" aria-hidden="true" class="logo-b">
+                <img src="img/logo_w.png" alt="" aria-hidden="true" class="logo-w">
             </a>
         </div>
-        <ul class="menu">
-            <li class="menu-li">
-                <a href="index.html">home</a>
-                <ul class="sub">
-                    <li class="sub-li"><a href="index.html">main homa</a></li>
-                </ul>
-            </li>
-            <li class="menu-li">
-                <a href="store.html">pages</a>
-                <ul class="sub">
-                    <li class="sub-li"><a href="store.html">store</a></li>
-                </ul>
-            </li>
-            
-            <li class="menu-li">
-                <a href="membership.html">membership</a>
-                <ul class="sub">
-                    <li class="sub-li"><a href="membership.html">membership</a></li>
-                </ul>
-            </li>
-            <li class="menu-li">
-                <a href="shop.html">shop</a>
-                <ul class="sub">
-                    <li class="sub-li"><a href="shop.html">shop list</a></li>
-                </ul>
-            </li>
-            <li class="menu-li">
-                <a href="contact.html">blog</a>
-                <ul class="sub">
-                    <li class="sub-li"><a href="contact.html">contact</a></li>
-                </ul>
-            </li>
-        </ul>
+        <nav aria-label="주메뉴">
+            <ul class="menu">
+                <li class="menu-li">
+                    <a href="index.html">home</a>
+                    <ul class="sub">
+                        <li class="sub-li"><a href="index.html">main homa</a></li>
+                    </ul>
+                </li>
+                <li class="menu-li">
+                    <a href="store.html">pages</a>
+                    <ul class="sub">
+                        <li class="sub-li"><a href="store.html">store</a></li>
+                    </ul>
+                </li>
+                <li class="menu-li">
+                    <a href="membership.html">membership</a>
+                    <ul class="sub">
+                        <li class="sub-li"><a href="membership.html">membership</a></li>
+                    </ul>
+                </li>
+                <li class="menu-li on">
+                    <a href="shop.html">shop</a>
+                    <ul class="sub">
+                        <li class="sub-li"><a href="shop.html">shop list</a></li>
+                    </ul>
+                </li>
+                <li class="menu-li">
+                    <a href="contact.html">blog</a>
+                    <ul class="sub">
+                        <li class="sub-li"><a href="contact.html">contact</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
         <div class="icon-menu">
-            <div class="icon icon1">
-                <img src="icon/lock.png" alt="lock" class="icon-w">
-                <img src="icon/lock.png" alt="lock" class="icon-b">
-            </div>
-            <div class="icon icon2">
-                <img src="icon/reading.png" alt="reading-glasses"class="icon-w">
-                <img src="icon/reading.png" alt="reading-glasses"class="icon-b">
-            </div>
-            <div class="icon icon3">
-                <img src="icon/cart.png" alt="cart"class="icon-w">
-                <img src="icon/cart.png" alt="cart"class="icon-b">
-            </div>
-            <div class="ham-btn">
-                <div class="bar bar1"></div>
-                <div class="bar bar2"></div>
-            </div>
+            <a href="#" class="icon icon1 soon" aria-label="로그인">
+                <img src="icon/lock.png" alt="" aria-hidden="true" class="icon-w">
+                <img src="icon/lock.png" alt="" aria-hidden="true" class="icon-b">
+            </a>
+            <a href="#" class="icon icon2 soon" aria-label="검색">
+                <img src="icon/reading.png" alt="" aria-hidden="true" class="icon-w">
+                <img src="icon/reading.png" alt="" aria-hidden="true" class="icon-b">
+            </a>
+            <a href="#" class="icon icon3 soon" aria-label="장바구니">
+                <img src="icon/cart.png" alt="" aria-hidden="true" class="icon-w">
+                <img src="icon/cart.png" alt="" aria-hidden="true" class="icon-b">
+            </a>
+            <button type="button" class="ham-btn" aria-label="메뉴 열기" aria-expanded="false" aria-controls="site-map">
+                <div class="bar bar1" aria-hidden="true"></div>
+                <div class="bar bar2" aria-hidden="true"></div>
+            </button>
         </div>
     </header>
 
     <!-- 사이트맵 -->
-    <div class="site-map">
-        <ul class="menu">
-            <li class="menu-li">
-                <div>home</div>
-                <ul class="sub">
-                    <li class="sub-li"><a href="index.html">main homa</a></li>
-                </ul>
-            </li>
-            <li class="menu-li">
-                <div>pages</div>
-                <ul class="sub">
-                    <li class="sub-li"><a href="store.html">store</a></li>
-                </ul>
-            </li>
-            <li class="menu-li">
-                <div>membership</div>
-                <ul class="sub">
-                    <li class="sub-li"><a href="membership.html">membership</a></li>
-                </ul>
-            </li>
-            <li class="menu-li">
-                <div>shop</div>
-                <ul class="sub">
-                    <li class="sub-li"><a href="shop.html">shop list</a></li>
-                </ul>
-            </li>
-            <li class="menu-li">
-                <div>blog</div>
-                <ul class="sub">
-                    <li class="sub-li"><a href="contact.html">contact</a></li>
-                </ul>
-            </li>
-        </ul>
+    <div class="site-map" id="site-map">
+        <nav aria-label="전체 메뉴">
+            <ul class="menu">
+                <li class="menu-li">
+                    <div>home</div>
+                    <ul class="sub">
+                        <li class="sub-li"><a href="index.html">main homa</a></li>
+                    </ul>
+                </li>
+                <li class="menu-li">
+                    <div>pages</div>
+                    <ul class="sub">
+                        <li class="sub-li"><a href="store.html">store</a></li>
+                    </ul>
+                </li>
+                <li class="menu-li">
+                    <div>membership</div>
+                    <ul class="sub">
+                        <li class="sub-li"><a href="membership.html">membership</a></li>
+                    </ul>
+                </li>
+                <li class="menu-li">
+                    <div>shop</div>
+                    <ul class="sub">
+                        <li class="sub-li"><a href="shop.html">shop list</a></li>
+                    </ul>
+                </li>
+                <li class="menu-li">
+                    <div>blog</div>
+                    <ul class="sub">
+                        <li class="sub-li"><a href="contact.html">contact</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="icon-menu">
+            <a href="#" class="icon icon1 soon">
+                <img src="icon/lock.png" alt="로그인" class="icon-w">
+            </a>
+            <a href="#" class="icon icon2 soon">
+                <img src="icon/reading.png" alt="검색"class="icon-w">
+            </a>
+            <a href="#" class="icon icon3 soon">
+                <img src="icon/cart.png" alt="장바구니"class="icon-w">
+            </a>
+        </div>
     </div>
+
+   <main>
+        <section class="page-name">
+            <div class="container">
+                <h2 class="page-title">shop</h2>
+            </div>
+        </section>
+    
+        <section class="section1">
+            <div class="menu-box">
+                <nav>
+                    <ul class="shop-ul">
+                        <li class="shop-li pick_" name="all">
+                            <a class="active" href="#home">전체</a>
+                        </li>
+                        <li class="shop-li pick_" name="sho">
+                            <a href="#home">선글라스</a>
+                        </li>
+                        <li class="shop-li pick_" name="gra">
+                            <a href="#home">안경</a>
+                        </li>
+                        <li class="shop-li pick_" name="gif">
+                            <a href="#home">선물추천</a>
+                        </li>
+                    </ul>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 977.2 18.2">
+                      <path class="squiggle" fill="none" stroke="currentColor" stroke-dashoffset="1" stroke-miterlimit="10" stroke-linecap="round" stroke-width="4" d="M.8 5.6a13.6 13.6 0 0 1 20.3 0l6.2 7a13.6 13.6 0 0 0 20.3 0l6.2-7a13.6 13.6 0 0 1 20.4 0l6.2 7a13.6 13.6 0 0 0 20.3 0l6.2-7a13.6 13.6 0 0 1 20.4 0l6.1 7a13.6 13.6 0 0 0 20.4 0l6.2-7a13.6 13.6 0 0 1 20.3 0l6.2 7a13.6 13.6 0 0 0 20.4 0l6.1-7a13.6 13.6 0 0 1 20.4 0l6.2 7a13.6 13.6 0 0 0 20.3 0l6.2-7a13.6 13.6 0 0 1 20.4 0l6.2 7a13.6 13.6 0 0 0 20.3 0l6.2-7a13.6 13.6 0 0 1 20.3 0l6.2 7a13.6 13.6 0 0 0 20.4 0l6.2-7a13.6 13.6 0 0 1 20.3 0l6.2 7a13.6 13.6 0 0 0 20.3 0l6.2-7a13.6 13.6 0 0 1 20.4 0l6.2 7a13.6 13.6 0 0 0 20.3 0l6.2-7a13.6 13.6 0 0 1 20.4 0l6.2 7a13.6 13.6 0 0 0 20.3 0l6.2-7a13.6 13.6 0 0 1 20.3 0l6.2 7a13.6 13.6 0 0 0 20.4 0l6.2-7a13.6 13.6 0 0 1 20.3 0l6.2 7a13.6 13.6 0 0 0 20.4 0l6.2-7a13.6 13.6 0 0 1 20.3 0l6.2 7a13.6 13.6 0 0 0 20.3 0l6.2-7a13.6 13.6 0 0 1 20.4 0l6.2 7a13.6 13.6 0 0 0 20.3 0l6.2-7a13.6 13.6 0 0 1 20.4 0l6.1 7a13.6 13.6 0 0 0 20.4 0l6.2-7a13.6 13.6 0 0 1 20.3 0l6.2 7a13.6 13.6 0 0 0 20.4 0l6.2-7a13.6 13.6 0 0 1 20.3 0l6.2 7a13.6 13.6 0 0 0 20.3 0l6.2-7a13.6 13.6 0 0 1 20.4 0l6.2 7a13.6 13.6 0 0 0 20.3 0l6.2-7a13.6 13.6 0 0 1 20.4 0" />
+                    </svg>
+                </nav>
+            </div>
+    
+            <div class="filter">
+                <a href="#" class="pick-a pick_">
+                    <img src="icon/filter.png" alt="필터 아이콘">
+                    <p>필터</p>
+                </a>
+                <ul class="filter-ul pick_">
+                    <li class="filter-li"><a href="#">인기순</a></li>
+                    <li class="filter-li"><a href="#">최신순</a></li>
+                    <li class="filter-li"><a href="#">높은가격순</a></li>
+                    <li class="filter-li"><a href="#">낮은가격순</a></li>
+                </ul>
+            </div>
+    
+            <div class="container">
+                <div class="item all sho pick-b">
+                    <div class="img-box">
+                        <img src="img/shop01.jpg" alt="상품 이미지" loading="lazy">
+                        <div class="bg">
+                            <div class="color"></div>
+                            <a href="shop2.html" class="btn pick_">Add cart</a>
+                        </div>
+                    </div>
+                    <div class="text-box">
+                        <a href="shop2.html" class="pick_">
+                            <h4>메종 마르지엘라 MM002 W2</h4>
+                            <p>550,000원</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="item all sho">
+                    <div class="img-box">
+                        <img src="img/shop02.jpg" alt="상품 이미지" loading="lazy">
+                        <div class="bg">
+                            <div class="color"></div>
+                            <a href="#" class="btn soon">Add cart</a>
+                        </div>
+                    </div>
+                    <div class="text-box">
+                        <a href="#" class="soon">
+                            <h4>메종 마르지엘라 MM002 01</h4>
+                            <p>550,000원</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="item sho">
+                    <div class="img-box">
+                        <img src="img/shop03.jpg" alt="상품 이미지" loading="lazy">
+                        <div class="bg">
+                            <div class="color"></div>
+                            <a href="#" class="btn soon">Add cart</a>
+                        </div>
+                    </div>
+                    <div class="text-box">
+                        <a href="#" class="soon">
+                            <h4>메종 마르지엘라 MM005 L2</h4>
+                            <p>552,000원</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="item sho">
+                    <div class="img-box">
+                        <img src="img/shop04.jpg" alt="상품 이미지" loading="lazy">
+                        <div class="bg">
+                            <div class="color"></div>
+                            <a href="#" class="btn soon">Add cart</a>
+                        </div>
+                    </div>
+                    <div class="text-box">
+                        <a href="#" class="soon">
+                            <h4>메종 마르지엘라 MM005 01</h4>
+                            <p>555,000원</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="item sho">
+                    <div class="img-box">
+                        <img src="img/shop05.jpg" alt="상품 이미지" loading="lazy">
+                        <div class="bg">
+                            <div class="color"></div>
+                            <a href="#" class="btn soon">Add cart</a>
+                        </div>
+                    </div>
+                    <div class="text-box">
+                        <a href="#" class="soon">
+                            <h4>부스터01</h4>
+                            <p>280,000원</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="item all sho">
+                    <div class="img-box">
+                        <img src="img/shop06.jpg" alt="상품 이미지" loading="lazy">
+                        <div class="bg">
+                            <div class="color"></div>
+                            <a href="#" class="btn soon">Add cart</a>
+                        </div>
+                    </div>
+                    <div class="text-box">
+                        <a href="#" class="soon">
+                            <h4>디어 클래식X02</h4>
+                            <p>280,000원</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="item sho">
+                    <div class="img-box">
+                        <img src="img/shop07.jpg" alt="상품 이미지" loading="lazy">
+                        <div class="bg">
+                            <div class="color"></div>
+                            <a href="#" class="btn soon">Add cart</a>
+                        </div>
+                    </div>
+                    <div class="text-box">
+                        <a href="#" class="soon">
+                            <h4>디어 클래식XD01</h4>
+                            <p>285,000원</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="item sho">
+                    <div class="img-box">
+                        <img src="img/shop08.jpg" alt="상품 이미지" loading="lazy">
+                        <div class="bg">
+                            <div class="color"></div>
+                            <a href="#" class="btn soon">Add cart</a>
+                        </div>
+                    </div>
+                    <div class="text-box">
+                        <a href="#" class="soon">
+                            <h4>로크B4</h4>
+                            <p>298,000원</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="item all sho">
+                    <div class="img-box">
+                        <img src="img/shop09.jpg" alt="상품 이미지" loading="lazy">
+                        <div class="bg">
+                            <div class="color"></div>
+                            <a href="#" class="btn soon">Add cart</a>
+                        </div>
+                    </div>
+                    <div class="text-box">
+                        <a href="#" class="soon">
+                            <h4>메종 마르지엘라 MM008 01</h4>
+                            <p>557,000원</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="item gra">
+                    <div class="img-box">
+                        <img src="img/gra01.jpg" alt="상품 이미지" loading="lazy">
+                        <div class="bg">
+                            <div class="color"></div>
+                            <a href="#" class="btn soon">Add cart</a>
+                        </div>
+                    </div>
+                    <div class="text-box">
+                        <a href="#" class="soon">
+                            <h4>해리 C1</h4>
+                            <p>340,000원</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="item all gra">
+                    <div class="img-box">
+                        <img src="img/gra02.jpg" alt="상품 이미지" loading="lazy">
+                        <div class="bg">
+                            <div class="color"></div>
+                            <a href="#" class="btn soon">Add cart</a>
+                        </div>
+                    </div>
+                    <div class="text-box">
+                        <a href="#" class="soon">
+                            <h4>해리 01</h4>
+                            <p>340,000원</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="item gra">
+                    <div class="img-box">
+                        <img src="img/gra03.jpg" alt="상품 이미지" loading="lazy">
+                        <div class="bg">
+                            <div class="color"></div>
+                            <a href="#" class="btn soon">Add cart</a>
+                        </div>
+                    </div>
+                    <div class="text-box">
+                        <a href="#" class="soon">
+                            <h4>에디 KC1</h4>
+                            <p>340,000원</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="item gra">
+                    <div class="img-box">
+                        <img src="img/gra04.jpg" alt="상품 이미지" loading="lazy">
+                        <div class="bg">
+                            <div class="color"></div>
+                            <a href="#" class="btn soon">Add cart</a>
+                        </div>
+                    </div>
+                    <div class="text-box">
+                        <a href="#" class="soon">
+                            <h4>죠죠 BRC4</h4>
+                            <p>340,000원</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="item gra">
+                    <div class="img-box">
+                        <img src="img/gra05.jpg" alt="상품 이미지" loading="lazy">
+                        <div class="bg">
+                            <div class="color"></div>
+                            <a href="#" class="btn soon">Add cart</a>
+                        </div>
+                    </div>
+                    <div class="text-box">
+                        <a href="#" class="soon">
+                            <h4>래플스 02(G)</h4>
+                            <p>340,000원</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="item all gra">
+                    <div class="img-box">
+                        <img src="img/gra06.jpg" alt="상품 이미지" loading="lazy">
+                        <div class="bg">
+                            <div class="color"></div>
+                            <a href="#" class="btn soon">Add cart</a>
+                        </div>
+                    </div>
+                    <div class="text-box">
+                        <a href="#" class="soon">
+                            <h4>부스터 BRC3</h4>
+                            <p>340,000원</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="item all gra">
+                    <div class="img-box">
+                        <img src="img/gra07.jpg" alt="상품 이미지" loading="lazy">
+                        <div class="bg">
+                            <div class="color"></div>
+                            <a href="#" class="btn soon">Add cart</a>
+                        </div>
+                    </div>
+                    <div class="text-box">
+                        <a href="#" class="soon">
+                            <h4>디어 클래식 X D01</h4>
+                            <p>340,000원</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="item gra">
+                    <div class="img-box">
+                        <img src="img/gra08.jpg" alt="상품 이미지" loading="lazy">
+                        <div class="bg">
+                            <div class="color"></div>
+                            <a href="#" class="btn soon">Add cart</a>
+                        </div>
+                    </div>
+                    <div class="text-box">
+                        <a href="#" class="soon">
+                            <h4>코쿠파 02</h4>
+                            <p>340,000원</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="item all gra">
+                    <div class="img-box">
+                        <img src="img/gra09.jpg" alt="상품 이미지" loading="lazy">
+                        <div class="bg">
+                            <div class="color"></div>
+                            <a href="#" class="btn soon">Add cart</a>
+                        </div>
+                    </div>
+                    <div class="text-box">
+                        <a href="#" class="soon">
+                            <h4>만투 01</h4>
+                            <p>340,000원</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="item gif">
+                    <div class="img-box">
+                        <img src="img/gift01.jpg" alt="상품 이미지" loading="lazy">
+                        <div class="bg">
+                            <div class="color"></div>
+                            <a href="#" class="btn soon">Add cart</a>
+                        </div>
+                    </div>
+                    <div class="text-box">
+                        <a href="#" class="soon">
+                            <h4>디어 클래식 X 02</h4>
+                            <p>285,000원</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="item all gif">
+                    <div class="img-box">
+                        <img src="img/gift02.jpg" alt="상품 이미지" loading="lazy">
+                        <div class="bg">
+                            <div class="color"></div>
+                            <a href="#" class="btn soon">Add cart</a>
+                        </div>
+                    </div>
+                    <div class="text-box">
+                        <a href="#" class="soon">
+                            <h4>사우스사이드 N 01</h4>
+                            <p>287,000원</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="item gif">
+                    <div class="img-box">
+                        <img src="img/gift03.jpg" alt="상품 이미지" loading="lazy">
+                        <div class="bg">
+                            <div class="color"></div>
+                            <a href="#" class="btn soon">Add cart</a>
+                        </div>
+                    </div>
+                    <div class="text-box">
+                        <a href="#" class="soon">
+                            <h4>안테나.C LVC1</h4>
+                            <p>280,000원</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="item all gif">
+                    <div class="img-box">
+                        <img src="img/gift04.jpg" alt="상품 이미지" loading="lazy">
+                        <div class="bg">
+                            <div class="color"></div>
+                            <a href="#" class="btn soon">Add cart</a>
+                        </div>
+                    </div>
+                    <div class="text-box">
+                        <a href="#" class="soon">
+                            <h4>이브 BLC6</h4>
+                            <p>280,000원</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="item gif">
+                    <div class="img-box">
+                        <img src="img/gift05.jpg" alt="상품 이미지" loading="lazy">
+                        <div class="bg">
+                            <div class="color"></div>
+                            <a href="#" class="btn soon">Add cart</a>
+                        </div>
+                    </div>
+                    <div class="text-box">
+                        <a href="#" class="soon">
+                            <h4>빌리 01</h4>
+                            <p>282,000원</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="item gif">
+                    <div class="img-box">
+                        <img src="img/gift06.jpg" alt="상품 이미지" loading="lazy">
+                        <div class="bg">
+                            <div class="color"></div>
+                            <a href="#" class="btn soon">Add cart</a>
+                        </div>
+                    </div>
+                    <div class="text-box">
+                        <a href="#" class="soon">
+                            <h4>디어 클래식 X 02</h4>
+                            <p>282,000원</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="item all gif">
+                    <div class="img-box">
+                        <img src="img/gift07.jpg" alt="상품 이미지" loading="lazy">
+                        <div class="bg">
+                            <div class="color"></div>
+                            <a href="#" class="btn soon">Add cart</a>
+                        </div>
+                    </div>
+                    <div class="text-box">
+                        <a href="#" class="soon">
+                            <h4>줄라이 PC6</h4>
+                            <p>282,000원</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="item gif">
+                    <div class="img-box">
+                        <img src="img/gift08.jpg" alt="상품 이미지" loading="lazy">
+                        <div class="bg">
+                            <div class="color"></div>
+                            <a href="#" class="btn soon">Add cart</a>
+                        </div>
+                    </div>
+                    <div class="text-box">
+                        <a href="#" class="soon">
+                            <h4>디어 클래식 X 02</h4>
+                            <p>289,000원</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="item all gif">
+                    <div class="img-box">
+                        <img src="img/gift09.jpg" alt="상품 이미지" loading="lazy">
+                        <div class="bg">
+                            <div class="color"></div>
+                            <a href="#" class="btn soon">Add cart</a>
+                        </div>
+                    </div>
+                    <div class="text-box">
+                        <a href="#" class="soon">
+                            <h4>라모드 X 02</h4>
+                            <p>280,000원</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="page-num">
+                <a href="#" class="soon" aria-label="이전 페이지"><i class="fa-solid fa-chevron-left"></i></a>
+                <a href="#" class="active">1</a>
+                <a href="#" class="soon">2</a>
+                <a href="#" class="soon">3</a>
+                <a href="#" class="soon">4</a>
+                <a href="#" class="soon">5</a>
+                <a href="#" class="soon" aria-label="다음 페이지"><i class="fa-solid fa-chevron-right"></i></a>
+            </div>
+        </section>
+   </main>
 
     <!-- 푸터 -->
     <footer>
         <div class="container">
             <div class="item item1">
-                <div class="logo"><a href="index.html"><img src="img/logo_w.png" alt="logo" class="logo"></a></div>
-                <p><a href="https://goo.gl/maps/igxhf4Cspog1GDEn7" target="_blank">서울시 강남구 압구정로 46길 50</a></p>
-                <p><a href="">1600-2126</a></p>
+                <div class="logo"><a href="index.html"><img src="img/logo_w.png" alt="젠틀몬스터 로고" class="logo"></a></div>
+                <p><a href="https://goo.gl/maps/igxhf4Cspog1GDEn7" target="_blank" rel="noopener noreferrer">서울시 강남구 압구정로 46길 50</a></p>
+                <p><a href="#">0000-0000</a></p>
             </div>
             <div class="item item2">
                 <h5>법적고지</h5>
-                <p>공지사항</p>
-                <p>이용약관</p>
-                <p>개인정보처리방침</p>
-                <p>쿠키정책</p>
-                <p>기프트카드 이용약관</p>
+                <p><a href="#" class="soon">공지사항</a></p>
+                <p><a href="#" class="soon">이용약관</a></p>
+                <p><a href="#" class="soon">개인정보처리방침</a></p>
+                <p><a href="#" class="soon">쿠키정책</a></p>
+                <p><a href="#" class="soon">기프트카드 이용약관</a></p>
             </div>
             <div class="item item3">
                 <h5>소셜 미디어</h5>
-                <p><a href="">페이스북</a></p>
-                <p><a href="">인스타그램</a></p>
-                <p><a href="">유투브</a></p>
-                <p><a href="">트위터</a></p>
-                <p><a href="">카카오톡</a></p>
-                <p><a href="">핀터레스트</a></p>
-                <p><a href="">위쳇</a></p>
-                <p><a href="">웨이보</a></p>
+                <p><a href="#" class="soon">페이스북</a></p>
+                <p><a href="#" class="soon">인스타그램</a></p>
+                <p><a href="#" class="soon">유튜브</a></p>
+                <p><a href="#" class="soon">트위터</a></p>
+                <p><a href="#" class="soon">카카오톡</a></p>
+                <p><a href="#" class="soon">핀터레스트</a></p>
+                <p><a href="#" class="soon">위쳇</a></p>
+                <p><a href="#" class="soon">웨이보</a></p>
             </div>
         </div>
     </footer>
 
+    <button type="button" class="qna-btn">
+        <img src="icon/icon_question.png" alt="" aria-hidden="true">
+        <p>질문하기</p>
+    </button>
     <div class="top-btn">
         <a href="#">top</a>
     </div>
@@ -569,43 +647,88 @@
 <script src="com.js"></script>
 <script>
     // 상품 카테고리
-let oldIndex = 0;
-updateDash(0);
+    let oldIndex = 0;
+    updateDash(0);
 
-function updateDash(index) {
-  const squiggle = document.querySelector(".squiggle");
-  const pathLength = squiggle.getTotalLength();
-  const start = pathLength * 0.25 * index;
-  const end = pathLength * 0.25 * (index + 1);
-  squiggle.style.setProperty("--factor", Math.abs(oldIndex - index));
-  oldIndex = index;
-  squiggle.setAttribute(
-    "stroke-dasharray",
-    `1, ${start}, ${end - start}, ${pathLength}`
-  );
-}
+    function updateDash(index) {
+        const squiggle = document.querySelector(".squiggle");
+        const pathLength = squiggle.getTotalLength();
+        const start = pathLength * 0.25 * index;
+        const end = pathLength * 0.25 * (index + 1);
+        squiggle.style.setProperty("--factor", Math.abs(oldIndex - index));
+        oldIndex = index;
+        squiggle.setAttribute(
+            "stroke-dasharray",
+            `1, ${start}, ${end - start}, ${pathLength}`
+        );
+    }
 
-const links = document.querySelectorAll("a");
-links.forEach((link, i) => {
-  link.addEventListener("click", () => {
-    links.forEach((l) => l.classList.remove("active"));
-    link.classList.add("active");
-    updateDash(i);
-  });
-});
+    const links = document.querySelectorAll(".shop-ul a");
+    links.forEach((link, i) => {
+        link.addEventListener("click", () => {
+            links.forEach((l) => l.classList.remove("active"));
+            link.classList.add("active");
+            updateDash(i);
+        });
+    });
 
-// 상품페이지 카테고리
-$(".section1 .shop-li").click(function(){
-    console.log("aa")
-    _name = $(this).attr("name")
-    console.log(_name)
-    $(".section1 .item").hide()
-    $(".section1 ."+_name).stop().fadeIn()
-})
+    // 상품페이지 카테고리
+    $(".section1 .shop-li").click(function(){
+        var _name = $(this).attr("name");
+        $(".section1 .item").hide();
+        $(".section1 ."+_name).stop().fadeIn();
+    });
 
-// 필터
-$(".section1 .filter").click(function(){
-    $(".section1 .filter-ul").stop().slideToggle()
-})
+    // 필터 열기/닫기
+    $(".section1 .pick-a").click(function(e){
+        e.preventDefault();
+        $(".section1 .filter-ul").stop().slideToggle();
+    });
+
+    // 2026-09-14 필터 옵션 실행
+    var originalOrder = $(".section1 .container").children(".item").get();
+
+    $(".section1 .filter-li a").click(function(e){
+        e.preventDefault();
+        e.stopPropagation();
+
+        var sortType = $(this).text().trim();
+        var $container = $(".section1 .container");
+        var items;
+
+        if(sortType === "인기순"){
+            // 저장해둔 원본 순서 그대로 복원
+            items = originalOrder;
+        } else {
+            items = $container.children(".item").get();
+
+            items.sort(function(a, b){
+                var priceA = parsePrice($(a).find(".text-box p").text());
+                var priceB = parsePrice($(b).find(".text-box p").text());
+
+                if(sortType === "높은가격순"){
+                    return priceB - priceA;
+                } else if(sortType === "낮은가격순"){
+                    return priceA - priceB;
+                } else if(sortType === "최신순"){
+                    return items.indexOf(b) - items.indexOf(a);
+                }
+                return 0;
+            });
+        }
+
+        $.each(items, function(idx, item){
+            $container.append(item);
+        });
+
+        $(".section1 .filter-li a").removeClass("active");
+        $(this).addClass("active");
+        $(".section1 .pick-a p").text(sortType);
+        $(".section1 .filter-ul").slideUp();
+    });
+
+    function parsePrice(text){
+        return parseInt(text.replace(/[^0-9]/g, ""), 10) || 0;
+    }
 </script>
 </html>
