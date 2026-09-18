@@ -30,7 +30,7 @@ header{
     /* border: 1px solid red; */
     text-align: center;
 }
-.main .text-group h1{
+.main .text-group h2{
     margin-bottom: 30px;
     animation: main-1 2s 1 linear ;
 }
@@ -82,7 +82,7 @@ header{
     .main{
         background-position: center;
     }
-    .main h1{font-size: 30px;}
+    .main h2{font-size: 30px;}
     .main h4{font-size: 15px; max-width: 280px;}
     .main .indi{width: 50px;}
 }
@@ -181,8 +181,8 @@ header{
   position: relative; 
   border-radius: 10px;
   overflow: hidden;
-  transition: 0.3s;
   cursor: pointer;
+  transform: scale(0.7) translate(640px);
 }
 .collection .item.slick-slide:hover{filter: brightness(120%);}
 
@@ -196,10 +196,6 @@ header{
   bottom: 0;
   background: rgba(0,0,0,.5);
   transition: transform .4s;
-}
-
-.collection .item.slick-slide {
-  transform: scale(0.7)  translate(640px);
 }
 
 .collection .item.slick-slide.slick-center + .slick-slide {
@@ -285,6 +281,8 @@ header{
     width: 50%;
 }
 .pop .pop-right h2{
+    font-size: 1.5em;
+    font-weight: 700;
     padding-top: 15px;
     padding-bottom: 35px;
 }
@@ -320,9 +318,9 @@ header{
     border-radius: 10px;
 }
 .pop .pop-right .swiper-slide:hover img{
-    /* box-shadow: 0 0 10px rgba(0,0,0,0.3); */
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
-.pop .pop-text::after{
+/* .pop .pop-text::after{
     content: '';
     display: block;
     width: 100%;
@@ -332,12 +330,13 @@ header{
     opacity: 0;
     transition: 0.5s;
     border-radius: 20px;
-}
+} */
 .pop .pop-text:hover::after{opacity: 1;}
 .pop .pop-right .swiper-slide p{transition: 0.5s;}
 .pop .pop-right .swiper-slide:hover p{color: #022840; font-weight: 700;}
 .pop .pop-box img{margin-bottom: 10px;}
 .pop .bold{font-weight: 700;}
+
 @media(max-width:1000px){
     .pop .fa-x{
         top: 100px; right: 30px; z-index: 10;
@@ -427,7 +426,9 @@ header{
     top: 40px; right: 40px; z-index: 15;
     width: 30px; height: 30px;
     display: flex;justify-content: center; align-items: center;
-    /* border: 1px solid red; */
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
 }
 .por .item .img-group img{border-radius: 20px;}
 .por .item .icon-group img{
@@ -754,6 +755,7 @@ header{
     color: white;
 }
 .media .text-box h5{
+    line-height: 1.4em;
     padding-bottom: 20px;
     transition: 0.5s;
 }
