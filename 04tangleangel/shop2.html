@@ -1060,19 +1060,7 @@
         var colorText = $(this).text();
         $(".color-selected").text(colorText);
     });
-
-    $(".cont2 .review").click(function(){
-        $(".cont2 .review-ul").stop().slideToggle();
-        $(this).find(".up").toggle();
-        $(this).find(".down").toggle();
-    });
-
-    $(".cont3 .qna").click(function(){
-        $(".cont3 .qna-ul").stop().slideToggle();
-        $(this).find(".up").toggle();
-        $(this).find(".down").toggle();
-    });
-
+    
     // 가격계산
     var price , num , totar;
     price = $(".shop2 .pri-box .pri").text();
