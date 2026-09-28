@@ -2,7 +2,7 @@
 var lastScroll = $(window).scrollTop();
 
 function isMobile() {
-    return $(window).width() < 800;
+    return $(window).width() < 600;
 }
 
 // 헤더 보임/숨김
@@ -49,17 +49,37 @@ $("header .menu-li").hover(
 );
 
 // PC/MOB 검색
+// 2026-09-28 화면 크기에 맞는 검색창 id
+function searchTarget() {
+    return isMobile() ? "mobali-search" : "search-sub";
+}
+
+// 검색 버튼 aria 초기화
+function syncSearchAria() {
+    $(".icon .search").attr({
+        "aria-controls": searchTarget(),
+        "aria-expanded": "false"
+    });
+}
+
+syncSearchAria();                 
+$(window).on("resize", function() {
+    syncSearchAria();
+    $("#search-sub").hide();    
+    $("#mobali-search").css({ left: "-100%" });
+});
+
 $("header .icon .search").click(function () {
     if (isMobile()) {
         $("#mobali-search").css({ left: "0" });
-        $(".icon .search").attr({ "aria-expanded": "true", "aria-controls": "mobali-search" });
+        $(this).attr("aria-expanded", "true");
     } else if ($(this).attr("aria-expanded") === "true") {
         $("#search-sub").stop().slideUp();
-        $(".icon .search").attr("aria-expanded", "false");
+        $(this).attr("aria-expanded", "false");
     } else {
         $("#mobali-search").css({ left: "-100%" });
         $("#search-sub").stop().slideDown();
-        $(".icon .search").attr({ "aria-expanded": "true", "aria-controls": "search-sub" });
+        $(this).attr("aria-expanded", "true");
     }
 });
 

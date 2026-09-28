@@ -475,11 +475,14 @@ header .ham-btn:hover .bar3{width: 10px;}
     width: 80%; max-width: 1300px; margin: 0 auto;
 }
 .search-sub .row1{
-    display: flex; justify-content: space-between;
-    align-items: center;
     border-bottom: 2px solid #666666;
     margin-top: 50px;
     margin-bottom: 50px;
+}
+.search-sub .row1 form{
+    width: 100%;
+    display: flex; justify-content: space-between;
+    align-items: center;
 }
 .search-sub .row1 input{
     width: calc(100% - 100px); height: 40px;
@@ -702,6 +705,7 @@ header .ham-btn:hover .bar3{width: 10px;}
     }
 }
 @media(max-width:600px){
+    .search-sub,
     .login-sub{
         display: none !important;
     }
