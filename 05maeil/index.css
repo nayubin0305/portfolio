@@ -3,8 +3,12 @@ header{}
 section{overflow: hidden; height: 100vh; scrollbar-width: none;}
 .footer{overflow: visible;}
 
+@media (min-width: 1025px){
+    html, body { overflow: hidden; }
+}
+
 @media(max-width:1024px){
-    body{overflow: auto;}
+    html, body{overflow: auto;}
 }
 
 .arrows {
@@ -81,18 +85,18 @@ section{overflow: hidden; height: 100vh; scrollbar-width: none;}
     position: absolute; top: 50%; left: 50%;
     transform: translate(-50%,-50%);
     width: 6px;height: 6px;
-    background-color: white;
+    background-color: #fff;
     border-radius: 50%;
     transition: 0.3s;
 }
 .indi .indi_name{
     font-size: 13px;
     text-transform: uppercase;
-    color: white;
+    color: #fff;
     opacity: 0;
 }
 
-.indi.active .dot{border-color: white;}
+.indi.active .dot{border-color: #fff;}
 .indi.active .indi_name{opacity: 1;}
 .indi.color.active .dot{border-color: #194e92;}
 .indi.color .dot::before{background-color: #194e92;}
@@ -119,7 +123,7 @@ section{overflow: hidden; height: 100vh; scrollbar-width: none;}
     position: absolute; top: 50%; left: 50%;
     transform: translate(-50%,-50%);
     text-align: center;
-    color: white;
+    color: #fff;
 }
 .section1 .text-box h5{
     opacity: 0.2; 
@@ -128,7 +132,7 @@ section{overflow: hidden; height: 100vh; scrollbar-width: none;}
     filter: blur(10px);
     transition: 1s;
 }
-.section1 .text-box h1{
+.section1 .text-box h2.title{
     font-size:70px;
     opacity: 0.2; 
     letter-spacing: 8px;
@@ -141,13 +145,13 @@ section{overflow: hidden; height: 100vh; scrollbar-width: none;}
     letter-spacing: 0px;
     filter: blur(0px);
 }
-.section1 .owl-item.active .text-box h1{
+.section1 .owl-item.active .text-box h2.title{
     opacity: 1;
     letter-spacing: 2px;
     filter: blur(0px);
 }
 @media(max-width:1024px){
-    .section1 .text-box h1{
+    .section1 .text-box h2.title{
         font-size: 30px;
         white-space: normal;
         width: 100%;
@@ -155,7 +159,7 @@ section{overflow: hidden; height: 100vh; scrollbar-width: none;}
     }
 }
 @media(max-width:800px){
-    .section1 .text-box h1{
+    .section1 .text-box h2.title{
         /* font-size: 18px; */
     }
 }
@@ -187,7 +191,7 @@ section{overflow: hidden; height: 100vh; scrollbar-width: none;}
     display: none;
 }
 .section2 .text:nth-child(1){display: block;}
-.section2 .text-box h1{
+.section2 .text-box h2.title{
     color: #194e92;
     font-size: 40px;
 }
@@ -236,7 +240,7 @@ section{overflow: hidden; height: 100vh; scrollbar-width: none;}
 .section2 .icon-box .prev:hover,
 .section2 .icon-box .next:hover{
     background-color:transparent;
-    color:white;
+    color:#fff;
     text-shadow:0 0 10px rgba(0, 0, 0, 0.8);
 }
 .section2 .icon-box .prev::after,
@@ -265,7 +269,8 @@ section{overflow: hidden; height: 100vh; scrollbar-width: none;}
     .section2 .text-box .btn-1{width: 350px; height: 45px;}
     .section2 .icon-box{
         position: relative; bottom: 50px; left: 0;
-        width: 90%; height: 95px;margin:0 auto;
+        width: 90%; height: 95px;
+        margin: 50px auto 0;
     }
     .section2 .icon img{
         width: 45px; margin: 0 auto 20px;
@@ -284,7 +289,7 @@ section{overflow: hidden; height: 100vh; scrollbar-width: none;}
     background-color: #194e92;
     padding: 120px 100px 100px 100px; box-sizing: border-box;
     display: flex;
-    color: white;
+    color: #fff;
 }
 .section3 .item{}
 .section3 .item-1{flex: 2;}
@@ -299,9 +304,9 @@ section{overflow: hidden; height: 100vh; scrollbar-width: none;}
     opacity: 0.2;
 }
 .section3 .item-2{flex: 3;}
-.section3 .news{border-top: 2px solid white;}
+.section3 .news{border-top: 2px solid #fff;}
 .section3 .news-li{
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid #fff;
     padding: 40px 20px;
     box-sizing: border-box;
 }
@@ -337,7 +342,7 @@ section{overflow: hidden; height: 100vh; scrollbar-width: none;}
     }
     .section3 .item-1 .img-box{display: none;}
     .section3 .news-li{
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid #fff;
     padding: 20px 10px;
     }
     .section3 .news-li p{
@@ -372,6 +377,10 @@ section{overflow: hidden; height: 100vh; scrollbar-width: none;}
     overflow: hidden;
     cursor: pointer;
 }
+.section4 .item a{
+    display: block;
+    height: 100%;
+}
 .section4 .item::before{
     content: '';
     display: block;
@@ -379,6 +388,7 @@ section{overflow: hidden; height: 100vh; scrollbar-width: none;}
     width: 100%; height: 100%;
     background-color: rgba(100, 120, 200, 0.3);
     transition: 0.5s; z-index: 1;
+    pointer-events: none;
 }
 .section4 .item .bg{
     position: absolute; bottom: 0; left: 0; z-index: 1;
@@ -392,7 +402,7 @@ section{overflow: hidden; height: 100vh; scrollbar-width: none;}
     position: absolute; 
     bottom: 30px; left: 50px; z-index: 2;
     /* color: burlywood; */
-    color: white;
+    color: #fff;
     /* text-shadow: 0 0 10px rgba(255,255,255,0.5); */
     text-shadow: 0 0 10px rgba(0,0,0,0.8);
     white-space : nowrap; 
@@ -424,21 +434,24 @@ section{overflow: hidden; height: 100vh; scrollbar-width: none;}
     height: 100vh;
     box-sizing: border-box; overflow: hidden;
 }
-.section5 .item{}
+.section5 .item > a{
+    display: block;
+    height: 100%;
+}
 .section5 .item img{
     width: 100%; height: 100%; object-fit: cover;
 }
 .section5 .item1{grid-column: span 2;}
 .section5 .item2{cursor: pointer;}
 .section5 .item3{cursor: pointer;}
-.section5 .item>img{
+.section5 .item .bg-img{
     filter: brightness(30%);
 }
 .section5 .item .text{
     /* border: 1px solid red; */
     position: absolute; top: 50%; left: 200px; z-index: 5;
     transform: translate(0,-50%);
-    color: white;
+    color: #fff;
 }
 .section5 .item .icon-group{
     display: grid; gap: 20px;
@@ -446,14 +459,19 @@ section{overflow: hidden; height: 100vh; scrollbar-width: none;}
     padding-top: 100px;
 }
 .section5 .item .icon{
-    border: 1px solid white;
+    border: 1px solid #fff;
     width: 128px; height: 128px;
     text-align: center;
     cursor: pointer;
     transition: 0.5s;
 }
+.section5 .item .icon a{
+    display: block;
+    height: 100%;
+}
 .section5 .icon img{
-    margin: 25px auto 10px;
+    margin: 0 auto;
+    padding: 25px 0 10px;
     width: 65px; height: auto;
 }
 .section5 .item .icon:hover{transform: translate(0,-20px);}
