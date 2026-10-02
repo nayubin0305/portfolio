@@ -4,10 +4,14 @@
     gap: 10px;
     text-transform: uppercase;
 }
-.kategorie .item p{
+.kategorie .item li{
     padding-right: 10px;
     border-right: 1px solid #999999;
     cursor: pointer;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #999999;
+    font-size: 14px;
+    line-height: 22px;
 }
 
 .left{
@@ -24,6 +28,8 @@
 }
 .left .col{
     width: 25px; height: 25px;
+    padding: 0;
+    border: none;
     border-radius: 50%;
     cursor: pointer;
 }
@@ -40,7 +46,7 @@
 .left .row p{margin: 0;}
 
 .left .row1 h5{padding-right: 20px;}
-.left .row1 p{font-size: 22px;}
+.left .row1 p{font-size: 22px; padding-bottom: 3px;}
 .left .row1 span{color: #999999; font-size: 20px;padding-left: 10px;}
 
 .left .row2{gap: 0;}
@@ -63,9 +69,9 @@
 
 .left .row3{padding-top: 30px;}
 .left .row3 h5{padding-right: 20px;}
-.left .row3 p{font-size: 22px; color: #333333; font-weight: 700;}
+.left .row3 p{font-size: 22px; color: #333333; font-weight: 700; padding-bottom: 6px;}
 .left .row3 span{color: #999999; font-size: 20px;padding-left: 10px; color: #333333; font-weight: 700;}
-.left .row3 .total-box{display: flex;}
+.left .row3 .total-box{display: flex; align-items: center;}
 
 .btn-group{
     display: flex;
@@ -81,6 +87,9 @@
    align-items: center;
    justify-content: center;
    transition: 0.3s;
+ }
+.btn-1:focus{
+  color: #fff;
  }
  .btn-1 span {
    position: relative;
@@ -181,7 +190,9 @@
     position: absolute; top: 0; left: 0;
     width: 100%; height: 100%;
     object-fit: cover;
+    display: none;
 }
+.right .img-box img:first-child{display: block;}
 
 .section2{padding-bottom: 100px;}
 .section2 h2{padding-bottom: 30px;}

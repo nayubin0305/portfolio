@@ -12,14 +12,15 @@ font-family: 'Noto Sans KR', sans-serif;
 *{position: relative;padding: 0;margin: 0;}
 img{display: block;width: 100%;}
 a{display: block;color: inherit;}
-a:hover{text-decoration: none;color: inherit;}
+a:hover,
+ a:focus{text-decoration: none;color: inherit;outline: none;}
 /* .container{border: 1px solid gold;}
 .item{border: 1px solid pink;} */
 
 body{font-family: 'Roboto', sans-serif; overflow-x: hidden;}
 html,body{scroll-behavior: smooth;}
-h2,h3,h6{}
-h1{text-transform: uppercase; padding-bottom: 20px; font-weight: 700;}
+/* h2,h3,h6{} */
+h2{text-transform: uppercase; padding-bottom: 20px; font-size: 36px; font-weight: 700;}
 h4{font-size: 22px; font-weight: 700;}
 h5{font-size: 20px; font-weight: 700;}
 p{
@@ -28,7 +29,30 @@ p{
     font-size: 14px; line-height: 22px;
 }
 
+/* 2026-10-01 */
+.none {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
 
+/* 클론 코딩 알림 */
+.clone-notice {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    padding: 8px 14px;
+    font-size: 11px;
+    color: #fff;
+    background: rgba(0,0,0,0.6);
+    border-radius: 20px;
+    z-index: 999;
+    pointer-events: none; 
+}
 
 
 section{text-align: center;}
@@ -83,10 +107,12 @@ input::placeholder,textarea::placeholder{
     font-size: 14px; font-weight: 600;
     text-transform: uppercase;
     transition: 0.5s;
+    padding: 10px 12px 6px;
 }
-.btn:focus , button:focus{outline: none;}
+.btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn.active.focus,
+button:focus, .btn:active{outline: none;}
 .btn:hover , button:hover{
-    background-color: #0C3E25; color: white;
+    background-color: #0C3E25; color: #fff;
 }
 
 .box-btn{
@@ -110,7 +136,7 @@ input::placeholder,textarea::placeholder{
     position: absolute; top: 50%; left: 50%;
     transform: translate(-50%,-50%);
     z-index: 10;
-    color: white;
+    color: #fff;
     font-weight: 800;
 }
 .top-btn:hover{animation: top 1.5s infinite;}
@@ -120,91 +146,22 @@ input::placeholder,textarea::placeholder{
     100%{transform: rotate(20deg);}
 }
 
-.main{top: 80px;}
-.main .img-box{
-    height: calc(100vh - 80px);filter: brightness(0.7);
+.sub-title{
+    margin-top: 80px;
 }
-.main .img{ 
-    position: absolute; top: 0; left: 0;
-    width: 100%; height: 100%;
-    object-fit: cover; 
-}
-.main .text-box{
-    position: absolute; top: 50%; left: 50%; z-index: 10;
-    transform: translate(-50%,-50%);
-    color: white;
-}
-.main .text{
-    position: absolute; top: 0; left: 0;
-    transform: translate(-50%,-50%);
-}
-.main .text-box h1{
-    font-size: 75px;
-    white-space: nowrap;
-    padding-bottom: 20px;
-}
-.main .text-box h6{
-    display: table;
-    border-bottom: 1px solid white;
-    margin: 0 auto;
-    cursor: pointer;
-    font-size: 18px;
-}
-
-.main .indi-box{
-    position: absolute; left: 50%; bottom: 30px; z-index: 10;
-    transform: translate(-50%,0);
-    /* border: 1px solid red; */
-    display: flex; gap: 20px;
-}
-.main .indi{
-    display: block;
-    width: 10px; height: 10px;
-    background-color: white;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: 0.5s; 
-    transform: scale(1);
-}
-.main .indi:hover{transform: scale(1.3);}
-
-.main .next-img, .main .next-text{display: none;}
-
-@media(max-width:992px){
-    .main .text-box h1{
-        font-size: 20px;
-        white-space : nowrap;
-        width: 90%;
-        padding-bottom: 20px;
-    }
-    .main .text-box h6{
-        font-size: 15px;
-        white-space : nowrap;
-    }
-}
-
 .sub-title img{height: 300px; object-fit: cover; filter: brightness(0.7);}
-.sub-title h1{
+.sub-title h2{
     /* border: 10px solid red; */
     position: absolute; top: 50%; left: 50%; z-index: 5;
     transform: translate(-50%,-50%);
-    color: white;
+    color: #fff;
     font-size: 44px;
     letter-spacing: 0.5em;
     text-transform: uppercase; 
+    padding: 0;
+    margin: 0;
 }
 
-.section3 .img-group{cursor: pointer;}
-.section3 .hov{
-    position: absolute; top: 0; left: 0;
-    opacity: 0;
-    transition: 0.5s;
-}
-.section3 .img-group:hover .hov{opacity: 1;}
-.section4 .video{height: 500px; object-fit: cover;}
-.section5 h4{
-    text-transform: uppercase;padding-top: 10px;
-}
 
 /* 스와이퍼 */
 .swiper {
@@ -236,11 +193,15 @@ header{
     position: fixed; top: 0; left: 0;
     z-index: 100;
     width: 100%;height: 80px;
-    transition: 1s;
+    transition: 0.2s;
 }
 header .container-fluid{}
 header .logo{}
-header .logo img{width: 50px;top: 22px;}
+header .logo a{
+    display: inline-block;
+    line-height: 80px;
+}
+header .logo img{width: 50px; display: inline-block;}
 header .menu{
     height: 80px;
     display: flex; gap: 30px;
@@ -267,29 +228,37 @@ header .ham-btn{
     position: absolute;
     top: 0; left: 15px;
     line-height: 80px;
+    border: none;
     cursor: pointer;
+    box-sizing: border-box;
+    padding: 0;
 }
+header .ham-btn:hover{
+    background-color: transparent;
+    color: #333;
+}
+
 /* 사이트맵 */
 .site-map{
     position: fixed; 
     top: -100%;
     left: 0; 
-    z-index: 80;
+    z-index: 101;
     width: 100%; height: 50vh;
-    background-color: white;
+    background-color: #fff;
     text-transform: uppercase;
     padding: 50px;
     transition: 1s;
 }
-.site-map .menu-li{
+.site-map .menu-li a{
     line-height: 60px;
     font-size: 25px;
     border-bottom: 1px solid #999999;
     padding-left: 10px;
     transition: 0.3s;
 }
-.site-map .menu-li:hover{color: #F05013;}
-.site-map .menu-li.active{color: #F05013;}
+.site-map .menu-li a:hover,
+.site-map .menu-li.active a{color: #F05013;}
 .site-map .x-btn{
     font-size: 18px;
     position: absolute;
@@ -299,7 +268,7 @@ header .ham-btn{
 }
 
 @media(max-width:992px){
-    header .logo img{margin: 0 auto;}
+    header .logo {text-align: center;}
 }
 
 /* 하단 스타일 */
@@ -307,32 +276,43 @@ footer{
     background-color: #0C3E25; 
     padding-top: 80px;padding-bottom: 80px;
     text-align: center;
-    color: white;
+    color: #fff;
 }
 footer .logo{
     width: 50px;
     margin: 0 auto; 
-    top: 10px; 
-    filter: invert(1);}
+    filter: invert(1);
+}
+footer .item-1 p{
+    color: #fff;
+}
+footer .item-2 a{
+    /* border: 1px solid red; */
+    display: inline-block;
+    top: 5px;
+}
 footer .c{padding-top: 55px;}
 footer button{
-    border: 1px solid red;
     position: absolute; top: 10px; right: 10px;
     border: none;
     background-color: transparent;
+    padding: 0;
 }
 footer button:hover{background-color: transparent;}
-footer .sns-box i{
+footer .sns-box{
     font-size: 20px;
-    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
     padding-top: 30px;
     cursor: pointer;
 }
 footer input{
     width: 100%;
     margin: 0 auto 20px;
-    color: white;
-    border-color: white;
+    color: #fff;
+    border-color: #fff;
 }
 footer input:focus{
     background-color: rgba(255,255,255,0.3);
@@ -353,7 +333,7 @@ footer input:focus::placeholder{color: transparent;}
     position: fixed; top: 0; left: 0; z-index: 200;
     transform: translate(-50%,-50%);
     pointer-events: none;
-    transition: 0.1s;
+    transition: transform 0.1s, background-color 0.1s;
     width: 8px; height: 8px;
     background-color: #F3E7D6;
     border-radius: 50%;
@@ -372,4 +352,46 @@ footer input:focus::placeholder{color: transparent;}
     background-color: #F05013;
     position: absolute; top: 0; left: 0;
     transform: translate(30px,20px);
+}
+
+/* 2026-10-01 디자인 알럿창 추가 */
+.alert{
+    position: fixed; 
+    bottom: 40px; 
+    left: 50%; 
+    transform: translateX(-50%) translateY(20px);
+    background: rgba(0,0,0,0.6); 
+    color: #fff;
+    font-size: 15px;
+    line-height: 1em;
+    padding: 12px 24px; 
+    border-radius: 20px;
+    max-width: calc(100% - 30px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s, transform 0.3s;
+    z-index: 9999;
+}
+.alert.on{
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* 2026-10-01 스크롤 디자인 추가 */
+html::-webkit-scrollbar{
+    width: 10px;
+    background-color: #F3E7D6;
+}
+html::-webkit-scrollbar-thumb{
+    background-color: #F05013;
+}
+
+/* 인풋 기본 설정 */
+input[type="number"] {
+    -moz-appearance: textfield; 
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;   
+    margin: 0;
 }

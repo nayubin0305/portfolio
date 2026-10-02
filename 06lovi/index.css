@@ -1,4 +1,4 @@
-.main{top: 80px;}
+.main{padding-top: 80px;}
 .main .img-box{
     height: calc(100vh - 80px);filter: brightness(0.7);
 }
@@ -10,20 +10,21 @@
 .main .text-box{
     position: absolute; top: 50%; left: 50%; z-index: 10;
     transform: translate(-50%,-50%);
-    color: white;
+    color: #fff;
 }
 .main .text{
     position: absolute; top: 0; left: 0;
     transform: translate(-50%,-50%);
 }
-.main .text-box h1{
+.main .text-box h2{
     font-size: 75px;
     white-space: nowrap;
     padding-bottom: 20px;
+    transition: font-size 0.2s;
 }
-.main .text-box h6{
+.main .text-box a{
     display: table;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid #fff;
     margin: 0 auto;
     cursor: pointer;
     font-size: 18px;
@@ -38,7 +39,7 @@
 .main .indi{
     display: block;
     width: 10px; height: 10px;
-    background-color: white;
+    background-color: #fff;
     border-radius: 50%;
     cursor: pointer;
     transition: 0.5s; 
@@ -48,22 +49,39 @@
 
 .main .next-img, .main .next-text{display: none;}
 
+@media(max-width:1500px){
+    .main .text-box h2{
+        font-size: 50px;
+    }
+}
+
 @media(max-width:992px){
     .main img{object-position: right top;}
-    .main .text-box h1{
+    .main .text-box h2{
         font-size: 20px;
         white-space : nowrap;
         width: 90%;
         padding-bottom: 20px;
     }
-    .main .text-box h6{
+    .main .text-box a{
         font-size: 15px;
         white-space : nowrap;
     }
 }
 
 .section1{}
-.section1 .img-box{cursor: pointer;}
+.section1 .img-box{cursor: pointer; margin-bottom: 20px;}
+
+.section3 .item{
+    margin-bottom: 20px;
+}
+.section3 .img-group{cursor: pointer;}
+.section3 .hov{
+    position: absolute; top: 0; left: 0;
+    opacity: 0;
+    transition: 0.5s;
+}
+.section3 .img-group:hover .hov{opacity: 1;}
 
 .section4 video{height: 500px; width: 100%; object-fit: cover;}
 .section4 .btn-group{
@@ -72,16 +90,21 @@
     transform: translate(-50%,-50%);
     width: 50px; height: 50px;
     cursor: pointer;
+    border: none;
+}
+.section4 .btn-group:hover{
+    background-color: transparent;
 }
 .section4 .btn-stop{display: none; opacity: 0; transition: 0.5s;}
 .section4 .btn-group:hover .btn-stop{opacity: 1;}
+.section4 .video{height: 500px; object-fit: cover;}
 
 .section5{}
 .section5 .item{overflow: hidden;cursor: pointer;}
 .section5 .item::after{
     content: '';
     display: block;
-    background-color: white;
+    background-color: #fff;
     width: 400px; height: 200px;
     transform: rotate(-45deg);
     z-index: 10;
@@ -92,6 +115,9 @@
     justify-content: center;
     padding: 30px; box-sizing: border-box;
     transition: 0.5s;
+}
+.section5 h4{
+    text-transform: uppercase;padding-top: 10px;
 }
 .section5 .item:nth-child(1)::after{
     content: 'LOVI HEART';
@@ -104,4 +130,14 @@
 }
 .section5 .item:hover::after{
     top: -50px; left: -150px;
+}
+
+.section6 p {
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+
+@media(max-width:992px){
+    .item{padding: 0 25px 50px;}
+    .section5 h2{padding-bottom: 20px;}
 }

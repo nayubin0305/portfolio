@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="robots" content="noindex, nofollow">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>로비 상세페이지</title>
+    <title>로비 상세페이지 | lovi</title>
+
     <!-- 부트스트랩 : 모바일 우선 / 화면이 달라져도 강제로 확대를 안 시키겠다 -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -27,252 +28,277 @@
 
 </head>
 <body>
+    <h1 class="none">나유빈 포트폴리오 매일유업</h1>
+
     <div class="cursor"></div>
 
+    <div class="clone-notice">
+        학습/시연 목적의 클론 코딩입니다
+    </div>
+    
+    <!-- 탑버튼 -->
     <a href="#" class="top-btn cur-over">
-        <img src="img/top.png" alt="top">
+        <img src="img/top.png" alt="위로 가기 버튼">
         <p>top</p>
     </a>
 
+    <!-- 헤더 -->
     <header>
         <div class="container-fluid">
             <div class="logo col-md-2 col-sm-12">
-                <a href="index.html"><img src="img/logo.png" alt="logo"><a >
+                <a href="index.html"><img src="img/logo.png" alt="로비 로고"></a>
             </div>
-            <ul class="menu col-md-10 hidden-sm hidden-xs">
+            <nav aria-label="주메뉴" class="col-md-10 hidden-sm hidden-xs">
+                <ul class="menu">
+                    <li class="menu-li"><a href="index.html">home<span></span></a></li>
+                    <li class="menu-li"><a href="about.html">about us<span></span></a></li>
+                    <li class="menu-li active"><a href="shop.html">shop<span></span></a></li>
+                    <li class="menu-li"><a href="write.html">WRITE US<span></span></a></li>
+                </ul>
+            </nav>
+            <button type="button" class="ham-btn cur-over hidden-md hidden-lg" aria-label="모바일 메뉴 열기" aria-expanded="false" aria-controls="site-map">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- 사이트맵 -->
+    <div class="site-map" id="site-map">
+        <div class="x-btn cur-over"><i class="fa-solid fa-xmark"></i></div>
+        <nav aria-label="모바일 전체 메뉴">
+            <ul class="menu">
                 <li class="menu-li"><a href="index.html">home<span></span></a></li>
                 <li class="menu-li"><a href="about.html">about us<span></span></a></li>
                 <li class="menu-li active"><a href="shop.html">shop<span></span></a></li>
                 <li class="menu-li"><a href="write.html">WRITE US<span></span></a></li>
             </ul>
-            <div class="ham-btn hidden-md hidden-lg"><i class="fa-solid fa-bars"></i></div>
-        </div>
-    </header>
-
-    <!-- 사이트맵 -->
-    <div class="site-map">
-        <div class="x-btn cur-over"><i class="fa-solid fa-xmark"></i></div>
-        <ul class="menu">
-            <li class="menu-li"><a href="index.html">home<span></span></a></li>
-            <li class="menu-li"><a href="about.html">about us<span></span></a></li>
-            <li class="menu-li active"><a href="shop.html">shop<span></span></a></li>
-            <li class="menu-li"><a href="write.html">WRITE US<span></span></a></li>
-        </ul>
+        </nav>
     </div>
     
-    <section class="sub-title">
-        <img src="img/shop_title.jpg" alt="title">
-        <h1>shop</h1>
-    </section>
-
-    <section class="section1">
-        <div class="container kategorie">
-            <div class="item col-md-12">
-                <p><a href="index.html">lovi</a></p>
-                <p><a href="shop.html">shop</a></p>
-                <p><a href="shop.html">동물</a></p>
-                <p>로비 래브라도</p>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="left col-md-6 .col-sm-12">
-                <h2>로비 래브라도</h2>
-                <p>Lovi Labrador는 구성원이 동물이든, 사람이든, 동물 인형이든 가족을 사랑합니다. 온순한 이 동물은 항상 열심히 꼬리를 흔들며 집으로 여러분을 환영할 것입니다. 저녁에 혼자 소파에 누울 필요가 없습니다. 다리가 네 개인 친구가 항상 탑승할 것입니다.</p>
-                <p>이 사랑스러운 개는 검은색, 갈색, 천연 나무의 세 가지 색상으로 제공되며 등을 대고 엎드려 끝없는 긁힘을 기다립니다. 이 제품은 평소보다 부품이 약간 더 많지만 패키지에 포함된 명확한 설명서로 조립이 쉽습니다. 본체에서 조립을 시작하고 머리를 추가한 다음 마지막으로 귀를 제자리에 놓습니다.</p>
-                <div class="color">
-                    <h5>색상</h5>
-                    <div class="color-box">
-                        <div class="col black cur-over"></div>
-                        <div class="col brown cur-over"></div>
-                        <div class="col pink cur-over"></div>
-                    </div>
-                </div>
-                <div class="price">
-                    <div class="row row1">
-                        <h5>가격</h5>
-                        <p class="pr">1590</p>
-                        <span>€</span>
-                    </div>
-                    <div class="row row2">
-                        <p class="num-btn btn-m cur-over">-</p>
-                        <input class="num" type="text" value="1">
-                        <p class="num-btn btn-p cur-over">+</p>
-                    </div>
-                    <div class="row row3">
-                        <div class="total-box">
-                            <h5>총가격</h5>
-                            <p class="total">1590</p>
-                            <span>€</span>
+    <main>
+        <section class="sub-title">
+            <img src="img/shop_title.jpg" alt="타이틀 배경 이미지" loading="lazy">
+            <h2>shop</h2>
+        </section>
+    
+        <section class="section1">
+            <nav class="container kategorie" aria-label="브레드크럼">
+                <ol class="item col-md-12">
+                    <li><a href="index.html">lovi</a></li>
+                    <li><a href="shop.html">shop</a></li>
+                    <li><a href="shop.html">동물</a></li>
+                    <li aria-current="page">로비 래브라도</li>
+                </ol>
+            </nav>
+    
+            <div class="container">
+                <div class="left col-md-6 .col-sm-12">
+                    <h2>로비 래브라도</h2>
+                    <p>Lovi Labrador는 구성원이 동물이든, 사람이든, 동물 인형이든 가족을 사랑합니다. 온순한 이 동물은 항상 열심히 꼬리를 흔들며 집으로 여러분을 환영할 것입니다. 저녁에 혼자 소파에 누울 필요가 없습니다. 다리가 네 개인 친구가 항상 탑승할 것입니다.</p>
+                    <p>이 사랑스러운 개는 검은색, 갈색, 천연 나무의 세 가지 색상으로 제공되며 등을 대고 엎드려 끝없는 긁힘을 기다립니다. 이 제품은 평소보다 부품이 약간 더 많지만 패키지에 포함된 명확한 설명서로 조립이 쉽습니다. 본체에서 조립을 시작하고 머리를 추가한 다음 마지막으로 귀를 제자리에 놓습니다.</p>
+                    <div class="color">
+                        <h5>색상</h5>
+                        <div class="color-box">
+                            <button type="button" class="col black cur-over active" aria-label="블랙"></button>
+                            <button type="button" class="col brown cur-over" aria-label="브라운"></button>
+                            <button type="button" class="col pink cur-over" aria-label="핑크"></button>
                         </div>
                     </div>
+                    <div class="price">
+                        <div class="row row1">
+                            <h5>가격</h5>
+                            <p class="pr">1590</p>
+                            <span>€</span>
+                        </div>
+                        <div class="row row2">
+                            <button type="button" class="num-btn btn-m cur-over" aria-label="수량 감소">-</button>
+                            <label for="num" class="none">수량</label>
+                            <input type="number" value="1" min="1" class="num" id="num">
+                            <button type="button" class="num-btn btn-p cur-over" aria-label="수량 증가">+</button>
+                        </div>
+                        <div class="row row3">
+                            <div class="total-box">
+                                <h5>총가격</h5>
+                                <p class="total">1590</p>
+                                <span>€</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-group">
+                        <a href="#" class="box-btn btn-1 soon"><span>구매</span></a>
+                        <button type="button" class="box-btn btn-2 btn-cart">장바구니</button>
+                    </div>
                 </div>
-                <div class="btn-group">
-                    <div class="box-btn btn-1"><span>구매</span></div>
-                    <div class="box-btn btn-2">장바구니</div>
+                <div class="right col-md-6 .col-sm-12">
+                    <div class="img-box">
+                        <img src="img/black768x768.jpg" alt="상품 이미지 블랙" loading="lazy">
+                        <img src="img/brown768x768.jpg" alt="상품 이미지 브라운" loading="lazy">
+                        <img src="img/wood768x768.jpg" alt="상품 이미지 핑크" loading="lazy">
+                    </div>
+                    <img src="img/shop2_01.jpg" alt="상품상세 설명 1" loading="lazy">
+                    <img src="img/shop2_02.jpg" alt="상품상세 설명 2" loading="lazy">
+                    <h3>세부사항</h3>
+                    <p>소재: 친환경 핀란드산 자작나무 합판</p>
+                    <p>수성 무독성 장난감 페인트로 손으로 칠했습니다. 얇은 페인트 층을 통해 천연 나무 재료가 보입니다.</p>
+                    <p>핀란드에서 제작되었습니다. 플라스틱 무료. 엽서와 같은 패키지를 쉽게 보낼 수 있습니다. 패키지 내부의 그림으로 된 지침. 특허. 디자인: 앤 파소</p>
                 </div>
             </div>
-            <div class="right col-md-6 .col-sm-12">
-                <div class="img-box">
-                    <img src="img/black768x768.jpg" alt="img">
-                    <img src="img/brown768x768.jpg" alt="img">
-                    <img src="img/wood768x768.jpg" alt="img">
-                </div>
-                <img src="img/shop2_01.jpg" alt="img">
-                <img src="img/shop2_02.jpg" alt="img">
-                <h3>세부사항</h3>
-                <p>소재: 친환경 핀란드산 자작나무 합판</p>
-                <p>수성 무독성 장난감 페인트로 손으로 칠했습니다. 얇은 페인트 층을 통해 천연 나무 재료가 보입니다.</p>
-                <p>핀란드에서 제작되었습니다. 플라스틱 무료. 엽서와 같은 패키지를 쉽게 보낼 수 있습니다. 패키지 내부의 그림으로 된 지침. 특허. 디자인: 앤 파소</p>
+        </section>
+    
+        <section class="section2">
+            <div class="container">
+                <h2>더 둘러보기</h2>
             </div>
-        </div>
-    </section>
+            <div class="container">
+                <div class="item col-md-3 col-sm-6 col-xs-12">
+                    <a href="#" class="soon">
+                        <div class="img-group">
+                            <img src="img/product01.jpg" alt="상품 이미지 1" loading="lazy">
+                            <img src="img/product01_b.jpg" alt="상품 이미지 2" class="hov" loading="lazy">
+                        </div>
+                        <div class="text-group">
+                            <h4>로비 고슴도치</h4>
+                            <p>12,90 €</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="item col-md-3 col-sm-6 col-xs-12">
+                    <a href="#" class="soon">
+                        <div class="img-group">
+                            <img src="img/product02.jpg" alt="상품 이미지 1" loading="lazy">
+                            <img src="img/product02_b.jpg" alt="상품 이미지 2" class="hov" loading="lazy">
+                        </div>
+                        <div class="text-group">
+                            <h4>로비 올빼미</h4>
+                            <p>12,90 €</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="item col-md-3 col-sm-6 col-xs-12">
+                    <a href="#" class="soon">
+                        <div class="img-group">
+                            <img src="img/product03.jpg" alt="상품 이미지 1" loading="lazy">
+                            <img src="img/product03_b.jpg" alt="상품 이미지 2" class="hov" loading="lazy">
+                        </div>
+                        <div class="text-group">
+                            <h4>로비 고양이</h4>
+                            <p>12,90 €</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="item col-md-3 col-sm-6 col-xs-12">
+                    <a href="#" class="soon">
+                        <div class="img-group">
+                            <img src="img/product04.jpg" alt="상품 이미지 1" loading="lazy">
+                            <img src="img/product04_b.jpg" alt="상품 이미지 2" class="hov" loading="lazy">
+                        </div>
+                        <div class="text-group">
+                            <h4>로비 토끼</h4>
+                            <p>12,90 €</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <section class="section2">
-        <div class="container">
-            <h2>더 둘러보기</h2>
-        </div>
-        <div class="container">
-            <div class="item col-md-3 col-sm-6 col-xs-12">
-                <div class="img-group">
-                    <img src="img/product01.jpg" alt="product">
-                    <img src="img/product01_b.jpg" alt="product" class="hov">
-                </div>
-                <div class="text-group">
-                    <a href="#"><h4>로비 고슴도치</h4><a >
-                    <p>12,90 €</p>
-                </div>
-            </div>
-            <div class="item col-md-3 col-sm-6 col-xs-12">
-                <div class="img-group">
-                    <img src="img/product02.jpg" alt="product">
-                    <img src="img/product02_b.jpg" alt="product" class="hov">
-                </div>
-                <div class="text-group">
-                    <a href="#"><h4>로비 올빼미</h4><a >
-                    <p>12,90 €</p>
-                </div>
-            </div>
-            <div class="item col-md-3 col-sm-6 col-xs-12">
-                <div class="img-group">
-                    <img src="img/product03.jpg" alt="product">
-                    <img src="img/product03_b.jpg" alt="product" class="hov">
-                </div>
-                <div class="text-group">
-                    <a href="#"><h4>로비 고양이</h4><a >
-                    <p>12,90 €</p>
-                </div>
-            </div>
-            <div class="item col-md-3 col-sm-6 col-xs-12">
-                <div class="img-group">
-                    <img src="img/product04.jpg" alt="product">
-                    <img src="img/product04_b.jpg" alt="product" class="hov">
-                </div>
-                <div class="text-group">
-                    <a href="#"><h4>로비 토끼</h4><a >
-                    <p>12,90 €</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    <!-- 푸터 -->
     <footer>
         <div class="container">
-            <div class="item col-md-4 col-sm-12">
+            <div class="item item-1 col-md-4 col-sm-12">
                 <h4>LOVI FACTORY SHOP</h4>
-                <a href="#">Taito Shop Oulu
-                    Rautatienkatu 11 B</a><br>
-                <a href="#">+358 (0)40 3522082</a><br>
-                <a href="#">info@lovi.fi</a><br>
+                <p>Taito Shop Oulu Rautatienkatu 11 B</p>
+                <p>+358 (0)00 0000000</p>
+                <p>info@lovi.fi</p>
             </div>
-            <div class="item col-md-4 col-sm-12">
-                <a href="#"><img src="img/logo.png" alt="logo" class="logo"></a>
-                <p class="c">© 2023 Lovi</p>
+            <div class="item item-2 col-md-4 col-sm-12">
+                <a href="index.html"><img src="img/logo.png" alt="로비 로고" class="logo" loading="lazy"></a>
+                <p class="c">© 학습/시연 목적의 클론 코딩 홈페이지입니다</p>
             </div>
-            <div class="item col-md-4 col-sm-12">
+            <div class="item item-3 col-md-4 col-sm-12">
                 <h4>SUBSCRIBE</h4>
                 <div class="input-box">
-                    <input type="text" placeholder="E-Mail Adress">
-                    <button><i class="fa-regular fa-paper-plane"></i></button>
+                    <form id="subscribe">
+                        <input type="email" id="email" name="email" placeholder="E-Mail Adress" required autocomplete="email">
+                        <button type="submit" aria-label="전송하기"><i class="fa-regular fa-paper-plane"></i></button>
+                    </form>
                 </div>
                 <div class="sns-box">
-                    <i class="fa-brands fa-facebook-f"></i>
-                    <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-twitter"></i>
-                    <i class="fa-brands fa-youtube"></i>
+                    <a href="#" class="soon" aria-label="페이스북"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="soon" aria-label="인스타그램"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="soon" aria-label="트위터"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="soon" aria-label="유튜브"><i class="fa-brands fa-youtube"></i></a>
                 </div>
             </div>
         </div>
     </footer>
 
-     <!-- Swiper JS -->
-     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-
-     <!-- Initialize Swiper -->
-     <script>
-      var swiper = new Swiper(".mySwiper", {
-       slidesPerView: 1,
-       spaceBetween: 30,
-       loop: true,
-       pagination: {
-         el: ".swiper-pagination",
-         clickable: true,
-       },
-       navigation: {
-         nextEl: ".next",
-         prevEl: ".prev",
-       },
-      });
-     </script>
-
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script src="index.js"></script>
 <script>
-
-    // 숫자계산
+    // 2026-10-02 스크립트 정리
+    // 가격계산
     var price , num , totar
-    price = $(".price .pr").text()
-    price = Number(price)//숫자로 인식
-    price1 = price.toLocaleString() //콤마
-    $(".price .pr").text(price1) 
+    price = $(".price .pr").text();
+    price = Number(price); //숫자로 변경
+    var price1 = price.toLocaleString(); //콤마 추가
+    $(".price .pr").text(price1);
 
-    num = $(".row .num").val()
-    num = Number(num)
+    num = $(".row .num").val();
+    num = Number(num);
 
-    totar = price*num
-    totar = totar.toLocaleString()
-    $(".total-box .total").text(totar)
+    totar = price * num;
+    totar = totar.toLocaleString();
+    $(".total-box .total").text(totar);
+
+    // 수량 갱신
+    function updateTotal() {
+        var totar = price * num;
+        totar = totar.toLocaleString();
+        $(".total-box .total").text(totar);
+    }
 
     $(".btn-p").click(function(){
-        num++
-        $(".row .num").val(num)
-        totar = price*num
-        totar = totar.toLocaleString()
-        $(".total-box .total").text(totar)
+        num++;
+        $(".row .num").val(num);
+        updateTotal();
     })
     $(".btn-m").click(function(){
-        if(num>1){
-            num--
-            $(".row .num").val(num)
-            totar = price*num
-            totar = totar.toLocaleString()
-            $(".total-box .total").text(totar)
+        if(num > 1){
+            num--;
+            $(".price .num").val(num);
+            updateTotal();
+        } else {
+            showAlert("1개 보다 적게 담을 수 없습니다");
         }
     })
 
-    var i = 0
-        $(".right .img-box img").eq(i).stop().fadeIn()
-        $(".right .img-box img").not($(".right .img-box img").eq(i)).stop().fadeOut()
-        $(".left .col").removeClass("active")
-        $(".left .col").eq(i).addClass("active")
+    $(".price .num").on("input", function(){
+        var value = parseInt($(this).val(), 10);
+
+        if(isNaN(value) || value < 1){
+            $(this).val(1);
+        }
+
+        num = parseInt($(this).val(), 10);
+        updateTotal();
+    });
+
+    // 색상 변경
+    var i = 0;
 
     $(".left .col").click(function(){
-        i = $(this).index()
-        $(".right .img-box img").eq(i).stop().fadeIn()
-        $(".right .img-box img").not($(".right .img-box img").eq(i)).stop().fadeOut()
-        $(".left .col").removeClass("active")
-        $(this).addClass("active")
-    })
+        i = $(this).index();
+        $(".right .img-box img").eq(i).stop().fadeIn();
+        $(".right .img-box img").not($(".right .img-box img").eq(i)).stop().fadeOut();
+        $(".left .col").removeClass("active");
+        $(this).addClass("active");
+    });
+
+    // 장바구니
+    $(".btn-cart").click(function() {
+        showAlert("장바구니에 담겼습니다.");
+    });
 </script>
 </body>
 </html>
