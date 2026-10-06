@@ -28,32 +28,25 @@ $(window).scroll(function() {
 
 // 사이트맵
 $(".ham-btn").click(function(){
+    var isOpen = $(this).attr("aria-expanded") === "true";
+    $(this).attr("aria-expanded", !isOpen);
+    
     $("body").toggleClass("site-on");
     $(".site-map .bg").stop().fadeToggle();
 });
 
 // 커서
+// 2026-10-06 스크립트 정리
 $(window).mousemove(function(event){
-    var _x = event.clientX;
-    var _y = event.clientY;
-    $(".cursor").css({left:_x, top:_y});
+    $(".cursor").css({ left: event.clientX, top: event.clientY });
 });
-$(".pick").mouseenter(function(){
+
+var cursorHoverTargets = ".pick, .pick_, .ham-btn";
+
+$(cursorHoverTargets).mouseenter(function(){
     $(".cursor").addClass("over");
 });
-$(".pick").mouseleave(function(){
-    $(".cursor").removeClass("over");
-});
-$(".pick_").mouseenter(function(){
-    $(".cursor").addClass("over");
-});
-$(".pick_").mouseleave(function(){
-    $(".cursor").removeClass("over");
-});
-$(".ham-btn").mouseenter(function(){
-    $(".cursor").addClass("over");
-});
-$(".ham-btn").mouseleave(function(){
+$(cursorHoverTargets).mouseleave(function(){
     $(".cursor").removeClass("over");
 });
 

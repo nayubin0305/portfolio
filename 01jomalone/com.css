@@ -15,7 +15,7 @@ font-family: 'Noto Serif KR', serif;
 *{padding: 0; margin: 0; position: relative;}
 img{display: block; width: 100%;}
 li, ul, ol{list-style: none;}
-a{display: block; color: inherit; text-decoration: none;}
+a{display: block; color: inherit; text-decoration: none; outline: none;}
 html, body{font-family: 'SUIT', sans-serif; 
     scroll-behavior: smooth; overflow-x: hidden; background-color: #fcf9ee;}
 
@@ -45,13 +45,13 @@ input:focus, textarea:focus{
 }
 
 .none {
-  position: absolute;
-  width: 1px; height: 1px;
-  padding: 0; margin: -1px;
-  overflow: hidden;
-  clip: rect(0,0,0,0);
-  white-space: nowrap;
-  border: 0;
+    position: absolute;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
 }
 
 /* 클론 코딩 알림 */
@@ -408,6 +408,11 @@ section{padding-top: 100px; padding-bottom: 100px;}
 }
 .top-btn:hover::after{opacity: 1;}
 
+@media(max-width:800px){
+    .top-btn{width: 55px; height: 55px; right: 20px;}
+    .top-btn p{font-size: 14px;}
+}
+
 /* 서브페이지 상단 페이지 타이틀 */
 .page-title{height: 400px; text-transform: uppercase;}
 .page-title img{
@@ -482,7 +487,7 @@ header .icon-group{
     display: flex; align-items: center;
     gap: 15px;
 }
-header .icon-group a{color: #222222;transition: 0.5s;}
+header .icon-group a{color: #222222;transition: 0.5s; outline: none;}
 header.top .icon-group a{color: white;}
 header .icon-group a:hover{color: white;}
 header .icon-group i{}
@@ -490,6 +495,7 @@ header .icon-group i{}
 .ham-btn{
     width: 36px; height: 36px;
     background-color: #322826;
+    border: none;
     position: fixed; 
     top: 7px; left: 30px; z-index: 111;
     border-radius: 50%;
@@ -517,6 +523,8 @@ header .icon-group i{}
     header{height: 50px;}
     header .menu{display: none;}
     .ham-btn{display: block;}
+    header.top .icon-group a:hover{color: #fff;}
+    header .icon-group a:hover{color: #222222;}
     header .icon-group a:nth-child(2){display: none;}
     header .icon-group a:nth-child(3){display: none;}
     header .logo{position: relative; left: 0;}
