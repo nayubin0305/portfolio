@@ -55,6 +55,12 @@ p{line-height: 1.6rem;}
 
 /* 2026-09-14 */
 .page-title{font-size: 70px;}
+@media(max-width:800px){
+    .page-title{
+        font-size: 50px;
+    }
+}
+
 
 ::selection {background-color: #0D0D0D; color: #93F205;}
 
@@ -81,6 +87,17 @@ p{line-height: 1.6rem;}
     border-radius: 20px;
     z-index: 999;
     pointer-events: none; 
+}
+
+/* 2026-10-08 사이트맵 오픈 시 body */
+html:has(body.site-on),
+body.site-on{overflow: hidden;}
+html{
+    scrollbar-gutter: stable;
+    background-color: #0D0D0D;
+}
+body{
+    background-color: #ffffff;
 }
 
 /* 버튼 */
@@ -333,17 +350,28 @@ header.white-bg .ham-btn .bar{background-color: var(--font-color-6);}
 header.white-bg .ham-btn:hover .bar{background-color: var(--color-point);}
 header.white-bg::before{background-color: #f2f2f2;}
 
-@media(max-width:1100px){
-    header .menu{display: none;}
-}
-@media(max-width:800px){
-    header .icon{display: none;}
-}
-
 /* 2026-09-14 각페이지에 있던 메뉴 액티브 통합 */
 header .menu-li.on{
     text-decoration: var(--color-point) wavy underline;
     text-underline-offset: 7px;
+}
+
+@media(max-width:1100px){
+    header .menu{display: none;}
+}
+@media(max-width:800px){
+    header{
+        padding: 0 20px;
+        height: 50px;
+    }
+    header .logo{
+        width: 150px;
+    }
+    header .icon-menu{
+        right: 20px;
+        height: 50px;
+    }
+    header .icon{display: none;}
 }
 
 /* 사이트맵 */
@@ -368,18 +396,22 @@ header .menu-li.on{
 }
 .site-map .sub:hover{color: var(--color-point);}
 .site-map.active{right: 0;}
+.site-map .sub a{
+    display: block;
+}
 
 /* 2026-09-11 모바일 버전에 아이콘 메뉴 추가 */
 .site-map .icon-menu{display: none;}
 
 @media(max-width:800px){
-    .site-map{width: 100%;}
-
-    
+    .site-map{
+        width: 100%;
+        padding: 80px 20px;
+    }    
     .site-map .icon-menu{
         position: absolute;
-        left: 50px;
-        bottom: 50px;
+        left: 15px;
+        bottom: 70px;
         display: flex;
         gap: 20px;
         align-items: center;
@@ -421,8 +453,8 @@ footer p{line-height: 30px; cursor: pointer;}
 }
 
 /* 탑버튼 */
-.top-btn{
-    position: fixed; bottom: 50px; right: 50px; z-index: 101;
+.top-btn a{
+    position: fixed; bottom: 50px; right: 50px; z-index: 98;
     width: 50px; height: 50px;
     background-color: #0D0D0D;
     color: white;
@@ -435,10 +467,16 @@ footer p{line-height: 30px; cursor: pointer;}
     cursor: pointer;
     transition: background-color 0.5s, box-shadow 0.5s, color 0.5s;
 }
-.top-btn:hover{
+.top-btn a:hover{
     background-color: var(--color-point);
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     color: #000000;
+}
+@media(max-width:800px){
+    .top-btn a{
+        right: 15px;
+        bottom: 20px;
+    }
 }
 
 section{background-color: white;}
@@ -485,7 +523,7 @@ section:last-of-type{margin-bottom: 400px;}
 
 /* 질문하기 */
 .qna-btn{
-    position: fixed; bottom: 120px; right: 50px; z-index: 101;
+    position: fixed; bottom: 120px; right: 50px; z-index: 98;
     width: 50px; height: 50px;
     background-color: #0D0D0D;
     border-radius: 50%;
@@ -524,6 +562,12 @@ section:last-of-type{margin-bottom: 400px;}
 .qna-btn:hover img{
     filter: invert(0);
     transform: translateX(-25px);
+}
+@media(max-width:800px){
+    .qna-btn{
+        right: 15px;
+        bottom: 90px;
+    }
 }
 
 /* 마스킹 */

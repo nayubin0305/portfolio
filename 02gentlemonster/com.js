@@ -91,10 +91,11 @@ $(".ham-btn").click(function(){
 
     $(".ham-btn").toggleClass("active");
     $(".site-map").toggleClass("active");
+    $("body").toggleClass("site-on");
 });
 
- $(".site-map .menu-li").click(function(){
-    var idx = $(this).index();
+ $(".site-map .menu-li > div").click(function(){
+    var idx = $(this).parent().index();
     $(".site-map .sub").eq(idx).stop().slideToggle();
     $(".site-map .sub").not($(".site-map .sub").eq(idx)).stop().slideUp();
 });

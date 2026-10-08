@@ -1,3 +1,8 @@
+/* 2026-10-08 공통 */
+section:nth-child(2){
+    padding-top: 100px;
+}
+
 /* 상품 */
 .section1 .menu-box {
     display: block;
@@ -6,38 +11,56 @@
     /* box-shadow: 0 0 10px rgba(0,0,0,0.5); */
     width: 90%; margin: 0 auto;
     /* border-radius: 20px; */
-    padding-top: 10px; margin-bottom: 50px;
+    padding-top: 10px; margin-bottom: 30px;
 }
-.section1 li {font-size: 14px;}
+.section1 li {font-size: 14px; padding: 0 0.5em;}
 .section1 .container{
     grid-template-columns: repeat(2,1fr);
 }
+@media(max-width:480px){
+    .section1 .container{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
 
 /* 연락처 */
-.section2 .row3{display: block;}
+.section2 .row3{display: block; margin-bottom: 0;}
 .section2 .item2{padding-top: 50px;}
-.section2 .item2 p{padding-top: 10px;}
 
 /* 맴버쉽 */
 .section3 .row2{display: block;}
 .section3 .row2 .item{margin-bottom: 20px;}
+.section3 .row2 .item:last-child{margin-bottom: 0;}
+.section3 .row2 .item h3{padding-bottom: 25px;}
+.section3 .row2 .item .text{padding-bottom: 15px;}
+.section3 .row2 .btn{margin-bottom: 0;}
 
 /* 상세페이지 */
 .section4 .cont1{
     display: block;
     padding-top: 0;
+    padding-bottom: 80px;
 }
+.section4 .cont1 .item1{margin: 30px 0;}
 .section4 .cont1 .left .img-row1{height: 300px;}
+.section4 .cont1 .left .img-row2{gap: 10px;}
 .section4 .cont1 .right{padding: 0; padding-top: 30px;}
-.section4 .cont2{display: none;}
+/* .section4 .cont2{display: none;} */
+.section4 .cont2{width: 100%; padding: 0;}
+.section4 .cont2 .row1 .filter{font-size: 14px; padding: 15px 10px;}
+.section4 .cont2 .row1 .filter span{display: none;}
+.section4 .cont2 .row2{padding: 20px 15px 80px;}
 .section4 .cont3 .grid{display: block;}
+.section4 .cont3 h2{font-size: 28px; margin-top: 0;}
 .section4 .cont3 .item{margin-bottom: 50px;}
+.section4 .cont3 .item:last-child{margin-bottom: 0;}
 
 /* 스토어 */
 .section5{}
 .section5 .container{
     text-align: center;
     display: block;
+    padding-bottom: 100px;
 }
 .section5 .item-img{padding-bottom: 0px; padding-top: 80px;}
 .section5 .item-text{padding-top: 20px;}
@@ -46,6 +69,9 @@
 .section5 .item4.item-text .row1,
 .section5 .item8.item-text .row1{
     text-align: center;
+}
+.section5 .item-text .row3 h2{
+    font-size: 28px;
 }
 
 .section5 .line{display: none;}
