@@ -426,6 +426,14 @@ section{padding-top: 100px; padding-bottom: 100px;}
     font-size: 50px; font-weight: 900;
     font-family: 'Cinzel', serif;
 }
+@media (max-width :800px) {
+    .page-title{
+        height: 200px;
+    }
+    .page-title .bg{
+        font-size: 30px;
+    }
+}
 
 /* 헤더css */
 header{
@@ -497,7 +505,7 @@ header .icon-group i{}
     background-color: #322826;
     border: none;
     position: fixed; 
-    top: 7px; left: 30px; z-index: 111;
+    top: 7px; left: 15px; z-index: 111;
     border-radius: 50%;
     cursor: pointer;
     display: none;
@@ -524,6 +532,7 @@ header .icon-group i{}
     header .menu{display: none;}
     .ham-btn{display: block;}
     header.top .icon-group a:hover{color: #fff;}
+    header .icon-group{right: 15px;}
     header .icon-group a:hover{color: #222222;}
     header .icon-group a:nth-child(2){display: none;}
     header .icon-group a:nth-child(3){display: none;}
@@ -549,7 +558,7 @@ header .icon-group i{}
     padding-top: 80px;
     border-top: 1px solid #ede4c5;
 }
-.site-map .menu-li{
+.site-map .menu-li a{
     text-transform: uppercase;
     font-size: 16px;
     line-height: 50px;
@@ -557,11 +566,11 @@ header .icon-group i{}
     padding-left: 50px;
     transition: 0.2s;
 }
-.site-map .menu-li:hover{background-color: #ede4c5;}
+.site-map .menu-li a:hover{background-color: #ede4c5;}
 /* site-on */
 body.site-on .ham-btn{
     background-color: transparent;
-    left: 65%;
+    left: calc(80% - 40px);
 }
 body.site-on .ham-btn .bar{background-color: #322826;}
 body.site-on .ham-btn .bar1{
@@ -663,8 +672,15 @@ footer{}
     }
 }
 @media(max-width:800px){
+    .foot1{
+        padding-top: 15px;
+    }
     .foot1 .row2 .item-1 .foot-menu{
-        display: block;
+        flex-direction: column;
+        gap: 5px;
+    }
+    .foot1 .row2 .item-1 .foot-menu a{
+        display: inline-block;
     }
 }
 
@@ -693,7 +709,7 @@ footer{}
     background: rgba(0,0,0,0.6); 
     color: #fff;
     font-size: 15px;
-    line-height: 1em;
+    line-height: 1.5em;
     padding: 12px 24px; 
     border-radius: 20px;
     max-width: calc(100% - 30px);
@@ -701,6 +717,7 @@ footer{}
     pointer-events: none;
     transition: opacity 0.3s, transform 0.3s;
     z-index: 9999;
+    text-align: center;
 }
 .alert.on{
     opacity: 1;
@@ -714,4 +731,18 @@ html::-webkit-scrollbar{
 }
 html::-webkit-scrollbar-thumb{
     background-color: #322826;
+}
+
+/* 2026-10-08 input 공통 css */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+@media(min-width:801px){
+    .pc-hidden{display: none;}
 }

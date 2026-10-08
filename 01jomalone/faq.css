@@ -1,7 +1,13 @@
 .section1 .list{
-    line-height: 80px;
+    /* line-height: 80px; */
     border-bottom: 1px solid #ede4c5;
     cursor: pointer;
+    line-height: 1.5em;
+    padding: 28px 0;
+}
+.section1 .q{
+    padding-right: 30px;
+
 }
 .section1 .q-1{
     font-size: 22px; font-weight: 700;
@@ -11,8 +17,8 @@
     font-size: 16px;
 }
 .section1 .q-3{
-    position: absolute; top: 0; left: 0;
-    width: 100%; height: 100%;
+    position: absolute; top: 0; right: 0;
+    width: 0; height: 100%;
 }
 .section1 .q-3 .st{
     display: block;
@@ -43,7 +49,11 @@
 .section1 .a{
     background-color: white;
     padding: 20px;
+    margin-top: 20px;
     display: none;
+}
+.section1 .a p:last-child{
+    margin-bottom: 0;
 }
 
 /* 액티브 */

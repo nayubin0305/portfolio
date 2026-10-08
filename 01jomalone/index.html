@@ -101,7 +101,7 @@
                         <img src="img/main01.jpg" alt="맞춤 제작 서비스 메인 배너">
                         <div class="bg"></div>
                         <div class="text-box">
-                            <h3>특별한 날, 특별한 사람을 위해 나만의 것을 만드세요.</h3>
+                            <h3>특별한 날, <br class="pc-hidden">특별한 사람을 위해 나만의 것을 만드세요.</h3>
                             <h2>맞춤 제작 서비스</h2>
                             <a href="#" class="btn3 soon">See More</a>
                         </div>
@@ -110,7 +110,7 @@
                         <img src="img/main02.jpg" alt="온라인 단독 컬렉션 메인 배너">
                         <div class="bg"></div>
                         <div class="text-box">
-                            <h3>오로지 온라인에서만 볼 수 있는 특별한 아이템을 만나보세요.</h3>
+                            <h3>오로지 온라인에서만 볼 수 있는 <br class="pc-hidden">특별한 아이템을 만나보세요.</h3>
                             <h2>online exclusive</h2>
                             <a href="#" class="btn3 soon">View Collection</a>
                         </div>
@@ -119,7 +119,7 @@
                         <img src="img/main03.jpg" alt="남성 향수 컬렉션 메인 배너">
                         <div class="bg"></div>
                         <div class="text-box">
-                            <h3>날카롭게 차려입은 네 가지 향기. 남성을 위한 세련된 향수 컬렉션.</h3>
+                            <h3>날카롭게 차려입은 네 가지 향기. <br class="pc-hidden">남성을 위한 세련된 향수 컬렉션.</h3>
                             <h2>Jo Malone London &<br> Huntsman Savile Row</h2>
                             <a href="#" class="btn3 soon">View Collection</a>
                         </div>
@@ -617,13 +617,13 @@
                     </div>
                 </div>
                 <div class="img-group mask-right">
-                    <img src="img/vw01.jpg" alt="조말론 스토리 뷰 이미지" loading="lazy">
-                    <img src="img/vw02.jpg" alt="조말론 스토리 뷰 이미지" loading="lazy">
-                    <img src="img/vw03.jpg" alt="조말론 스토리 뷰 이미지" loading="lazy">
-                    <img src="img/vw04.jpg" alt="조말론 스토리 뷰 이미지" loading="lazy">
-                    <img src="img/vw05.jpg" alt="조말론 스토리 뷰 이미지" loading="lazy">
-                    <img src="img/vw06.jpg" alt="조말론 스토리 뷰 이미지" loading="lazy">
-                    <img src="img/vw07.jpg" alt="조말론 스토리 뷰 이미지" loading="lazy">
+                    <a href="#" class="img-a soon"><img src="img/vw01.jpg" alt="조말론 스토리 뷰 이미지" loading="lazy"></a>
+                    <a href="#" class="img-a soon"><img src="img/vw02.jpg" alt="조말론 스토리 뷰 이미지" loading="lazy"></a>
+                    <a href="#" class="img-a soon"><img src="img/vw03.jpg" alt="조말론 스토리 뷰 이미지" loading="lazy"></a>
+                    <a href="#" class="img-a soon"><img src="img/vw04.jpg" alt="조말론 스토리 뷰 이미지" loading="lazy"></a>
+                    <a href="#" class="img-a soon"><img src="img/vw05.jpg" alt="조말론 스토리 뷰 이미지" loading="lazy"></a>
+                    <a href="#" class="img-a soon"><img src="img/vw06.jpg" alt="조말론 스토리 뷰 이미지" loading="lazy"></a>
+                    <a href="#" class="img-a soon"><img src="img/vw07.jpg" alt="조말론 스토리 뷰 이미지" loading="lazy"></a>
                 </div>
             </div>
             <div class="container">
@@ -676,7 +676,7 @@
                     <button type="submit" class="btn6">보내기</button>
                 </form>
                 <form class="item" data-type="tel">
-                    <input type="text" id="tel" name="tel" autocomplete="off" required>
+                    <input type="number" id="tel" name="tel" autocomplete="off" required>
                     <label for="tel"><span>전화번호</span></label>
                     <button type="submit" class="btn6">보내기</button>
                 </form>
@@ -809,13 +809,13 @@
     $(".play").click(function(){
         $(".vod").get(0).play();
         $(".play").hide();
-        $(".stop").show();
+        $(".stop").css({display:'flex'});
     });
 
     $(".stop").click(function(){
         $(".vod").get(0).pause();
         $(".stop").hide();
-        $(".play").show();
+        $(".play").css({display:'flex'});
     });
 
     // 섹션 5 클립패스
@@ -844,24 +844,41 @@
     });
 
     // 섹션 8
+    // 2026-10-08 모바일 활용도 상향
     var img_ = 0;
-    $(".section8 .img-group img").eq(img_).stop().fadeIn();
-    $(".section8 .img-group img").not($(".section8 .img-group img").eq(img_)).stop().fadeOut();
-    $(".section8 .text").eq(img_).stop().fadeIn();
-    $(".section8 .text").not($(".section8 .text").eq(img_)).stop().fadeOut();
+    var $thumbs = $(".section8 .img-box");
+    
+    function showStory(idx) {
+        img_ = idx;
+        $(".section8 .img-group .img-a").eq(idx).stop().fadeIn();
+        $(".section8 .img-group .img-a").not($(".section8 .img-group .img-a").eq(idx)).stop().fadeOut();
+        $(".section8 .text").eq(idx).stop().fadeIn();
+        $(".section8 .text").not($(".section8 .text").eq(idx)).stop().fadeOut();
 
-    $(".section8 .img-box").click(function(){
-        img_ = $(this).index();
-        $(".section8 .img-group img").eq(img_).stop().fadeIn();
-        $(".section8 .img-group img").not($(".section8 .img-group img").eq(img_)).stop().fadeOut();
-        $(".section8 .text").eq(img_).stop().fadeIn();
-        $(".section8 .text").not($(".section8 .text").eq(img_)).stop().fadeOut();
+        $thumbs.removeClass("active").eq(idx).addClass("active");
+
+        if ($(window).width() <= 800) {
+            var wrap = $(".section8 .indi-group")[0];
+            var box = $thumbs[idx];
+            var target = box.offsetLeft - (wrap.clientWidth - box.clientWidth) / 2;
+
+            wrap.style.scrollSnapType = "none";        
+            $(wrap).stop().animate({ scrollLeft: target }, 400, function () {
+                wrap.style.scrollSnapType = "";        
+            });
+        }
+    }
+
+    showStory(0);
+
+    $thumbs.click(function() {
+        showStory($(this).index());
     });
 
     // 2026-09-10 섹션 9
     $(".section9 form").on("submit", function(e) {
         e.preventDefault();
-        $(".alert").stop().text("구독 신청이 완료되었습니다.").fadeIn().delay(1500).fadeOut();
+        showAlert("구독 신청이 완료되었습니다.");
         this.reset();
     });
 

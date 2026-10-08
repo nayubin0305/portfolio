@@ -131,17 +131,18 @@
     .section1{padding: 50px 0;}
     .section1 .container{display: block;}
     .section1 .section-title{width: 90%;}
+    .section1 .section-title h2{max-width: 100%;}
     .section1 .section-title p{max-width: 90%;}
     .section1 .img-box{padding-bottom: 20px;}
     .section1 .text-box{padding-bottom: 20px;}
     .section1 .btn2{position: relative; margin-top: 0;}
 
-    .section2{padding: 50px 0;}
+    .section2{padding: 50px 0 0;}
     .section2 .cont1{display: block;}
     .section2 .cont2 .img-box{height: 400px;}
-    .section2 .cont2 .btn1{width: 100%;}
+    .section2 .cont2 .btn1{width: 100%; margin-bottom: 0;}
 
-    .section3{padding: 50px 0;}
+    .section3{padding: 100px 0;}
     .section3 .container{display: block;}
     .section3 .cont1{margin-bottom: 50px;}
     .section3 .cont1 .text-box{width: 90%; line-height: 22px;padding: 10px 0;}

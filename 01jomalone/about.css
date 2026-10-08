@@ -41,6 +41,9 @@
         margin-bottom: 50px;
     }
     .section1 .right{display: block; width: 100%;}
+    .section1 .right .item1{
+        height: auto;
+    }
 }
 
 .section2{
@@ -76,8 +79,10 @@
 .section2 .left .img-box:hover img{transform: scale(1.1);}
 
 @media(max-width:800px){
+    .section2{padding-top: 0;}
     .section2 .container{display: block;}
     .section2 .left{width: 100%; margin-bottom: 50px;}
-    .section2 .section-title{width: 100%;}
+    .section2 .section-title{width: 100%; margin-bottom: 0;}
     .section2 .group{display: block;}
+    .section2 .group .box:last-child p{margin-bottom: 0;}
 }

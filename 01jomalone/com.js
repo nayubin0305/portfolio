@@ -35,6 +35,14 @@ $(".ham-btn").click(function(){
     $(".site-map .bg").stop().fadeToggle();
 });
 
+$(window).resize(function(){
+    if ($(window).width() > 800) {
+        $("body").removeClass("site-on");
+        $(".ham-btn").attr("aria-expanded", "false");
+        $(".site-map .bg").stop().hide();
+    }
+});
+
 // 커서
 // 2026-10-06 스크립트 정리
 $(window).mousemove(function(event){

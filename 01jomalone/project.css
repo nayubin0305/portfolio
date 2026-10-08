@@ -79,6 +79,9 @@
         text-align: left;
         width: 100%;
     }
+    .section1 .item-3{
+        padding-bottom: 0;
+    }
     .section1 .item .text-box p{
         padding: 0;
     }

@@ -30,6 +30,11 @@
     }
     .section1 .container .section-title{
         margin: 0;
+        width: 100%;
+        padding: 50px 0 0;
+    }
+    .section1 .text-box:last-child{
+        margin-bottom: 0;
     }
 }
 
@@ -87,5 +92,11 @@
     }
     .section-input .container{display: block;}
     .section-input .section-title{width: 100% !important;}
-    .section-input .right{width: 100%;}
+    .section-input .right{
+        width: 100%;
+        display: block;
+    }
+    .section-input .right .box + .box {
+        margin-top: 20px;
+    }
 }

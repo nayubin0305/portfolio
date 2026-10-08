@@ -38,6 +38,13 @@
 @media(max-width:800px){
     .section1 .container{
         grid-template-columns: repeat(1,1fr);
+        gap: 0;
+    }
+    .section1 .item{
+        padding-bottom: 0;
+    }
+    .section1 .item h4{
+        margin-bottom: 15px;
     }
     .section1 .item .img-box{right: 10%;}
 }

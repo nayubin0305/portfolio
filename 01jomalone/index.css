@@ -136,7 +136,9 @@
     transform: translate(-50%,-50%);
 }
 @media(max-width:800px){
-    .main .text-box{width: 60%;}
+    .main .text-box{
+        width: calc(100% - 30px);
+    }
     .main .text-box h3{
         font-size: 14px;
         line-height: 30px;
@@ -340,6 +342,9 @@
     .section3 .container{
         grid-template-columns: repeat(1,1fr);
     }
+    .section3 .item p{
+        font-size: 14px;
+    }
 }
 
 /* 444 */
@@ -356,17 +361,24 @@
 .section4 .bg video{height: 500px; width: 100%; object-fit: cover;}
 
 .section4 .btn-group{
-    position: absolute; top: 50%; left: 50%;
-    width: 50px; height: 50px;
+    position: absolute; 
+    top: 0; left: 0;
+    width: 100%; height: 100%;
     box-sizing: border-box;
     filter: invert(1);
 }
 .section4 .btn-group div{
     position: absolute; top: 0; left: 0;
     width: 100%; height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
 }
-.section4 .stop{display: none; opacity: 0; transition: 0.5s;}
+.section4 .btn-group img{
+    width: 50px;
+}
+.section4 .btn-group div.stop{display: none; opacity: 0; transition: 0.5s;}
 .section4 .btn-group:hover .stop{opacity: 1;}
 
 @media(max-width:800px){
@@ -460,7 +472,7 @@
         display: block;
     }
     .section5 .item .section-title{
-        padding-top: 20px;
+        padding-top: 100px;
         text-align: center;
     }
     .section5 .item .section-title p{
@@ -616,8 +628,11 @@
 .section8 .mask-right.is-open{
     clip-path: inset(0 0 0 0); 
 }
-.section8 .img-group img{
+.section8 .img-group .img-a{
     position: absolute; top: 0; left: 0;
+    width: 100%; height: 100%; 
+}
+.section8 .img-group img{
     width: 100%; height: 100%; object-fit: cover;
 }
 .section8 .text-group{
@@ -648,23 +663,24 @@
         grid-template-columns: repeat(4,1fr);
     }
     .section8 .text-group{
-        padding: 30px 50px 0px 50px;}
-        .section8 .text{
-            display : -webkit-box;
-            -webkit-box-orient : vertical;
-            -webkit-line-clamp : 5;
-            overflow : hidden;
-        }
+        padding: 0px 50px 0px 50px;
+    }
+    .section8 .text{
+        display : -webkit-box;
+        -webkit-box-orient : vertical;
+        -webkit-line-clamp : 5;
+        overflow : hidden;
+    }
 }
 @media(max-width:800px){
     .section8 .row1{display: block;}
-    .section8 .section-title{height: 20vh; text-align: center;}
+    .section8 .section-title{height: auto; text-align: center;}
     .section8 .section-title h5{margin: 0 auto;}
     .section8 .section-title h2{margin-bottom: 20px;}
     
     .section8 .img-group{width: 100%;margin-top: 20px; position:relative; left:0;}
     .section8 .text-group{
-        padding: 30px 50px 0px 50px;
+        padding: 0 50px 0px 50px;
         width: 100%;
     }
     .section8 .text{
@@ -674,9 +690,24 @@
         overflow : hidden;
     }
     .section8 .indi-group{
-        grid-template-columns: repeat(2,1fr);
-        
+        /* grid-template-columns: repeat(2,1fr); */
+        position: relative;           
+        display: flex;             
+        gap: 12px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch; 
+        scrollbar-width: none; 
     }
+    .section8 .indi-group::-webkit-scrollbar{display: none;}
+    .section8 .indi-group .img-box{
+        flex: 0 0 40%;
+        scroll-snap-align: center;
+        opacity: 0.5;
+        transition: opacity 0.3s;
+    }
+    .section8 .indi-group .img-box.active{opacity: 1;}
+    .section8 .text-box{margin-top: 30px;}
 }
 
 /* 999 */
@@ -710,10 +741,11 @@
     content:""; position:absolute; left:0; bottom:-1px; width:0; height:100%; border-bottom:3px solid #322826; transition:all .3s ease; 
 } /* 파란색 가로줄 */
 .section9 label span { 
-    position:absolute; left:0; bottom:5px; transition:all .3s ease; 
+    position:absolute; left:10px; bottom:5px; transition:all .3s ease; 
 }
 .section9 input:focus + label span, 
 .section9 input:valid + label span { 
+    left: 0;
     transform:translateY(-150%); font-size:14px; color:#322826; font-size: 12px;
 }  
 /* input에 글을 입력하고 포커스가 지나간 상태에서 제어하려면 valid 선택자를 써야한다. */
@@ -729,5 +761,5 @@
     .section9 .container{display: block;}
     .section9 .item{width: 100%;}
     .section9 .item:nth-child(2){margin-top: 30px;}
-    .section9 input{padding: 0;}
+    /* .section9 input{padding: 0;} */
 }
