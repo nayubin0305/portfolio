@@ -94,10 +94,14 @@ $(".ham-btn").click(function(){
     $("body").toggleClass("site-on");
 });
 
- $(".site-map .menu-li > div").click(function(){
-    var idx = $(this).parent().index();
-    $(".site-map .sub").eq(idx).stop().slideToggle();
-    $(".site-map .sub").not($(".site-map .sub").eq(idx)).stop().slideUp();
+$(".site-map .menu-li > .menu-toggle").click(function(){
+    var $sub = $(this).next(".sub");
+    var wasOpen = $(this).attr("aria-expanded") === "true";
+
+    $(".site-map .menu-toggle").attr("aria-expanded", "false");
+    $(".site-map .sub").not($sub).stop().slideUp();
+    $sub.stop().slideToggle();
+    $(this).attr("aria-expanded", wasOpen ? "false" : "true");
 });
 
 // 커서

@@ -90,8 +90,8 @@ p{line-height: 1.6rem;}
 }
 
 /* 2026-10-08 사이트맵 오픈 시 body */
-html:has(body.site-on),
-body.site-on{overflow: hidden;}
+html:has(body.site-on){overflow: hidden;}
+body.site-on{overflow: visible;}
 html{
     scrollbar-gutter: stable;
     background-color: #0D0D0D;
@@ -379,7 +379,7 @@ header .menu-li.on{
     position: fixed; top: 0; right: -100%; z-index: 99;
     width: 500px; height: 100vh;
     background-color: #0D0D0D;
-    color: white;
+    color: #fff;
     text-transform: uppercase;
     font-size: 20px;
     line-height: 50px;
@@ -387,9 +387,21 @@ header .menu-li.on{
     box-sizing: border-box;
     transition: 1s;
 }
-.site-map .menu-li{border-bottom: 1px solid white;}
-.site-map .menu-li>div{transition: 0.3s; cursor: pointer;}
-.site-map .menu-li:hover>div{color: var(--color-point);}
+.site-map .menu-li{border-bottom: 1px solid #fff;}
+.site-map .menu-li>.menu-toggle{
+    width: 100%;
+    height: auto;
+    border: none;
+    text-align: left;
+    color: #fff;
+    font-size: 20px;
+    line-height: 50px;
+    display: block;
+    transition: 0.3s; 
+    cursor: pointer;
+}
+.site-map .menu-li:hover>.menu-toggle{color: var(--color-point);}
+.site-map .menu-li>.menu-toggle::after{display: none;}
 .site-map .sub{
     font-size: 15px;
     display: none;
