@@ -700,6 +700,10 @@ footer{}
     border: 1px solid #e4c841;
 }
 
+@media(max-width:800px){
+    .cursor{display: none;}
+}
+
 /* 2026-09-10 디자인 알럿창 추가 */
 .alert{
     position: fixed; 

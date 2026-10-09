@@ -1,6 +1,6 @@
 // 헤더
 // 2026-09-09 느린 반응 수정
-var lastScroll = 0;
+var lastScroll = $(window).scrollTop();
 
 $(window).scroll(function() {
     var currentScroll = $(window).scrollTop();
