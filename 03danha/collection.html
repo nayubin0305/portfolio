@@ -334,14 +334,16 @@
         data-500="top:0%"
         data-1000="top:-100%"
         >
-            <img 
+            <div class="main-img"
             data-0="left:0%"
-            data-500="left:-100%"
-            src="img/background_01.jpg" alt="왼쪽 문" class="left" loading="lazy">
-            <img 
+            data-500="left:-100%">
+                <img src="img/background_01.jpg" alt="왼쪽 문" class="left" loading="lazy">
+            </div>
+            <div class="main-img"
             data-0="right:0%"
-            data-500="right:-100%"
-            src="img/background_02.jpg" alt="오른쪽 문" class="right" loading="lazy">
+            data-500="right:-100%">
+                <img src="img/background_02.jpg" alt="오른쪽 문" class="right" loading="lazy">
+            </div>
         </section>
     
         <!-- 섹션2 -->
@@ -480,7 +482,7 @@
         data-9000="opacity:0"
         data-9500="opacity:1"
         >
-            <a href="#"><h2>처음으로 돌아가기</h2></a>
+            <a href="#"><h2>컬렉션 다시 보기</h2></a>
         </section>
     </main>
 
@@ -493,7 +495,7 @@
     // 스크롤 플러그인
     skrollr.init();
 
-    var sc
+    var sc;
 
     scEvent();
 
@@ -501,9 +503,12 @@
         scEvent();
     });
     
+
     function scEvent(){
         sc = $(window).scrollTop();
-        $(".sc-box").text(sc);
+
+        $(".end").toggleClass("show", sc >= 9000)  
+                 .toggleClass("on", sc >= 9300);  
     }
 </script>
 </html>

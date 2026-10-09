@@ -350,11 +350,11 @@
                             </ul>
                             <div class="color-box">
                                 <div class="box-title">
-                                    <h4 class="pick-a">색상</h4>
-                                    <button type="button" class="btn-up" aria-label="접기"><i class="fa-solid fa-chevron-up"></i></button>
-                                    <button type="button" class="btn-down" aria-label="펼치기"><i class="fa-solid fa-chevron-down"></i></button>
+                                    <button type="button" class="filter-toggle pick-a" aria-expanded="true" aria-controls="color-ul-side">
+                                        색상 <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
+                                    </button>
                                 </div>
-                                <ul class="color-ul">
+                                <ul class="color-ul" id="color-ul-side">
                                     <li class="color-li">
                                         <input type="checkbox" id="side-white" data-color="white_">
                                         <label for="side-white">
@@ -401,11 +401,11 @@
                             </div>
                             <div class="price-box">
                                 <div class="box-title">
-                                    <h4 class="pick-a">가격대</h4>
-                                    <button type="button" class="btn-up" aria-label="접기"><i class="fa-solid fa-chevron-up"></i></button>
-                                    <button type="button" class="btn-down" aria-label="펼치기"><i class="fa-solid fa-chevron-down"></i></button>
+                                    <button type="button" class="filter-toggle pick-a" aria-expanded="true" aria-controls="price-ul-side">
+                                        가격대 <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
+                                    </button>
                                 </div>
-                               <ul class="price-ul">
+                                <ul class="price-ul" id="price-ul-side">
                                     <li class="price-li">
                                         <input type="checkbox" id="price-01" data-range="0-50000">
                                         <label for="price-01">
@@ -442,11 +442,11 @@
                             <i class="fa-solid fa-xmark x-btn"></i>
                             <div class="color-box">
                                 <div class="box-title">
-                                    <h4>색상</h4>
-                                    <i class="fa-solid fa-chevron-up"></i>
-                                    <i class="fa-solid fa-chevron-down"></i>
+                                    <button type="button" class="filter-toggle pick-a" aria-expanded="true" aria-controls="color-ul-side-m">
+                                        색상 <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
+                                    </button>
                                 </div>
-                                <ul class="color-ul">
+                                <ul class="color-ul" id="color-ul-side-m">
                                     <li class="color-li">
                                         <input type="checkbox" id="white-m" data-color="white_">
                                         <label for="white-m">
@@ -493,11 +493,11 @@
                             </div>
                             <div class="price-box">
                                 <div class="box-title">
-                                    <h4>가격대</h4>
-                                    <i class="fa-solid fa-chevron-up"></i>
-                                    <i class="fa-solid fa-chevron-down"></i>
+                                    <button type="button" class="filter-toggle pick-a" aria-expanded="true" aria-controls="price-ul-side-m">
+                                        가격대 <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
+                                    </button>
                                 </div>
-                               <ul class="price-ul">
+                               <ul class="price-ul" id="price-ul-side-m">
                                     <li class="price-li">
                                         <input type="checkbox" id="price-01-m" data-range="0-50000">
                                         <label for="price-01-m">
@@ -1064,10 +1064,10 @@
                 </div>
             </div>
             <div class="container cont2">
-                <a-la href="#" class="page_arr soon" ariabel="이전 페이지">
+                <a href="#" class="page_arr soon" ariabel="이전 페이지">
                     <p>첫 페이지로</p>
                     <i class="fa-solid fa-chevron-left"></i>
-                </a-la>
+                </a>
                 <a href="#" class="page_num active">1</a>
                 <a href="#" class="page_num soon">2</a>
                 <a href="#" class="page_num soon">3</a>
@@ -1150,10 +1150,10 @@
     });
 
     // 필터 항목 펼치기/접기
-    $(".color-box .box-title, .price-box .box-title").click(function(){
-        $(this).next("ul").stop().slideToggle();
-        $(this).find(".btn-up").toggle();
-        $(this).find(".btn-down").toggle();
+    $(".filter-toggle").click(function(){
+        var isOpen = $(this).attr("aria-expanded") === "true";
+        $(this).attr("aria-expanded", !isOpen);
+        $(this).closest(".box-title").next("ul").stop().slideToggle();
     });
 
     // 사이드바/모바일 동기화

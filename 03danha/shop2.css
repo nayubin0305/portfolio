@@ -12,15 +12,21 @@
     margin: 0 auto;
     padding-bottom: 50px;
 }
-.category p:last-child{font-weight: 700;}
+.category a{
+    font-family: 'SUIT', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 22px;
+}
+.category a:last-child{font-weight: 700;}
 
 .shop2 .container{
     width: 90%; max-width: 1300px; margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
+    display: flex;
+    gap: 100px;
 }
 
-.shop2 .left{width: 120%;}
+.shop2 .left{flex: 1;}
 .shop2 .left .img-group{
     display: grid;
     grid-template-columns: repeat(4,1fr);
@@ -54,7 +60,7 @@
 
 /* 오른쪽 */
 .shop2 .right{
-    width: 80%; margin: 0 200px 0;
+    flex: 1;
 }
 .shop2 .right .star-group{
     display: flex; gap: 5px;
@@ -63,7 +69,7 @@
 }
 .shop2 .right .pri-box{padding: 30px 0;display: flex;}
 .shop2 .right .pri-box h2{font-size: 24px; font-weight: 700;}
-.shop2 .right .text{padding-bottom: 20px; width: 80%;}
+.shop2 .right .text{padding-bottom: 20px;}
 .shop2 .right .text2 p{font-weight: 700; line-height: 30px;}
 .shop2 .right .size-box{
     text-transform: uppercase;
@@ -185,7 +191,9 @@
 .shop2 .btn-6:hover .heart-ot{transform: scale(1.2);}
 .shop2 .btn-6:hover .heart-pl{transform: translate(-50%,-50%) scale(1.2);}
 
-.detail{}
+.detail{
+    margin-bottom: 100px;
+}
 .detail .cate{
     width: 90%;
     max-width: 1300px;
@@ -199,13 +207,13 @@
     display: grid;
     grid-template-columns: repeat(4,1fr);
     text-align: center;
-    padding: 15px 0;
     font-size: 20px;
     border-bottom: 1px solid #999999;
 }
 .detail .cate-li{
     cursor: pointer;
     transition: 0.5s;
+    padding: 15px 0;
     border-right: 1px solid #999999;
 }
 .detail .cate-li:last-child{border: none;}
@@ -431,6 +439,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; 
+    box-sizing: border-box;
 }
 .cont3 .row4 .tab2{gap: 3px;}
 .cont3 .row3 .tab3,
@@ -438,6 +450,8 @@
     width: 55%;
     justify-content: left;
     padding-left: 50px;
+    display: block;
+    line-height: 60px;
 }
 .cont3 .row4 .tab2.no{font-size: 14px;color: #e8b3b3;}
 .cont3 .row4 .tab2.yes{font-size: 14px;color: #b3c0e8;}
@@ -471,6 +485,9 @@
     padding-top: 20px;
     padding-bottom: 40px;
 }
+.detail .cont4 ul:last-child{
+    padding-bottom: 0;
+}
 .detail .cont4 li{
     list-style: circle;
     line-height: 30px;
@@ -485,13 +502,15 @@
     height: 4px;
     background-color: #023059;
     position: absolute;
-    bottom: -15px; left: 0;
+    bottom: 0; left: 0;
 }
 .detail .cont{display: none;}
 .detail .cont1{display: block;}
 
 /* recommend */
 .recommend h2{
+    font-size: 24px;
+    font-weight: 700;
     padding-bottom: 20px;
 }
 .recommend .grid{
@@ -542,26 +561,39 @@
 }
 .recommend .item .text-group p:first-child{padding: 15px 0;}
 
-@media(max-width:1300px){
-    .shop2 .right{
-        margin: 0 100px 0;
-        padding-left: 50px;
+@media(max-width:1200px){
+    .shop2 .container{
+        gap: 50px;
     }
 }
 @media(max-width:1000px){
+    .shop2{
+        margin-bottom: 50px;
+    }
     .shop2 .container{
         display: block;
     }
-    .shop2 .left{width: 100%;}
-    .shop2 .right{padding-top: 30px;}
+    .shop2 .left .img-box{
+        width: auto;
+    }
+    .shop2 .right{
+        padding: 30px 0 0;
+    }
     .cont1 .page-m{display: block;}
     .cont1 .page-d{display: none;}
+
     .detail .cont4{width: 90%; margin: 0 auto;}
     .detail .cont4 li{
         transform: translateX(20px);
     }
 }
 @media(max-width:800px){
+    .category{
+        padding-bottom: 25px;
+    }
+    .category a{
+        font-size: 14px;
+    }
     .shop2 .left{
         display: none;
     }
@@ -590,14 +622,51 @@
         object-fit: cover;
     }
 
-    .shop2 .right h1{font-size: 30px;padding-bottom: 10px;}
     .shop2 .right{
-        width: 100%; margin: 0 auto;
+        width: 100%; 
+        margin: 0 auto;
+    }
+    .shop2 .right > h2{font-size: 30px;padding-bottom: 10px;}
+    .shop2 .right .pri-box{
+        padding: 20px 0;
+    }
+    .shop2 .right .size{margin-bottom: 20px;}
+    .shop2 .btn-6{
+        width: 40px;
+        height: 40px;
+    }
+    .shop2 .btn-6 img{
+        width: 25px;
     }
 
 
+    .detail .cate{
+        padding-top: 50px;
+    }
+    .detail .cate-li{
+        font-size: 16px;
+    }
+
+    .cont2{
+        padding-bottom: 20px;
+    }
+    .cont2 .graph + .graph{
+        margin-top: 20px;
+    }
+    .cont2 .graph .row p:last-child{
+        width: auto;
+    }
+    .cont2 .rev-row0{
+        align-items: flex-start;
+    }
+    .cont2 .rev-row0 .btn-4{
+        margin-top: 10px;
+    }
     .cont2 .rev-row1 .box{
         display: block;
+    }
+    .cont2 .rev-row1 .box .star{
+        margin-bottom: 10px;
     }
     .cont2 .rev-row1 .mini-box{
         display: flex;
@@ -610,27 +679,38 @@
         display: block;
     }
     .cont2 .rev-row0 .review{width: 150px;}
+    .cont2 .review-ul{
+        width: 150px;
+    }
 
+    .cont3{
+        padding-bottom: 20px;
+    }
+    .cont3 .qna{
+        font-size: 14px;
+    }
     .cont3 .row1{
         display: block;
         padding-top: 20px;
     }
     .cont3 .row1 .btn-group{margin: 20px 0;}
-
+    .cont3 .row3{font-size: 14px;}
     .cont3 .row3 .tab,
     .cont3 .row4 .tab{
-        width: 25%;
+        width: 15%;
         white-space:nowrap;
     }
+    .cont3 .row3, .cont3 .row4 .tab-row a{height: 45px;}
     .cont3 .row3 .tab3,
     .cont3 .row4 .tab3{
-        width: 30%;
+        width: 35%;
         justify-content: left;
-        padding-left: 50px;
+        padding-left: 0px;
+        line-height: 45px;
     }
-    .cont3 .row4 .tab2 p{font-size: 12px;}
+    .cont3 .row4 .tab2 p{font-size: 10px;}
     .cont3 .row4 .tab2::before{
-        width: 60px; height: 30px;
+        width: 50px; height: 20px;
         border-radius: 30px;
     }
     .cont3 .row4 .tab2 img{display: none;}
@@ -640,7 +720,11 @@
     }
     .recommend .item{height: auto;}
     .recommend .item .text-group p:first-child{padding: 5px 0;}
+    .detail .cont4 h4{
+        font-size: 16px;
+    }
     .detail .cont4 li{
         transform: translateX(10px);
+        font-size: 14px;
     }
 }
