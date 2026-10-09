@@ -624,6 +624,9 @@ section:last-of-type{margin-bottom: 400px;}
 }
 .cursor.over p{opacity: 1; transform: translate(-40%,-130%);}
 
+@media(max-width:800px){
+    .cursor{display: none;}
+}
 
 .pick-b::before{
     content: '';
