@@ -9,11 +9,13 @@ function header() {
          $("header").css({
             transform: "translateY(-100%)"
         });
+        $(".ham-btn").addClass("color");
     } else {
         $("header").css({
             transform: "translateY(0)",
             backgroundImage: "linear-gradient(rgba(2,40,64,0.8),transparent)"
         });
+        $(".ham-btn").removeClass("color");
     }
     lastScroll = sc;
 }
@@ -40,10 +42,6 @@ onScroll();
 $(window).scroll(onScroll);
 
 // 메뉴
-$(".ham-btn").click(function(){
-    $(this).toggleClass("active");
-});
-
 $("header .menu-li").mouseleave(function(){
     $(this).find(".sub").stop().slideUp();
 });
@@ -53,19 +51,37 @@ $("header .menu-li").mouseenter(function(){
 });
 
 //모바일
-$(".mobali-sub-li h5").click(function(){
-    $(".mobali-ul").stop().slideUp();
-    $(this).next(".mobali-ul").stop().slideToggle();
+$(".mobali-sub-li .mobali-toggle").click(function(){
+    var $ul = $(this).parent().siblings(".mobali-ul");
+    var wasOpen = $(this).attr("aria-expanded") === "true";
+
+    $(".mobali-toggle").attr("aria-expanded", "false");
+    $(".mobali-ul").not($ul).stop().slideUp();
+
+    $ul.stop().slideToggle();
+    $(this).attr("aria-expanded", wasOpen ? "false" : "true");
 });
 
 $(".ham-btn").click(function(){
+    var isOpen = $(this).attr("aria-expanded") === "true";
+
+    $(this).toggleClass("active").attr("aria-expanded", !isOpen);
     $(".mobali-bg").stop().fadeToggle();
     $(".mobali-sub").toggleClass("active");
 });
-$(".mobali-bg").click(function(){
+
+function closeMobali() {
     $(".mobali-bg").stop().fadeOut();
     $(".mobali-sub").removeClass("active");
-    $(".ham-btn").removeClass("active");
+    $(".ham-btn").removeClass("active").attr("aria-expanded", "false");
+}
+
+$(".mobali-bg").click(closeMobali);
+
+$(window).resize(function(){
+    if ($(window).width() > 1200) {
+        closeMobali();
+    }
 });
 
 // 헤더 메뉴바 슬라이드
@@ -73,18 +89,17 @@ var swiper = new Swiper("header .mySwiper", {
     slidesPerView: 1,
     spaceBetween: 30,
     loop: true,
-    autoplay: 3000,
     pagination: {
-      el: "header .swiper-pagination",
-      clickable: true,
+        el: "header .swiper-pagination",
+        clickable: true,
     },
     autoplay : {  // 자동 슬라이드 설정 , 비 활성화 시 false
-    delay : 3000,   // 시간 설정
-    disableOnInteraction : false,  // false로 설정하면 스와이프 후 자동 재생이 비활성화 되지 않음
+        delay : 3000,   // 시간 설정
+        disableOnInteraction : false,  // false로 설정하면 스와이프 후 자동 재생이 비활성화 되지 않음
     },
     navigation: {
-      nextEl: ".swiper-next",
-      prevEl: ".swiper-prev",
+        nextEl: ".swiper-next",
+        prevEl: ".swiper-prev",
     },
 });
 

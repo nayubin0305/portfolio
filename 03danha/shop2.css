@@ -67,7 +67,7 @@
 .shop2 .right .text2 p{font-weight: 700; line-height: 30px;}
 .shop2 .right .size-box{
     text-transform: uppercase;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 .shop2 .right .size{
     border: 1px solid #999999;
@@ -78,6 +78,7 @@
     justify-content: space-between;
     margin: 10px 0 40px;
     box-sizing: border-box;
+    cursor: pointer;
 }
 .shop2 .right .size-ul{
     border: 1px solid #999999;
@@ -106,11 +107,12 @@
     border-bottom: 1px solid #999999;
 }
 .shop2 .right .btn-num{
-    width: 36px; height: 36px;
+    width: 38px; height: 38px;
     display: flex;
     align-items: center;
     justify-content: center;
     border: 1px solid #999999;
+    background-color: #fff;
     cursor: pointer;
 }
 .shop2 .right .btn-m{}

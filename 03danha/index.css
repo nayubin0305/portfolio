@@ -553,6 +553,8 @@ header{
 .service{}
 .service .cont1{
     display: flex; justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 .service .item{
     text-align: center;
@@ -566,8 +568,8 @@ header{
 .service .item:hover img{transform: translateY(-10px);}
 
 @media(max-width:800px){
-    .service .cont1{display: none;}
-    .service .cont2{display: block;}
+    /* .service .cont1{display: none;}
+    .service .cont2{display: block;} */
     .service .cont2 .box1{
         display: flex; justify-content: space-between;
         align-items: center;
