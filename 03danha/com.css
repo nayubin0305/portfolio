@@ -350,7 +350,7 @@ p{
     filter: invert(1);
     transition: 0.5s;
 }
-.cons-btn p{
+.cons-btn span{
     white-space: nowrap;
     transition: 0.5s;
     color: #fff;
@@ -364,7 +364,7 @@ p{
     width: 120px;
 }
 .cons-btn:hover img{transform: translateX(-30px);}
-.cons-btn:hover p{transform: scaleX(1) translateY(-50%); opacity: 1;}
+.cons-btn:hover span{transform: scaleX(1) translateY(-50%); opacity: 1;}
 @media(max-width:800px){
     .top-btn,
     .cons-btn{

@@ -32,9 +32,9 @@
         <img src="img/icon_arrow.png" alt="위로 가기 버튼">
     </a>
     <!-- 상담버튼 -->
-    <button class="cons-btn">
+    <button type="button" class="cons-btn">
         <img src="img/icon_question.png" alt="" aria-hidden="true">
-        <p>상담하기</p>
+        <span>상담하기</span>
     </button>
     
     <!-- 헤더 -->
@@ -207,10 +207,10 @@
         </div>
     </header>
 
-    <button class="ham-btn pick_" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobali">
-        <div class="bar bar1"></div>
-        <div class="bar bar2"></div>
-        <div class="bar bar3"></div>
+    <button type="button" class="ham-btn pick_" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobali">
+        <span class="bar bar1"></span>
+        <span class="bar bar2"></span>
+        <span class="bar bar3"></span>
     </button>
 
     <!-- 모바일 -->
@@ -325,28 +325,28 @@
                 <div class="top">
                     <h3>상품</h3>
                     <div class="group">
-                        <div class="filter pick-a">
-                            <img src="img/filte.png" alt="필터 아이콘">
-                            <p>필터</p>
-                        </div>
-                        <div class="grid">
-                            <img src="img/grid.png" alt="정렬 아이콘">
-                            <p>정렬</p>
-                        </div>
+                        <button type="button" class="filter pick-a" aria-expanded="false" aria-controls="filter-box">
+                            <img src="img/filte.png" alt="" aria-hidden="true">
+                            <span>필터</span>
+                        </button>
+                        <button type="button" class="grid pick-a">
+                            <img src="img/grid.png" alt="" aria-hidden="true">
+                            <span>정렬</span>
+                        </button>
                     </div>
                 </div>
                 <div class="page">
                     <div class="left">
                         <div class="box">
                             <ul class="shop-ul pick_">
-                                <li class="shop-li active" name="all">모든 상품</li>
-                                <li class="shop-li" name="out_">외투</li>
-                                <li class="shop-li" name="top_">상의</li>
-                                <li class="shop-li" name="bot_">하의</li>
-                                <li class="shop-li" name="dre_">한벌옷</li>
-                                <li class="shop-li" name="sho_">신발</li>
-                                <li class="shop-li" name="acc_">장신구</li>
-                                <li class="shop-li" name="liv_">생활소품</li>
+                                <li class="shop-li active" data-name="all">모든 상품</li>
+                                <li class="shop-li" data-name="out_">외투</li>
+                                <li class="shop-li" data-name="top_">상의</li>
+                                <li class="shop-li" data-name="bot_">하의</li>
+                                <li class="shop-li" data-name="dre_">한벌옷</li>
+                                <li class="shop-li" data-name="sho_">신발</li>
+                                <li class="shop-li" data-name="acc_">장신구</li>
+                                <li class="shop-li" data-name="liv_">생활소품</li>
                             </ul>
                             <div class="color-box">
                                 <div class="box-title">
@@ -438,8 +438,10 @@
                             </div>
                         </div>
     
-                        <div class="filter-box">
-                            <i class="fa-solid fa-xmark x-btn"></i>
+                        <div class="filter-box" id="filter-box">
+                            <button type="button" class="x-btn" aria-label="필터 닫기">
+                                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                            </button>
                             <div class="color-box">
                                 <div class="box-title">
                                     <button type="button" class="filter-toggle pick-a" aria-expanded="true" aria-controls="color-ul-side-m">
@@ -1060,23 +1062,27 @@
                                 </div>
                             </a>
                         </div>
+
+                        <p class="no-result" role="status"></p>
                     </div>
                 </div>
             </div>
             <div class="container cont2">
-                <a href="#" class="page_arr soon" ariabel="이전 페이지">
-                    <p>첫 페이지로</p>
-                    <i class="fa-solid fa-chevron-left"></i>
-                </a>
-                <a href="#" class="page_num active">1</a>
-                <a href="#" class="page_num soon">2</a>
-                <a href="#" class="page_num soon">3</a>
-                <a href="#" class="page_num soon">4</a>
-                <a href="#" class="page_num soon">5</a>
-                <a href="#" class="page_arr soon" aria-label="다음 페이지">
-                    <i class="fa-solid fa-chevron-right"></i>
-                    <p>끝 페이지로</p>
-                </a>
+                <nav aria-label="페이지 이동">
+                    <a href="#" class="page_arr soon">
+                        <span>첫 페이지로</span>
+                        <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" class="page_num active" aria-current="page">1</a>
+                    <a href="#" class="page_num soon">2</a>
+                    <a href="#" class="page_num soon">3</a>
+                    <a href="#" class="page_num soon">4</a>
+                    <a href="#" class="page_num soon">5</a>
+                    <a href="#" class="page_arr soon">
+                        <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                        <span>끝 페이지로</span>
+                    </a>
+                </nav>
             </div>
         </section>
     </main>
@@ -1125,106 +1131,131 @@
             </div>
         </div>
     </footer>
-</body>
-<!-- 제이쿼리 스크립트 -->
-<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-<!-- 스와이퍼 슬라이드 -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-<script src="com.js"></script>
-<script>
-    // 2026-09-16 스크립트 정리
+    
+    <!-- 제이쿼리 스크립트 -->
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <!-- 스와이퍼 슬라이드 -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="com.js"></script>
+    <script>
+        // 2026-09-16 스크립트 정리
 
-    // 찜 등록
-    $(".right .icon-group").click(function(){
-        if($(this).hasClass("on")) {
-            showAlert("찜 등록 취소");
-            $(this).removeClass("on");
-            $(this).find(".heart-1").show();
-            $(this).find(".heart-2").hide();
-        } else {
-            showAlert("찜 등록 완료");
-            $(this).addClass("on");
-            $(this).find(".heart-1").hide();
-            $(this).find(".heart-2").show();
-        }
-    });
-
-    // 필터 항목 펼치기/접기
-    $(".filter-toggle").click(function(){
-        var isOpen = $(this).attr("aria-expanded") === "true";
-        $(this).attr("aria-expanded", !isOpen);
-        $(this).closest(".box-title").next("ul").stop().slideToggle();
-    });
-
-    // 사이드바/모바일 동기화
-    function syncCheckbox($changed, attr){
-        var val = $changed.data(attr);
-        $("input[data-" + attr + "='" + val + "']").not($changed).prop("checked", $changed.prop("checked"));
-    }
-
-    $(".color-box input[type=checkbox]").on("change", function(){
-        syncCheckbox($(this), "color");
-        applyFilters();
-    });
-
-    $(".price-box input[type=checkbox]").on("change", function(){
-        syncCheckbox($(this), "range");
-        applyFilters();
-    });
-
-    // 카테고리 필터
-    var currentCategory = "all";
-    $(".shop .shop-li").click(function(){
-        currentCategory = $(this).attr("name");
-        applyFilters();
-        $(".shop .shop-li").removeClass("active");
-        $(this).addClass("active");
-    });
-
-    // 필터 스크립트
-    function applyFilters(){
-        var checkedColors = $(".color-box input:checked").map(function(){
-            return $(this).data("color");
-        }).get();
-        checkedColors = [...new Set(checkedColors)]; // 중복 제거
-
-        var checkedRanges = $(".price-box input:checked").map(function(){
-            return $(this).data("range");
-        }).get();
-        checkedRanges = [...new Set(checkedRanges)]; // 중복 제거
-
-        $(".shop .right .item").each(function(){
-            var $item = $(this);
-            var matchCategory = $item.hasClass(currentCategory);
-
-            // 컬러 필터 체크
-            var matchColor = checkedColors.length === 0 || checkedColors.some(function(c){
-                return $item.hasClass(c);
-            });
-
-            // 상품 가격 체크
-            var price = parseInt($item.find(".price").text().replace(/[^0-9]/g, ""), 10);
-            
-            // 가격 필터 체크
-            var matchPrice = checkedRanges.length === 0 || checkedRanges.some(function(r){
-                var parts = r.split("-");
-                return price >= Number(parts[0]) && price <= Number(parts[1]);
-            });
-
-            if(matchCategory && matchColor && matchPrice){
-                $item.stop().fadeIn();
+        // 찜 등록
+        $(".right .icon-group").click(function(){
+            if($(this).hasClass("on")) {
+                showAlert("찜 등록 취소");
+                $(this).removeClass("on");
+                $(this).find(".heart-1").show();
+                $(this).find(".heart-2").hide();
             } else {
-                $item.stop().hide();
+                showAlert("찜 등록 완료");
+                $(this).addClass("on");
+                $(this).find(".heart-1").hide();
+                $(this).find(".heart-2").show();
             }
         });
-    }
 
-    // 필터박스 열기/닫기
-    $(".shop .filter").click(function(){
-        $(".filter-box").css({top:"0%"});
-    });
-    $(".filter-box .x-btn").click(function(){
-        $(".filter-box").css({top:"100%"});
-    });
-</script>
+        // 필터 항목 펼치기/접기
+        $(".filter-toggle").click(function(){
+            var isOpen = $(this).attr("aria-expanded") === "true";
+            $(this).attr("aria-expanded", !isOpen);
+            $(this).closest(".box-title").next("ul").stop().slideToggle();
+        });
+
+        // 사이드바/모바일 동기화
+        function syncCheckbox($changed, attr){
+            var val = $changed.data(attr);
+            $("input[data-" + attr + "='" + val + "']").not($changed).prop("checked", $changed.prop("checked"));
+        }
+
+        $(".color-box input[type=checkbox]").on("change", function(){
+            syncCheckbox($(this), "color");
+            applyFilters();
+        });
+
+        $(".price-box input[type=checkbox]").on("change", function(){
+            syncCheckbox($(this), "range");
+            applyFilters();
+        });
+
+        // 카테고리 필터
+        var currentCategory = "all";
+        $(".shop .shop-li").click(function(){
+            currentCategory = $(this).data("name");
+            applyFilters();
+            $(".shop .shop-li").removeClass("active");
+            $(this).addClass("active");
+        });
+
+        // 필터 스크립트
+        function applyFilters(){
+            var checkedColors = $(".color-box input:checked").map(function(){
+                return $(this).data("color");
+            }).get();
+            checkedColors = [...new Set(checkedColors)]; // 중복 제거
+
+            var checkedRanges = $(".price-box input:checked").map(function(){
+                return $(this).data("range");
+            }).get();
+            checkedRanges = [...new Set(checkedRanges)]; // 중복 제거
+
+            var visibleCount = 0;
+
+            $(".shop .right .item").each(function(){
+                var $item = $(this);
+                var matchCategory = $item.hasClass(currentCategory);
+
+                // 컬러 필터 체크
+                var matchColor = checkedColors.length === 0 || checkedColors.some(function(c){
+                    return $item.hasClass(c);
+                });
+
+                // 상품 가격 체크
+                var price = parseInt($item.find(".price").text().replace(/[^0-9]/g, ""), 10);
+                
+                // 가격 필터 체크
+                var matchPrice = checkedRanges.length === 0 || checkedRanges.some(function(r){
+                    var parts = r.split("-");
+                    return price >= Number(parts[0]) && price <= Number(parts[1]);
+                });
+
+                if(matchCategory && matchColor && matchPrice){
+                    $item.stop().fadeIn();
+                    visibleCount++;
+                } else {
+                    $item.stop().hide();
+                }
+            });
+
+            $(".shop .no-result").text(
+                visibleCount === 0 ? "조건에 맞는 상품이 없습니다." : ""
+            );
+        }
+
+        // 필터박스 열기/닫기
+        function openFilterBox(){
+            $(".filter-box").addClass("active");
+            $(".shop .filter").attr("aria-expanded", "true");
+        }
+
+        function closeFilterBox(){
+            $(".filter-box").removeClass("active");
+            $(".shop .filter").attr("aria-expanded", "false");
+        }
+
+        $(".shop .filter").click(function(){
+            var isOpen = $(this).attr("aria-expanded") === "true";
+            isOpen ? closeFilterBox() : openFilterBox();
+        });
+
+        $(".filter-box .x-btn").click(closeFilterBox);
+
+        $(window).resize(function(){
+            if ($(window).width() > 800) { 
+                closeFilterBox();
+            }
+        });
+
+    </script>
+</body>
 </html>
