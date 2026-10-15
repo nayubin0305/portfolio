@@ -69,10 +69,20 @@ section:nth-child(2){
     margin: 0 auto;
     padding-bottom: 20px;
 }
-.section1 .filter .pick-a{
+.section1 .filter .filter-a{
     display: flex; gap: 10px;
     align-items: center;
     width: auto;
+    height: auto;
+    border: none;
+    color: #000;
+}
+.section1 .filter .filter-a::after{
+    display: none;
+}
+.section1 .filter .pick-b::before{
+    top: -10px;
+    left: -10px;
 }
 .section1 .filter img{
     width: 20px;

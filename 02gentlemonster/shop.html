@@ -172,15 +172,15 @@
             </div>
     
             <div class="filter">
-                <a href="#" class="pick-a pick_">
-                    <img src="icon/filter.png" alt="필터 아이콘">
-                    <p>필터</p>
-                </a>
-                <ul class="filter-ul pick_">
-                    <li class="filter-li"><a href="#">인기순</a></li>
-                    <li class="filter-li"><a href="#">최신순</a></li>
-                    <li class="filter-li"><a href="#">높은가격순</a></li>
-                    <li class="filter-li"><a href="#">낮은가격순</a></li>
+                <button type="button" class="filter-a pick-b pick_" aria-expanded="false" aria-controls="fil-ul">
+                    <img src="icon/filter.png" alt="" aria-hidden="true">
+                    <span class="filter-text">필터</span>
+                </button>
+                <ul class="filter-ul pick_" id="filter-ul">
+                    <li class="filter-li"><a href="shop.html?sort=popular">인기순</a></li>
+                    <li class="filter-li"><a href="shop.html?sort=latest">최신순</a></li>
+                    <li class="filter-li"><a href="shop.html?sort=price-high">높은가격순</a></li>
+                    <li class="filter-li"><a href="shop.html?sort=price-low">낮은가격순</a></li>
                 </ul>
             </div>
     
@@ -680,9 +680,11 @@
     });
 
     // 필터 열기/닫기
-    $(".section1 .pick-a").click(function(e){
+    $(".section1 .filter-a").click(function(e){
         e.preventDefault();
-        $(".section1 .filter-ul").stop().slideToggle();
+        var $ul = $(".section1 .filter-ul");
+        $ul.stop().slideToggle();
+        $(this).attr("aria-expanded", $(this).attr("aria-expanded") === "true" ? "false" : "true");
     });
 
     // 2026-09-14 필터 옵션 실행
@@ -698,9 +700,9 @@
 
         if(sortType === "인기순"){
             // 저장해둔 원본 순서 그대로 복원
-            items = originalOrder;
+            items = originalOrder.slice();
         } else {
-            items = $container.children(".item").get();
+            items = originalOrder.slice();
 
             items.sort(function(a, b){
                 var priceA = parsePrice($(a).find(".text-box p").text());
@@ -711,7 +713,7 @@
                 } else if(sortType === "낮은가격순"){
                     return priceA - priceB;
                 } else if(sortType === "최신순"){
-                    return items.indexOf(b) - items.indexOf(a);
+                    return originalOrder.indexOf(b) - originalOrder.indexOf(a);
                 }
                 return 0;
             });
@@ -723,7 +725,8 @@
 
         $(".section1 .filter-li a").removeClass("active");
         $(this).addClass("active");
-        $(".section1 .pick-a p").text(sortType);
+        $(".section1 .filter-a .filter-text").text(sortType);
+        $(".section1 .filter .filter-a").attr("aria-expanded", "false");
         $(".section1 .filter-ul").slideUp();
     });
 
