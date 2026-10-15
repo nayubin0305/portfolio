@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    <title>shop | 젠틀몬스터</title>
+    <title>SHOP | 젠틀몬스터</title>
 
     <!-- 패비콘 36~32px -->
     <link rel="icon" href="icon.png">
@@ -43,7 +43,7 @@
                 <li class="menu-li">
                     <a href="index.html">home</a>
                     <ul class="sub">
-                        <li class="sub-li"><a href="index.html">main homa</a></li>
+                        <li class="sub-li"><a href="index.html">main home</a></li>
                     </ul>
                 </li>
                 <li class="menu-li">
@@ -86,8 +86,8 @@
                 <img src="icon/cart.png" alt="" aria-hidden="true" class="icon-b">
             </a>
             <button type="button" class="ham-btn" aria-label="메뉴 열기" aria-expanded="false" aria-controls="site-map">
-                <div class="bar bar1" aria-hidden="true"></div>
-                <div class="bar bar2" aria-hidden="true"></div>
+                <span class="bar bar1" aria-hidden="true"></span>
+                <span class="bar bar2" aria-hidden="true"></span>
             </button>
         </div>
     </header>
@@ -133,10 +133,10 @@
                 <img src="icon/lock.png" alt="로그인" class="icon-w">
             </a>
             <a href="#" class="icon icon2 soon">
-                <img src="icon/reading.png" alt="검색"class="icon-w">
+                <img src="icon/reading.png" alt="검색" class="icon-w">
             </a>
             <a href="#" class="icon icon3 soon">
-                <img src="icon/cart.png" alt="장바구니"class="icon-w">
+                <img src="icon/cart.png" alt="장바구니" class="icon-w">
             </a>
         </div>
     </div>
@@ -150,19 +150,19 @@
     
         <section class="section1">
             <div class="menu-box">
-                <nav>
+                <nav aria-label="상품 카테고리">
                     <ul class="shop-ul">
-                        <li class="shop-li pick_" name="all">
-                            <a class="active" href="#home">전체</a>
+                        <li class="shop-li pick_" data-name="all">
+                            <a class="active" href="shop.html?category=all" aria-current="true">전체</a>
                         </li>
-                        <li class="shop-li pick_" name="sho">
-                            <a href="#home">선글라스</a>
+                        <li class="shop-li pick_" data-name="sho">
+                            <a href="shop.html?category=sunglasses">선글라스</a>
                         </li>
-                        <li class="shop-li pick_" name="gra">
-                            <a href="#home">안경</a>
+                        <li class="shop-li pick_" data-name="gra">
+                            <a href="shop.html?category=glasses">안경</a>
                         </li>
-                        <li class="shop-li pick_" name="gif">
-                            <a href="#home">선물추천</a>
+                        <li class="shop-li pick_" data-name="gif">
+                            <a href="shop.html?category=gift">선물추천</a>
                         </li>
                     </ul>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 977.2 18.2">
@@ -172,7 +172,7 @@
             </div>
     
             <div class="filter">
-                <button type="button" class="filter-a pick-b pick_" aria-expanded="false" aria-controls="fil-ul">
+                <button type="button" class="filter-a pick-b pick_" aria-expanded="false" aria-controls="filter-ul">
                     <img src="icon/filter.png" alt="" aria-hidden="true">
                     <span class="filter-text">필터</span>
                 </button>
@@ -592,15 +592,15 @@
                 </div>
             </div>
     
-            <div class="page-num">
-                <a href="#" class="soon" aria-label="이전 페이지"><i class="fa-solid fa-chevron-left"></i></a>
-                <a href="#" class="active">1</a>
+            <nav class="page-num" aria-label="페이지 이동">
+                <a href="#" class="soon" aria-label="이전 페이지"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
+                <a href="#" class="active" aria-current="page">1</a>
                 <a href="#" class="soon">2</a>
                 <a href="#" class="soon">3</a>
                 <a href="#" class="soon">4</a>
                 <a href="#" class="soon">5</a>
-                <a href="#" class="soon" aria-label="다음 페이지"><i class="fa-solid fa-chevron-right"></i></a>
-            </div>
+                <a href="#" class="soon" aria-label="다음 페이지"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></a>
+            </nav>
         </section>
    </main>
 
@@ -608,7 +608,7 @@
     <footer>
         <div class="container">
             <div class="item item1">
-                <div class="logo"><a href="index.html"><img src="img/logo_w.png" alt="젠틀몬스터 로고" class="logo"></a></div>
+                <div class="logo-box"><a href="index.html"><img src="img/logo_w.png" alt="젠틀몬스터 로고" class="logo"></a></div>
                 <p><a href="https://goo.gl/maps/igxhf4Cspog1GDEn7" target="_blank" rel="noopener noreferrer">서울시 강남구 압구정로 46길 50</a></p>
                 <p><a href="#" class="soon">0000-0000</a></p>
             </div>
@@ -636,102 +636,108 @@
 
     <button type="button" class="qna-btn">
         <img src="icon/icon_question.png" alt="" aria-hidden="true">
-        <p>질문하기</p>
+        <span>질문하기</span>
     </button>
     <div class="top-btn">
         <a href="#">top</a>
     </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="com.js"></script>
+    <script>
+        // 상품 카테고리
+        let oldIndex = 0;
+        updateDash(0);
 
-</body>
-<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-<script src="com.js"></script>
-<script>
-    // 상품 카테고리
-    let oldIndex = 0;
-    updateDash(0);
-
-    function updateDash(index) {
-        const squiggle = document.querySelector(".squiggle");
-        const pathLength = squiggle.getTotalLength();
-        const start = pathLength * 0.25 * index;
-        const end = pathLength * 0.25 * (index + 1);
-        squiggle.style.setProperty("--factor", Math.abs(oldIndex - index));
-        oldIndex = index;
-        squiggle.setAttribute(
-            "stroke-dasharray",
-            `1, ${start}, ${end - start}, ${pathLength}`
-        );
-    }
-
-    const links = document.querySelectorAll(".shop-ul a");
-    links.forEach((link, i) => {
-        link.addEventListener("click", () => {
-            links.forEach((l) => l.classList.remove("active"));
-            link.classList.add("active");
-            updateDash(i);
-        });
-    });
-
-    // 상품페이지 카테고리
-    $(".section1 .shop-li").click(function(){
-        var _name = $(this).attr("name");
-        $(".section1 .item").hide();
-        $(".section1 ."+_name).stop().fadeIn();
-    });
-
-    // 필터 열기/닫기
-    $(".section1 .filter-a").click(function(e){
-        e.preventDefault();
-        var $ul = $(".section1 .filter-ul");
-        $ul.stop().slideToggle();
-        $(this).attr("aria-expanded", $(this).attr("aria-expanded") === "true" ? "false" : "true");
-    });
-
-    // 2026-09-14 필터 옵션 실행
-    var originalOrder = $(".section1 .container").children(".item").get();
-
-    $(".section1 .filter-li a").click(function(e){
-        e.preventDefault();
-        e.stopPropagation();
-
-        var sortType = $(this).text().trim();
-        var $container = $(".section1 .container");
-        var items;
-
-        if(sortType === "인기순"){
-            // 저장해둔 원본 순서 그대로 복원
-            items = originalOrder.slice();
-        } else {
-            items = originalOrder.slice();
-
-            items.sort(function(a, b){
-                var priceA = parsePrice($(a).find(".text-box p").text());
-                var priceB = parsePrice($(b).find(".text-box p").text());
-
-                if(sortType === "높은가격순"){
-                    return priceB - priceA;
-                } else if(sortType === "낮은가격순"){
-                    return priceA - priceB;
-                } else if(sortType === "최신순"){
-                    return originalOrder.indexOf(b) - originalOrder.indexOf(a);
-                }
-                return 0;
-            });
+        function updateDash(index) {
+            const squiggle = document.querySelector(".squiggle");
+            const pathLength = squiggle.getTotalLength();
+            const start = pathLength * 0.25 * index;
+            const end = pathLength * 0.25 * (index + 1);
+            squiggle.style.setProperty("--factor", Math.abs(oldIndex - index));
+            oldIndex = index;
+            squiggle.setAttribute(
+                "stroke-dasharray",
+                `1, ${start}, ${end - start}, ${pathLength}`
+            );
         }
 
-        $.each(items, function(idx, item){
-            $container.append(item);
+        const links = document.querySelectorAll(".shop-ul a");
+        links.forEach((link, i) => {
+            link.addEventListener("click", (e) => {
+                e.preventDefault();
+                links.forEach((l) => {
+                    l.classList.remove("active");
+                    l.removeAttribute("aria-current");
+                });
+                link.classList.add("active");
+                link.setAttribute("aria-current", "true");
+                updateDash(i);
+            });
         });
 
-        $(".section1 .filter-li a").removeClass("active");
-        $(this).addClass("active");
-        $(".section1 .filter-a .filter-text").text(sortType);
-        $(".section1 .filter .filter-a").attr("aria-expanded", "false");
-        $(".section1 .filter-ul").slideUp();
-    });
+        // 상품페이지 카테고리
+        $(".section1 .shop-li").click(function(){
+            var _name = $(this).data("name");
+            $(".section1 .item").hide();
+            $(".section1 ."+_name).stop().fadeIn();
+        });
 
-    function parsePrice(text){
-        return parseInt(text.replace(/[^0-9]/g, ""), 10) || 0;
-    }
-</script>
+        // 필터 열기/닫기
+        $(".section1 .filter-a").click(function(e){
+            e.preventDefault();
+            var $ul = $(".section1 .filter-ul");
+            $ul.stop().slideToggle();
+            $(this).attr("aria-expanded", $(this).attr("aria-expanded") === "true" ? "false" : "true");
+        });
+
+        // 2026-09-14 필터 옵션 실행
+        var originalOrder = $(".section1 .container").children(".item").get();
+
+        $(".section1 .filter-li a").click(function(e){
+            e.preventDefault();
+            e.stopPropagation();
+
+            var sortType = $(this).text().trim();
+            var $container = $(".section1 .container");
+            var items;
+
+            if(sortType === "인기순"){
+                // 저장해둔 원본 순서 그대로 복원
+                items = originalOrder.slice();
+            } else {
+                items = originalOrder.slice();
+
+                items.sort(function(a, b){
+                    var priceA = parsePrice($(a).find(".text-box p").text());
+                    var priceB = parsePrice($(b).find(".text-box p").text());
+
+                    if(sortType === "높은가격순"){
+                        return priceB - priceA;
+                    } else if(sortType === "낮은가격순"){
+                        return priceA - priceB;
+                    } else if(sortType === "최신순"){
+                        return originalOrder.indexOf(b) - originalOrder.indexOf(a);
+                    }
+                    return 0;
+                });
+            }
+
+            $.each(items, function(idx, item){
+                $container.append(item);
+            });
+
+            $(".section1 .filter-li a").removeClass("active");
+            $(this).addClass("active");
+            $(".section1 .filter-a .filter-text").text(sortType);
+            $(".section1 .filter .filter-a").attr("aria-expanded", "false");
+            $(".section1 .filter-ul").slideUp();
+        });
+
+        function parsePrice(text){
+            return parseInt(text.replace(/[^0-9]/g, ""), 10) || 0;
+        }
+    </script>
+
+</body>
 </html>

@@ -5,7 +5,7 @@
     <meta name="robots" content="noindex, nofollow">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>shop | 젠틀몬스터</title>
+    <title>SHOP | 젠틀몬스터</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 
@@ -44,7 +44,7 @@
                 <li class="menu-li">
                     <a href="index.html">home</a>
                     <ul class="sub">
-                        <li class="sub-li"><a href="index.html">main homa</a></li>
+                        <li class="sub-li"><a href="index.html">main home</a></li>
                     </ul>
                 </li>
                 <li class="menu-li">
@@ -87,8 +87,8 @@
                 <img src="icon/cart.png" alt="" aria-hidden="true" class="icon-b">
             </a>
             <button type="button" class="ham-btn" aria-label="메뉴 열기" aria-expanded="false" aria-controls="site-map">
-                <div class="bar bar1" aria-hidden="true"></div>
-                <div class="bar bar2" aria-hidden="true"></div>
+                <span class="bar bar1" aria-hidden="true"></span>
+                <span class="bar bar2" aria-hidden="true"></span>
             </button>
         </div>
     </header>
@@ -134,10 +134,10 @@
                 <img src="icon/lock.png" alt="로그인" class="icon-w">
             </a>
             <a href="#" class="icon icon2 soon">
-                <img src="icon/reading.png" alt="검색"class="icon-w">
+                <img src="icon/reading.png" alt="검색" class="icon-w">
             </a>
             <a href="#" class="icon icon3 soon">
-                <img src="icon/cart.png" alt="장바구니"class="icon-w">
+                <img src="icon/cart.png" alt="장바구니" class="icon-w">
             </a>
         </div>
     </div>
@@ -297,7 +297,7 @@
     <footer>
         <div class="container">
             <div class="item item1">
-                <div class="logo"><a href="index.html"><img src="img/logo_w.png" alt="젠틀몬스터 로고" class="logo"></a></div>
+                <div class="logo-box"><a href="index.html"><img src="img/logo_w.png" alt="젠틀몬스터 로고" class="logo"></a></div>
                 <p><a href="https://goo.gl/maps/igxhf4Cspog1GDEn7" target="_blank" rel="noopener noreferrer">서울시 강남구 압구정로 46길 50</a></p>
                 <p><a href="#" class="soon">0000-0000</a></p>
             </div>
@@ -325,64 +325,64 @@
 
     <button type="button" class="qna-btn">
         <img src="icon/icon_question.png" alt="" aria-hidden="true">
-        <p>질문하기</p>
+        <span>질문하기</span>
     </button>
     <div class="top-btn">
         <a href="#">top</a>
     </div>
     
-</body>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="com.js"></script>
+    <script>
+        // 숫자 버튼
+        var num = $(".num").val();
+        num = Number(num);
 
-<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-<script src="com.js"></script>
-<script>
-    // 숫자 버튼
-    var num = $(".num").val();
-    num = Number(num);
-
-    $(".btn-p").click(function(){
-        num++;
-        $(".num").val(num);
-    });
-
-    $(".btn-m").click(function(){
-        if(num>1){
-            num--;
+        $(".btn-p").click(function(){
+            num++;
             $(".num").val(num);
-        } else {
-            showAlert("1개 보다 적게 담을 수 없습니다");
-        }
-    });
+        });
 
-    $(".num").on("input", function(){
-        var value = parseInt($(this).val(), 10);
+        $(".btn-m").click(function(){
+            if(num>1){
+                num--;
+                $(".num").val(num);
+            } else {
+                showAlert("1개 보다 적게 담을 수 없습니다");
+            }
+        });
 
-        if(isNaN(value) || value < 1){
-            $(this).val(1);
-        }
-        
-        num = parseInt($(this).val(), 10); 
-    });
+        $(".num").on("input", function(){
+            var value = parseInt($(this).val(), 10);
 
-    // 상품 이미지 변경
-    var i = 0;
-    $(".img-row1 .img").stop().fadeOut();
-    $(".img-row1 .img").eq(i).stop().fadeIn();
-    
-    $(".img-row2 .img").click(function(){
-        i = $(this).index();
+            if(isNaN(value) || value < 1){
+                $(this).val(1);
+            }
+            
+            num = parseInt($(this).val(), 10); 
+        });
+
+        // 상품 이미지 변경
+        var i = 0;
         $(".img-row1 .img").stop().fadeOut();
         $(".img-row1 .img").eq(i).stop().fadeIn();
-    });
+        
+        $(".img-row2 .img").click(function(){
+            i = $(this).index();
+            $(".img-row1 .img").stop().fadeOut();
+            $(".img-row1 .img").eq(i).stop().fadeIn();
+        });
 
-    // 설명 필터
-    $(".cont2 .filter").click(function(){
-        var _name = $(this).attr("name");
-        $(".cont2 .box").hide();
-        $(".cont2 ."+_name).stop().fadeIn();
-        $(".cont2 .filter").css({color:"#000"});
-        $(this).css({color: "var(--color-second)"});
-    });
+        // 설명 필터
+        $(".cont2 .filter").click(function(){
+            var _name = $(this).attr("name");
+            $(".cont2 .box").hide();
+            $(".cont2 ."+_name).stop().fadeIn();
+            $(".cont2 .filter").css({color:"#000"});
+            $(this).css({color: "var(--color-second)"});
+        });
 
-</script>
+    </script>
+
+</body>
 </html>

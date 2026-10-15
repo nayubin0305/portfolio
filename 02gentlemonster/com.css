@@ -549,7 +549,7 @@ section:last-of-type{margin-bottom: 400px;}
 .qna-btn::after{
     display: none;
 }
-.qna-btn p{
+.qna-btn span{
     white-space: nowrap;
     position: absolute; top: 50%;
     right: 10px;
@@ -557,7 +557,7 @@ section:last-of-type{margin-bottom: 400px;}
     transition: 0.5s;
     color: #0D0D0D;
 }
-.qna-btn:hover p{
+.qna-btn:hover span{
     transform: translateY(-50%) scaleX(1);
 }
 .qna-btn:hover{
