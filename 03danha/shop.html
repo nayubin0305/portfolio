@@ -339,14 +339,14 @@
                     <div class="left">
                         <div class="box">
                             <ul class="shop-ul pick_">
-                                <li class="shop-li active" data-name="all">모든 상품</li>
-                                <li class="shop-li" data-name="out_">외투</li>
-                                <li class="shop-li" data-name="top_">상의</li>
-                                <li class="shop-li" data-name="bot_">하의</li>
-                                <li class="shop-li" data-name="dre_">한벌옷</li>
-                                <li class="shop-li" data-name="sho_">신발</li>
-                                <li class="shop-li" data-name="acc_">장신구</li>
-                                <li class="shop-li" data-name="liv_">생활소품</li>
+                                <li class="shop-li active"><a href="shop.html?category=all" data-name="all" aria-current="true">모든 상품</a></li>
+                                <li class="shop-li"><a href="shop.html?category=out" data-name="out_">외투</a></li>
+                                <li class="shop-li"><a href="shop.html?category=top" data-name="top_">상의</a></li>
+                                <li class="shop-li"><a href="shop.html?category=bot" data-name="bot_">하의</a></li>
+                                <li class="shop-li"><a href="shop.html?category=dre" data-name="dre_">한벌옷</a></li>
+                                <li class="shop-li"><a href="shop.html?category=sho" data-name="sho_">신발</a></li>
+                                <li class="shop-li"><a href="shop.html?category=acc" data-name="acc_">장신구</a></li>
+                                <li class="shop-li"><a href="shop.html?category=liv" data-name="liv_">생활소품</a></li>
                             </ul>
                             <div class="color-box">
                                 <div class="box-title">
@@ -1180,11 +1180,14 @@
 
         // 카테고리 필터
         var currentCategory = "all";
-        $(".shop .shop-li").click(function(){
+        $(".shop .shop-li a").click(function(e){
+            e.preventDefault(); // 시연용: 이동 대신 JS로 필터링
             currentCategory = $(this).data("name");
             applyFilters();
+
             $(".shop .shop-li").removeClass("active");
-            $(this).addClass("active");
+            $(".shop .shop-li a").removeAttr("aria-current");
+            $(this).removeAttr("aria-current").attr("aria-current", "true").parent().addClass("active");
         });
 
         // 필터 스크립트
