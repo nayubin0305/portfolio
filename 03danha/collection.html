@@ -486,29 +486,29 @@
         </section>
     </main>
 
-</body>
-<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-<script src="com.js"></script>
-<script>
-    // 스크롤 플러그인
-    skrollr.init();
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="com.js"></script>
+    <script>
+        // 스크롤 플러그인
+        skrollr.init();
 
-    var sc;
+        var sc;
 
-    scEvent();
-
-    $(window).scroll(function(){
         scEvent();
-    });
-    
 
-    function scEvent(){
-        sc = $(window).scrollTop();
+        $(window).scroll(function(){
+            scEvent();
+        });
+        
 
-        $(".end").toggleClass("show", sc >= 9000)  
-                 .toggleClass("on", sc >= 9300);  
-    }
-</script>
+        function scEvent(){
+            sc = $(window).scrollTop();
+
+            $(".end").toggleClass("show", sc >= 9000)  
+                    .toggleClass("on", sc >= 9300);  
+        }
+    </script>
+</body>
 </html>

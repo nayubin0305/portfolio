@@ -1226,149 +1226,150 @@
             </div>
         </div>
     </footer>
-</body>
-<!-- 제이쿼리 스크립트 -->
-<!-- <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script> -->
-<!-- 스와이퍼 슬라이드 -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-<script src="com.js"></script>
-<script>
-
-    // 메인
-    var num1 = -1 , mainTimer;
-    var bg=[
-        "url(img/main03.jpg)",
-        "url(img/main02.jpg)"
-    ]
-    timer1();
-    mainTimer = setInterval(timer1, 5000);
-
-    // 메인 인디
-    $(".main .indi").click(function(){
-        num1 = $(this).index();
-        slider();
-        clearInterval(mainTimer); 
-        mainTimer = setInterval(timer1, 5000);
-    });
-    // 슬라이드 인터벌
-    function timer1(){
-        num1++;
-        num1 = num1%2;
-        slider();
-    };
-
-    // 슬라이드 공통함수
-    function slider(){
-        $(".main").css({backgroundImage:bg[num1]});
-        $(".main .indi").eq(num1).addClass("active");
-        $(".main .indi")[0].offsetWidth; 
-        $(".main .indi").not($(".main .indi").eq(num1)).removeClass("active");
-    }
-
-    // 팝업 슬라이드
-    var swiper2 = new Swiper(".pop .pop-left .mySwiper", {
-        scrollbar: {
-            el: ".pop .pop-left .swiper-scrollbar",
-            hide: true,
-        },
-        loop:true,
-        autoplay: {
-            delay: 2500,
-            disableOnInteraction: false,
-        },
-    });
-
-    var swiper3 = new Swiper(".pop .pop-right .mySwiper", {
-        slidesPerView: 3,
-        spaceBetween: 30,
-        freeMode: true,
-        breakpoints: {
-            0:   { slidesPerView: 2, spaceBetween: 12 },
-            801: { slidesPerView: 3,   spaceBetween: 20 } 
-        },
-    });
-
-    //팝업
-    $(".collection .item").click(function(){
-        var pop_name = $(this).attr("name");
-        $(".pop."+pop_name).addClass("on");
-    });
-    $(".pop .fa-x").click(function(){
-        $(".pop").removeClass("on");
-    });
     
-    // 상품
-    // 2026-09-16 스크립트 정리
-    $(".por .icon-group").click(function(){
-        if($(this).hasClass("on")) {
-            showAlert("찜 등록 취소");
-            $(this).removeClass("on");
-            $(this).find(".heart-1").show();
-            $(this).find(".heart-2").hide();
-        } else {
-            showAlert("찜 등록 완료");
-            $(this).addClass("on");
-            $(this).find(".heart-1").hide();
-            $(this).find(".heart-2").show();
-        }
-    });
+    <!-- 제이쿼리 스크립트 -->
+    <!-- <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script> -->
+    <!-- 스와이퍼 슬라이드 -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="com.js"></script>
+    <script>
 
-
-    // 이벤트
-    var eve = -1 , timer2;
-    
-    timer2();
-    setInterval(timer2,5000);
-
-    // 인디
-    $(".event .indi").click(function(){
-        eve = $(this).index();
-        event();
-    });
-
-    // 인터벌
-    function timer2(){
-        eve++;
-        eve = eve%3;
-        event();
-    }
-
-    // 공통 함수
-    function event(){
-        $(".event .img").eq(eve).stop().fadeIn();
-        $(".event .img").not($(".event .img").eq(eve)).stop().fadeOut();
-        $(".event .text").eq(eve).stop().fadeIn();
-        $(".event .text").not($(".event .text").eq(eve)).stop().fadeOut();
-        $(".event .indi").css({backgroundColor:"#D9D9D9"});
-        $(".event .indi").eq(eve).css({backgroundColor:"#022840"});
-    }
-
-    // 룩북
-    $('.collection .slider').slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        arrows: true,
-        dots: false,
-        centerMode: true,
-        variableWidth: true,
-        infinite: true,
-        focusOnSelect: true,
-        cssEase: 'linear',
-        touchMove: true,
-        prevArrow:'<button class="slick-prev"> <i class="fa-solid fa-chevron-left"></i> </button>',
-        nextArrow:'<button class="slick-next"> <i class="fa-solid fa-chevron-right"></i> </button>',
-        responsive: [
-            {
-                breakpoint: 800,
-                settings: {
-                    slidesToShow: 1,
-                    centerMode: false,
-                    variableWidth: false,
-                    focusOnSelect: false
-                }
-            }
+        // 메인
+        var num1 = -1 , mainTimer;
+        var bg=[
+            "url(img/main03.jpg)",
+            "url(img/main02.jpg)"
         ]
-    });
+        timer1();
+        mainTimer = setInterval(timer1, 5000);
 
-</script>
+        // 메인 인디
+        $(".main .indi").click(function(){
+            num1 = $(this).index();
+            slider();
+            clearInterval(mainTimer); 
+            mainTimer = setInterval(timer1, 5000);
+        });
+        // 슬라이드 인터벌
+        function timer1(){
+            num1++;
+            num1 = num1%2;
+            slider();
+        };
+
+        // 슬라이드 공통함수
+        function slider(){
+            $(".main").css({backgroundImage:bg[num1]});
+            $(".main .indi").eq(num1).addClass("active");
+            $(".main .indi")[0].offsetWidth; 
+            $(".main .indi").not($(".main .indi").eq(num1)).removeClass("active");
+        }
+
+        // 팝업 슬라이드
+        var swiper2 = new Swiper(".pop .pop-left .mySwiper", {
+            scrollbar: {
+                el: ".pop .pop-left .swiper-scrollbar",
+                hide: true,
+            },
+            loop:true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+        });
+
+        var swiper3 = new Swiper(".pop .pop-right .mySwiper", {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            freeMode: true,
+            breakpoints: {
+                0:   { slidesPerView: 2, spaceBetween: 12 },
+                801: { slidesPerView: 3,   spaceBetween: 20 } 
+            },
+        });
+
+        //팝업
+        $(".collection .item").click(function(){
+            var pop_name = $(this).attr("name");
+            $(".pop."+pop_name).addClass("on");
+        });
+        $(".pop .fa-x").click(function(){
+            $(".pop").removeClass("on");
+        });
+        
+        // 상품
+        // 2026-09-16 스크립트 정리
+        $(".por .icon-group").click(function(){
+            if($(this).hasClass("on")) {
+                showAlert("찜 등록 취소");
+                $(this).removeClass("on");
+                $(this).find(".heart-1").show();
+                $(this).find(".heart-2").hide();
+            } else {
+                showAlert("찜 등록 완료");
+                $(this).addClass("on");
+                $(this).find(".heart-1").hide();
+                $(this).find(".heart-2").show();
+            }
+        });
+
+
+        // 이벤트
+        var eve = -1 , timer2;
+        
+        timer2();
+        setInterval(timer2,5000);
+
+        // 인디
+        $(".event .indi").click(function(){
+            eve = $(this).index();
+            event();
+        });
+
+        // 인터벌
+        function timer2(){
+            eve++;
+            eve = eve%3;
+            event();
+        }
+
+        // 공통 함수
+        function event(){
+            $(".event .img").eq(eve).stop().fadeIn();
+            $(".event .img").not($(".event .img").eq(eve)).stop().fadeOut();
+            $(".event .text").eq(eve).stop().fadeIn();
+            $(".event .text").not($(".event .text").eq(eve)).stop().fadeOut();
+            $(".event .indi").css({backgroundColor:"#D9D9D9"});
+            $(".event .indi").eq(eve).css({backgroundColor:"#022840"});
+        }
+
+        // 룩북
+        $('.collection .slider').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            arrows: true,
+            dots: false,
+            centerMode: true,
+            variableWidth: true,
+            infinite: true,
+            focusOnSelect: true,
+            cssEase: 'linear',
+            touchMove: true,
+            prevArrow:'<button class="slick-prev"> <i class="fa-solid fa-chevron-left"></i> </button>',
+            nextArrow:'<button class="slick-next"> <i class="fa-solid fa-chevron-right"></i> </button>',
+            responsive: [
+                {
+                    breakpoint: 800,
+                    settings: {
+                        slidesToShow: 1,
+                        centerMode: false,
+                        variableWidth: false,
+                        focusOnSelect: false
+                    }
+                }
+            ]
+        });
+
+    </script>
+</body>
 </html>

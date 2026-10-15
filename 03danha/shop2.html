@@ -952,199 +952,199 @@
         </div>
     </footer>
     
-</body>
-<!-- 제이쿼리 스크립트 -->
-<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-<!-- 스와이퍼 슬라이드 -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-<script src="com.js"></script>
-<script>
+    <!-- 제이쿼리 스크립트 -->
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <!-- 스와이퍼 슬라이드 -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="com.js"></script>
+    <script>
 
-    // 썸네일 이미지 변경
-    $(".shop2 .left .img-box2").click(function(){
-        var i_ = $(this).index() - 1;
-        $(".shop2 .left .img-box1 img").eq(i_).stop().fadeIn();
-        $(".shop2 .left .img-box1 img").not($(".shop2 .left .img-box1 img").eq(i_)).hide();
-    })
+        // 썸네일 이미지 변경
+        $(".shop2 .left .img-box2").click(function(){
+            var i_ = $(this).index() - 1;
+            $(".shop2 .left .img-box1 img").eq(i_).stop().fadeIn();
+            $(".shop2 .left .img-box1 img").not($(".shop2 .left .img-box1 img").eq(i_)).hide();
+        })
 
-    // 모바일 슬라이드
-    var swiper1 = new Swiper(".shop2 .left-m .mySwiper", {
-        scrollbar: {
-            el: ".swiper-scrollbar",
-            hide: true,
-        },
-        loop:true, //무한반복
-        autoplay: {
-            delay: 2500,
-            disableOnInteraction: false,
-        },
-    });
+        // 모바일 슬라이드
+        var swiper1 = new Swiper(".shop2 .left-m .mySwiper", {
+            scrollbar: {
+                el: ".swiper-scrollbar",
+                hide: true,
+            },
+            loop:true, //무한반복
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+        });
 
-    // 사이즈 설정
-    $(".shop2 .size").click(function(){
-        $(".shop2 .size-ul").stop().slideToggle();
-        $(this).find(".up").toggle();
-        $(this).find(".down").toggle();
-    });
+        // 사이즈 설정
+        $(".shop2 .size").click(function(){
+            $(".shop2 .size-ul").stop().slideToggle();
+            $(this).find(".up").toggle();
+            $(this).find(".down").toggle();
+        });
 
-    $(".shop2 .size-li").click(function(){
-        var sizeText = $(this).text();
-        $(".size-text").text(sizeText);
-    });
+        $(".shop2 .size-li").click(function(){
+            var sizeText = $(this).text();
+            $(".size-text").text(sizeText);
+        });
 
-    // 가격계산
-    var price , num , totar;
-    price = $(".shop2 .pri-box .pri").text();
-    price = Number(price); //숫자로 인식
-    price1 = price.toLocaleString(); //콤마
-    $(".shop2 .pri-box .pri").text(price1);
-    
-    num = $(".shop2 .num-box .num").val();
-    num = Number(num);
+        // 가격계산
+        var price , num , totar;
+        price = $(".shop2 .pri-box .pri").text();
+        price = Number(price); //숫자로 인식
+        price1 = price.toLocaleString(); //콤마
+        $(".shop2 .pri-box .pri").text(price1);
+        
+        num = $(".shop2 .num-box .num").val();
+        num = Number(num);
 
-    totar = price * num;
-    totar = totar.toLocaleString();
-    $(".shop2 .total-box .total").text(totar);
-
-    // 수량 갱신
-    function updateTotal() {
-        var totar = price * num;
+        totar = price * num;
         totar = totar.toLocaleString();
         $(".shop2 .total-box .total").text(totar);
-        $(".shop2 .total-box .num2").text(num);
-    }
 
-    $(".btn-p").click(function(){
-        num++;
-        $(".shop2 .num-box .num").val(num);
-        updateTotal();
-    });
+        // 수량 갱신
+        function updateTotal() {
+            var totar = price * num;
+            totar = totar.toLocaleString();
+            $(".shop2 .total-box .total").text(totar);
+            $(".shop2 .total-box .num2").text(num);
+        }
 
-    $(".btn-m").click(function(){
-        if(num > 1){
-            num--;
+        $(".btn-p").click(function(){
+            num++;
             $(".shop2 .num-box .num").val(num);
             updateTotal();
-        } else {
-            showAlert("1개 보다 적게 담을 수 없습니다");
-        }
-    });
+        });
 
-    $(".shop2 .num-box .num").on("input", function(){
-        var value = parseInt($(this).val(), 10);
-
-        if(isNaN(value) || value < 1){
-            $(this).val(1);
-        }
-
-        num = parseInt($(this).val(), 10);
-        updateTotal();
-    });
-
-    // 카테고리 탭
-    $(".detail .cate-li").click(function(){
-        var name_ca = $(this).attr("name");
-        $(".detail .cont").hide();
-        $(".detail ."+name_ca).stop().fadeIn();
-
-        $(".detail .cate-li").removeClass("active");
-        $(this).addClass("active");
-    });
-
-    // 리뷰
-    $(".cont2 .review").click(function(){
-        $(".cont2 .review-ul").stop().slideToggle();
-        $(this).find(".up").toggle();
-        $(this).find(".down").toggle();
-    });
-    $(".cont2 .review-li").click(function(){
-        var reviewText = $(this).text();
-        $(".review-text").text(reviewText);
-    });
-    $(".cont2 .help-up").click(function(){
-        var $this = $(this);
-        var $count = $this.find("span");
-        var $opposite = $this.siblings(".help-down");
-        var isPressed = $this.attr("aria-pressed") === "true";
-
-        if (isPressed) {
-            // 취소
-            $this.attr("aria-pressed", "false");
-            $count.text(Number($count.text()) - 1);
-        } else {
-            // 활성화
-            $this.attr("aria-pressed", "true");
-            $count.text(Number($count.text()) + 1);
-            showAlert("도움이 돼요!");
-
-            if ($opposite.attr("aria-pressed") === "true") {
-                $opposite.attr("aria-pressed", "false");
-                $opposite.find("span").text(Number($opposite.find("span").text()) - 1);
+        $(".btn-m").click(function(){
+            if(num > 1){
+                num--;
+                $(".shop2 .num-box .num").val(num);
+                updateTotal();
+            } else {
+                showAlert("1개 보다 적게 담을 수 없습니다");
             }
-        }
-    });
+        });
 
-    $(".cont2 .help-down").click(function(){
-        var $this = $(this);
-        var $count = $this.find("span");
-        var $opposite = $this.siblings(".help-up");
-        var isPressed = $this.attr("aria-pressed") === "true";
+        $(".shop2 .num-box .num").on("input", function(){
+            var value = parseInt($(this).val(), 10);
 
-        if (isPressed) {
-            $this.attr("aria-pressed", "false");
-            $count.text(Number($count.text()) - 1);
-        } else {
-            $this.attr("aria-pressed", "true");
-            $count.text(Number($count.text()) + 1);
-            showAlert("도움 안돼요!");
-
-            if ($opposite.attr("aria-pressed") === "true") {
-                $opposite.attr("aria-pressed", "false");
-                $opposite.find("span").text(Number($opposite.find("span").text()) - 1);
+            if(isNaN(value) || value < 1){
+                $(this).val(1);
             }
-        }
-    });
 
-    $(".cont2 .report").click(function(){
-        showAlert("신고가 완료 되었습니다.");
-    });
+            num = parseInt($(this).val(), 10);
+            updateTotal();
+        });
 
-    // 문의
-    $(".cont3 .qna").click(function(){
-        $(".cont3 .qna-ul").stop().slideToggle();
-        $(this).find(".up").toggle();
-        $(this).find(".down").toggle();
-    });
-    $(".cont3 .qna-li").click(function(){
-        var qnaText = $(this).text();
-        $(".qna-text").text(qnaText);
-    });
+        // 카테고리 탭
+        $(".detail .cate-li").click(function(){
+            var name_ca = $(this).attr("name");
+            $(".detail .cont").hide();
+            $(".detail ."+name_ca).stop().fadeIn();
 
-    // 메인 상품 찜 등록
-    $(".shop2 .heart").click(function(){
-        if($(this).hasClass("check")) {
-            showAlert("찜 등록 취소");
-            $(this).removeClass("check");
-        } else {
-            showAlert("찜 등록 완료");
-            $(this).addClass("check");
-        }
-    });
+            $(".detail .cate-li").removeClass("active");
+            $(this).addClass("active");
+        });
 
-    // 추천 상품 찜 등록
-    $(".recommend .icon-group").click(function(){
-        if($(this).hasClass("on")) {
-            showAlert("찜 등록 취소");
-            $(this).removeClass("on");
-            $(this).find(".heart-1").show();
-            $(this).find(".heart-2").hide();
-        } else {
-            showAlert("찜 등록 완료");
-            $(this).addClass("on");
-            $(this).find(".heart-1").hide();
-            $(this).find(".heart-2").show();
-        }
-    });
+        // 리뷰
+        $(".cont2 .review").click(function(){
+            $(".cont2 .review-ul").stop().slideToggle();
+            $(this).find(".up").toggle();
+            $(this).find(".down").toggle();
+        });
+        $(".cont2 .review-li").click(function(){
+            var reviewText = $(this).text();
+            $(".review-text").text(reviewText);
+        });
+        $(".cont2 .help-up").click(function(){
+            var $this = $(this);
+            var $count = $this.find("span");
+            var $opposite = $this.siblings(".help-down");
+            var isPressed = $this.attr("aria-pressed") === "true";
 
-</script>
+            if (isPressed) {
+                // 취소
+                $this.attr("aria-pressed", "false");
+                $count.text(Number($count.text()) - 1);
+            } else {
+                // 활성화
+                $this.attr("aria-pressed", "true");
+                $count.text(Number($count.text()) + 1);
+                showAlert("도움이 돼요!");
+
+                if ($opposite.attr("aria-pressed") === "true") {
+                    $opposite.attr("aria-pressed", "false");
+                    $opposite.find("span").text(Number($opposite.find("span").text()) - 1);
+                }
+            }
+        });
+
+        $(".cont2 .help-down").click(function(){
+            var $this = $(this);
+            var $count = $this.find("span");
+            var $opposite = $this.siblings(".help-up");
+            var isPressed = $this.attr("aria-pressed") === "true";
+
+            if (isPressed) {
+                $this.attr("aria-pressed", "false");
+                $count.text(Number($count.text()) - 1);
+            } else {
+                $this.attr("aria-pressed", "true");
+                $count.text(Number($count.text()) + 1);
+                showAlert("도움 안돼요!");
+
+                if ($opposite.attr("aria-pressed") === "true") {
+                    $opposite.attr("aria-pressed", "false");
+                    $opposite.find("span").text(Number($opposite.find("span").text()) - 1);
+                }
+            }
+        });
+
+        $(".cont2 .report").click(function(){
+            showAlert("신고가 완료 되었습니다.");
+        });
+
+        // 문의
+        $(".cont3 .qna").click(function(){
+            $(".cont3 .qna-ul").stop().slideToggle();
+            $(this).find(".up").toggle();
+            $(this).find(".down").toggle();
+        });
+        $(".cont3 .qna-li").click(function(){
+            var qnaText = $(this).text();
+            $(".qna-text").text(qnaText);
+        });
+
+        // 메인 상품 찜 등록
+        $(".shop2 .heart").click(function(){
+            if($(this).hasClass("check")) {
+                showAlert("찜 등록 취소");
+                $(this).removeClass("check");
+            } else {
+                showAlert("찜 등록 완료");
+                $(this).addClass("check");
+            }
+        });
+
+        // 추천 상품 찜 등록
+        $(".recommend .icon-group").click(function(){
+            if($(this).hasClass("on")) {
+                showAlert("찜 등록 취소");
+                $(this).removeClass("on");
+                $(this).find(".heart-1").show();
+                $(this).find(".heart-2").hide();
+            } else {
+                showAlert("찜 등록 완료");
+                $(this).addClass("on");
+                $(this).find(".heart-1").hide();
+                $(this).find(".heart-2").show();
+            }
+        });
+
+    </script>
+</body>
 </html>
