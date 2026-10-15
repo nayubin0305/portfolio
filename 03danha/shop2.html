@@ -726,7 +726,7 @@
                     </div>
                     <div class="row row2">
                         <div class="qna pick_">
-                            분류
+                            <div class="qna-text">분류</div>
                             <i class="fa-solid fa-caret-down down"></i>
                             <i class="fa-solid fa-caret-up up"></i> 
                             <ul class="qna-ul">
@@ -1114,6 +1114,10 @@
         $(".cont3 .qna-ul").stop().slideToggle();
         $(this).find(".up").toggle();
         $(this).find(".down").toggle();
+    });
+    $(".cont3 .qna-li").click(function(){
+        var qnaText = $(this).text();
+        $(".qna-text").text(qnaText);
     });
 
     // 메인 상품 찜 등록

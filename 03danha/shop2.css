@@ -678,7 +678,10 @@
     .cont2 .box2{
         display: block;
     }
-    .cont2 .rev-row0 .review{width: 150px;}
+    .cont2 .rev-row0 .review{
+        width: 150px;
+        font-size: 14px;
+    }
     .cont2 .review-ul{
         width: 150px;
     }
