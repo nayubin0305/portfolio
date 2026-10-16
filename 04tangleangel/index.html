@@ -346,7 +346,7 @@
                             <li class="mobali-li"><a href="#" class="soon">커뮤니티</a></li>
                         </ul>
                     </li>
-                    <li class="mobali-sub-li">
+                    <li class="mobali-sub-li pick">
                         <h5>
                             <button type="button" class="mobali-toggle" aria-expanded="false" aria-controls="mobali-ul-2">모든 상품</button>
                         </h5>
@@ -1120,11 +1120,12 @@
         var $Rslide = $(".Rslide");
         var $control = $(".oncontrol");
         var $wrapper = $(".wrapper");
-        var slideHeight = $wrapper.innerHeight(); 
+        var slideHeight = $(".slideshow-left").innerHeight();
         var index = 0;
 
         function init() { // 초기 위치 세팅
-            slideHeight = $wrapper.innerHeight(); 
+            slideHeight = $(".slideshow-left").innerHeight();
+            index = 0;
             $Lslide.each(function (i) {
                 $(this).css("top", -slideHeight * i + "px");
             });
@@ -1192,6 +1193,8 @@
 
         var wheeling;
         $wrapper.on("wheel", function (e) {
+            if (isMobile()) return;
+
             clearTimeout(wheeling);
             e.preventDefault();
 
@@ -1265,10 +1268,12 @@
       
         // 매거진
         $(".magazine .item").mouseenter(function(){
+            if (isMobile()) return;
             $(this).find(".text-box p").stop().fadeIn(300);
             $(this).find(".text-box .btn-box").stop().fadeIn(300);
         });
         $(".magazine .item").mouseleave(function(){
+            if (isMobile()) return;
             $(this).find(".text-box p").stop().fadeOut(300);
             $(this).find(".text-box .btn-box").stop().fadeOut(300);
         });

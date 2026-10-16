@@ -7,7 +7,7 @@
     width: 90%;
     max-width: 1400px;
     margin: 0 auto;
-    height: 100px;
+    padding-bottom: 50px;
     display: flex;
     justify-content: end;
 }
@@ -37,6 +37,7 @@
     width: 150px;
     box-sizing: border-box;
     background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
     display: none;
 }
 .shop-top .fil-li a{
@@ -83,14 +84,14 @@
 
 
 .cont1 .shop-left .list-ul{box-shadow: 0 0 10px rgba(0,0,0,0.2);}
-.cont1 .shop-left .list-li{
+.cont1 .shop-left .list-li a{
     line-height: 30px;
     padding: 10px 20px;
     cursor: pointer;
     transition: 0.3s;
 }
-
-.cont1 .shop-left .list-li:hover{background-color: #eeeeee;}
+.cont1 .shop-left .list-li a.active,
+.cont1 .shop-left .list-li a:hover{background-color: #eeeeee;}
 
 .range-slider {
     padding-top: 20px;
@@ -314,15 +315,18 @@ input::-moz-focus-inner, input::-moz-focus-outer {
     }
     .cont1 .shop-left{
         width: 100%;
-        padding-bottom: 20px;
+        padding-bottom: 50px;
     }
     .cont1 .shop-left .sticky-box{
         width: 100%;
     }
 
-    .product{}
+    .shop-top{
+        padding-bottom: 20px;
+    }
+
     .product{
-        padding-bottom: 50px;
+        padding-bottom: 0px;
         grid-template-columns: repeat(2,1fr);
         width: 100%;
         row-gap: 30px;
@@ -343,15 +347,18 @@ input::-moz-focus-inner, input::-moz-focus-outer {
     }
     .cont1 .shop-left .list-ul{
         display: flex;
+        flex-wrap: wrap;
+        gap: 0;
         justify-content: space-evenly;
         white-space: nowrap;
         font-size: 14px;
     }
-    .cont1 .shop-left .list-li{padding: 5px 10px;}
+    .cont1 .shop-left .list-li{}
+    .cont1 .shop-left .list-li a{padding: 5px 10px;}
 }
 
 /* 페이지 넘버 */
-.cont2{
+.cont2 nav{
     display: flex;
     align-items: center;
     justify-content: center;

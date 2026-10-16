@@ -2,7 +2,7 @@
 var lastScroll = $(window).scrollTop();
 
 function isMobile() {
-    return $(window).width() < 600;
+    return $(window).width() <= 800;
 }
 
 // 헤더 보임/숨김
@@ -24,6 +24,7 @@ function toggleSidebar(sc) {
     }
 }
 
+// 스크롤 시 실행할 함수
 function onScroll() {
     var sc = $(window).scrollTop();
     header(sc);
@@ -32,11 +33,11 @@ function onScroll() {
 
 // 초기 실행
 onScroll();
-
+// 스크롤 실행
 $(window).scroll(onScroll);
 
 
-// 헤더 메뉴
+// 헤더 드롭메뉴
 $("header .menu-li").hover(
     function() {
         $(this).find(".sub").stop().slideDown(500);
@@ -62,13 +63,9 @@ function syncSearchAria() {
     });
 }
 
-syncSearchAria();                 
-$(window).on("resize", function() {
-    syncSearchAria();
-    $("#search-sub").hide();    
-    $("#mobali-search").css({ left: "-100%" });
-});
+syncSearchAria();           
 
+// 검색창 열기
 $("header .icon .search").click(function () {
     if (isMobile()) {
         $("#mobali-search").css({ left: "0" });
@@ -83,12 +80,12 @@ $("header .icon .search").click(function () {
     }
 });
 
-$(".search-sub .search-close").click(function() {
+$(".search-sub .search-close").click(function() { // pc 검색창 닫기
     $("#search-sub").stop().slideUp();
     $(".icon .search").attr("aria-expanded", "false");
 });
 
-$(".mobali-search .search-close-m").click(function() {
+$(".mobali-search .search-close-m").click(function() { // mob 검색창 닫기
     $("#mobali-search").css({ left: "-100%" });
     $(".icon .search").attr("aria-expanded", "false");
 });
@@ -107,9 +104,11 @@ $("#login-sub .login-close, #login-sub .bg").click(function() {
 // MOB 로그인
 $("#mobali-sub .login-m").click(function () {
     $("#mobali-login").css({ left: "0" });
+    $(this).attr("aria-expanded", "true");
 });
 $("#mobali-login .login-close-m").click(function () {
     $("#mobali-login").css({ left: "-100%" });
+    $("#mobali-sub .login-m").attr("aria-expanded", "false");
 });
 
 // 회원 / 비회원 탭
@@ -123,8 +122,12 @@ function initLoginTab(wrapper, activeColor, inactiveColor) {
         $wrap.find(".mem-off").css("color", isMember ? inactiveColor : activeColor);
     }
 
-    $wrap.find(".mem-on").click(function() { setMode(true); });
-    $wrap.find(".mem-off").click(function() { setMode(false); });
+    // $wrap.find(".mem-on").click(function() { setMode(true); });
+    // $wrap.find(".mem-off").click(function() { setMode(false); });
+    var $radios = $wrap.find("input[type=radio]");
+    $radios.on("change", function() {
+        setMode($radios.index(this) === 0);
+    });
 }
 
 initLoginTab(".login-sub", "#ffffff", "#444444");
@@ -152,6 +155,38 @@ $(".mobali-toggle").click(function () {
 
     $ul.stop().slideToggle();
     $(this).attr("aria-expanded", wasOpen ? "false" : "true");
+});
+
+// 2026-10-16 모달 리사이징
+function closePcModals() { // pc 모달 모두 닫기
+    $("#search-sub").stop(true, true).hide();
+    $("#login-sub").stop(true, true).hide();
+    $("header .menu-li .sub").stop(true, true).hide();
+    $(".icon .search, .icon .login").attr("aria-expanded", "false");
+}
+function closeMobileModals() { // mob 모달 모두 닫기
+    $("#mobali-search").css({ left: "-100%" });
+    $("#mobali-login").css({ left: "-100%" });
+    $("#mobali-sub").css({ left: "-100%" });
+    $(".mobali-bg").stop(true, true).hide();
+    $(".mobali-ul").stop(true, true).hide();
+    $(".ham-btn, .login-m, .mobali-toggle").attr("aria-expanded", "false");
+}
+
+// 경계 확인
+var wasMobile = isMobile();
+
+$(window).on("resize", function() {
+    var nowMobile = isMobile();
+    if (nowMobile === wasMobile) return;   
+    wasMobile = nowMobile;
+
+    syncSearchAria();
+    if (nowMobile) {
+        closePcModals();       
+    } else {
+        closeMobileModals();   
+    }
 });
 
 

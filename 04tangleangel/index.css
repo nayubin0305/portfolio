@@ -262,11 +262,11 @@ body{ overflow-x: hidden;}
 @media(max-width:1200px){
     .slideshow .Lslide-content h3{font-size: 22px;}
     .slideshow .Lslide-content p{font-size: 14px; line-height: 22px;}
-    .slideshow .Lslide-content h2{font-size: 35px;}
+    .slideshow .Lslide-content h2{font-size: 28px;}
 }
 @media(max-width:800px){
     .wrapper {
-        height: 700px;
+        height: 600px;
         width: 100%;
         display: block;
         overflow: visible;
@@ -284,12 +284,16 @@ body{ overflow-x: hidden;}
         display: block;
         overflow: hidden;
     }
+    .slideshow .slideshow-left,
+    .slideshow .slideshow-right {
+        overflow: hidden;
+    }
     .slideshow .slideshow-left {
         width: 100%;
         display: block;
         /* float: left; */
         position: relative;
-        height: 400px;  
+        height: 300px;  
     }
     .slideshow .slideshow-right {
         width: 100%;
@@ -298,6 +302,12 @@ body{ overflow-x: hidden;}
         position: relative;
         height: 300px;  
     }     
+    .slideshow .Lslide-content{
+        width: 90%;
+    }
+    .slideshow .Lslide-content .btn1{
+        margin-top: 30px;
+    }
 
 
     .slideshow .control {
@@ -376,14 +386,17 @@ body{ overflow-x: hidden;}
     .campaign .item h5{
         font-size: 12px;
     }
-    .campaign .item h2{font-size: 50px;}
+    .campaign .item h2{
+        font-size: 45px;
+        margin: 10px 0;
+    }
     .campaign .item h3{
         font-size: 14px;
         width: 70%;
     }
     .campaign .item p{
         font-size: 12px;
-        margin-top: 50px;
+        margin-top: 30px;
     }
     .campaign .item .text-v{top: 20px;}
 }
@@ -432,6 +445,9 @@ body{ overflow-x: hidden;}
 
 @media(max-width:800px){
     .review{padding-top: 100px; padding-bottom: 100px;}
+    .review .section-title{
+        margin-bottom: 20px;
+    }
     .review .container{
         grid-template-columns: repeat(2,1fr);
     }
@@ -567,8 +583,12 @@ body{ overflow-x: hidden;}
 
 @media(max-width:800px){
     .product{padding-bottom: 100px;}
+    .product .section-title{
+        margin-bottom: 20px;
+    }
     .product .container{
         grid-template-columns: repeat(2,1fr);
+        row-gap: 30px;
     }
     .product .container .icon-box{
         font-size: 16px;
@@ -633,6 +653,9 @@ body{ overflow-x: hidden;}
     }
 
     .set .item{margin-bottom: 30px;}
+    .set .item-1 .section-title{
+        margin-bottom: 20px;
+    }
     .set .item-1 .img-box{transform: translate(0,0);}
     .set .item-1 .shop{
         margin-bottom: 30px;
@@ -744,6 +767,9 @@ body{ overflow-x: hidden;}
 
 @media(max-width:1300px){
     .magazine{padding-top: 100px; padding-bottom: 100px;}
+    .magazine .section-title{
+        margin-bottom: 20px;
+    }
     .magazine .container{
         grid-template-columns: repeat(3,1fr);
     }
@@ -775,6 +801,10 @@ body{ overflow-x: hidden;}
 }
 @media(max-width:800px){
     .magazine .container{grid-template-columns: repeat(1,1fr);}
+    .magazine .item .text-box p{
+        display: block !important;
+        opacity: 1 !important;
+    }
     .magazine .item:nth-child(5){margin-bottom: 30px;}
     .magazine .item:nth-child(6){margin-bottom: 0;}
 
