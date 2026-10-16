@@ -179,6 +179,9 @@
     gap: 20px;
     padding-top: 30px;
 }
+.shop .right.view-large{
+    grid-template-columns: repeat(2, 1fr);
+}
 .shop .right .item{
     /* border: 1px solid blue; */
     cursor: pointer;
@@ -340,6 +343,7 @@
     .shop .right{
         grid-template-columns: repeat(2,1fr);
     }
+    .shop .right.view-large{ grid-template-columns: 1fr; }
     .shop .right .item .text-group p:first-child{padding: 5px 0;}
 
     .shop .top .filter{

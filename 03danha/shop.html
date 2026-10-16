@@ -329,7 +329,7 @@
                             <img src="img/filte.png" alt="" aria-hidden="true">
                             <span>필터</span>
                         </button>
-                        <button type="button" class="grid pick-a">
+                        <button type="button" class="grid pick-a" aria-pressed="false" aria-controls="item-list">
                             <img src="img/grid.png" alt="" aria-hidden="true">
                             <span>정렬</span>
                         </button>
@@ -533,7 +533,7 @@
                         </div>
                     </div>
 
-                    <div class="right">
+                    <div class="right" id="item-list">
                         <div class="item all out_ black_">
                             <button type="button" class="icon-group" aria-label="찜하기">
                                 <img src="img/icon_heart_ot.png" alt="" aria-hidden="true" loading="lazy" class="heart-1">
@@ -1257,6 +1257,12 @@
             if ($(window).width() > 800) { 
                 closeFilterBox();
             }
+        });
+
+        // 2026-10-16
+        $(".shop .grid").click(function() {
+            var isLarge = $(".shop .right").toggleClass("view-large").hasClass("view-large");
+            $(this).attr("aria-pressed", isLarge ? "true" : "false");
         });
 
     </script>
