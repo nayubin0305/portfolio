@@ -343,15 +343,15 @@ button{
 
 /* 상단 */
 header{
-        background-color: #ffc1c1;
-        height: 80px; width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: fixed; top: 0; left: 0; z-index: 100;
-        box-shadow: 0 0 10px rgba(0,0,0,0.5);
-        transition: 0.5s;
-        }
+    background-color: #ffc1c1;
+    height: 80px; width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; top: 0; left: 0; z-index: 100;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    transition: 0.5s;
+}
 header .container{
     /* border: 1px solid red; */
     display: flex;
@@ -704,7 +704,7 @@ header .ham-btn:hover .bar3{width: 10px;}
         white-space: nowrap;
     }
 }
-@media(max-width:600px){
+@media(max-width:800px){
     .search-sub,
     .login-sub{
         display: none !important;

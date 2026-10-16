@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="robots" content="noindex, nofollow">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-sclable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>상품상세페이지 | tangleangel</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css" rel="stylesheet">
@@ -496,11 +496,11 @@
             <nav aria-label="브레드크럼">
                 <ol class="category">
                     <li><a href="index.html">홈</a></li>
-                    <li><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></li>
+                    <li aria-hidden="true"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></li>
                     <li><a href="shop.html">상품</a></li>
-                    <li><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></li>
+                    <li aria-hidden="true"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></li>
                     <li><a href="shop.html">모든 상품</a></li>
-                    <li><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></li>
+                    <li aria-hidden="true"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></li>
                     <li aria-current="page">탱글엔젤X무직타이거 트윙클 에디션</li>
                 </ol>
             </nav>
@@ -599,9 +599,10 @@
                     
                     <div class="num-box">
                         <div class="num-group">
-                            <input type="number" value="1" class="num">
-                            <div class="btn-num btn-p"><i class="fa-solid fa-plus"></i></div>
-                            <div class="btn-num btn-m"><i class="fa-solid fa-minus"></i></div>
+                            <label for="num" class="none">수량</label>
+                            <input type="number" value="1" min="1" class="num" id="num">
+                            <button type="button" class="btn-num btn-p"><i class="fa-solid fa-plus"></i></button>
+                            <button type="button" class="btn-num btn-m"><i class="fa-solid fa-minus"></i></button>
                         </div>
                     </div>
                     <div class="total-box">
@@ -1065,8 +1066,8 @@
     var price , num , totar;
     price = $(".shop2 .pri-box .pri").text();
     price = Number(price); //숫자로 인식
-    price1 = price.toLocaleString(); //콤마
-    $(".shop2 .pri-box .pri").text(price1) ;
+    var price1 = price.toLocaleString(); //콤마
+    $(".shop2 .pri-box .pri").text(price1);
     
     num = $(".shop2 .num-box .num").val();
     num = Number(num);
@@ -1080,7 +1081,6 @@
         var totar = price * num;
         totar = totar.toLocaleString();
         $(".shop2 .total-box .total").text(totar);
-        $(".shop2 .total-box .num2").text(num);
     }
 
     $(".btn-p").click(function(){
