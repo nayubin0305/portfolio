@@ -705,6 +705,8 @@
             if(sortType === "인기순"){
                 // 저장해둔 원본 순서 그대로 복원
                 items = originalOrder.slice();
+            } else if(sortType === "최신순"){
+                items = originalOrder.slice().reverse();
             } else {
                 items = originalOrder.slice();
 
@@ -712,13 +714,8 @@
                     var priceA = parsePrice($(a).find(".text-box p").text());
                     var priceB = parsePrice($(b).find(".text-box p").text());
 
-                    if(sortType === "높은가격순"){
-                        return priceB - priceA;
-                    } else if(sortType === "낮은가격순"){
-                        return priceA - priceB;
-                    } else if(sortType === "최신순"){
-                        return originalOrder.indexOf(b) - originalOrder.indexOf(a);
-                    }
+                    if(sortType === "높은가격순") return priceB - priceA;  
+                    if(sortType === "낮은가격순") return priceA - priceB;
                     return 0;
                 });
             }
