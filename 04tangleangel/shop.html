@@ -493,15 +493,15 @@
         <section class="shop">
             <div class="shop-top">
                 <div class="filter">
-                    <a href="#" class="filter-a pick_">
+                    <button type="button" class="filter-a pick_" aria-expanded="false" aria-controls="fil-ul">
                         <span class="filte-text">인기순위</span>
-                        <img src="img/icon_down.png" alt="필터 여닫기">
-                    </a>
-                    <ul class="fil-ul pick_">
-                        <li class="fil-li"><a href="#">인기순위</a></li>
-                        <li class="fil-li"><a href="#">신상순위</a></li>
-                        <li class="fil-li"><a href="#">높은가격</a></li>
-                        <li class="fil-li"><a href="#">낮은가격</a></li>
+                        <img src="img/icon_down.png" alt="" aria-hidden="true">
+                    </button>
+                    <ul class="fil-ul pick_" id="fil-ul">
+                        <li class="fil-li active"><a href="shop.html?sort=popular" aria-current="true">인기순위</a></li>
+                        <li class="fil-li"><a href="shop.html?sort=latest">신상순위</a></li>
+                        <li class="fil-li"><a href="shop.html?sort=price-high">높은가격</a></li>
+                        <li class="fil-li"><a href="shop.html?sort=price-low">낮은가격</a></li>
                     </ul>
                 </div>
             </div>
@@ -511,34 +511,28 @@
                         <!-- 메뉴 -->
                         <div class="list list1 pick_">
                             <div class="box-title">
-                                <h4>카테고리</h4>
-                                <img src="img/icon_down.png" alt="여닫기 버튼">
+                                <button type="button" class="filter-toggle pick_" aria-expanded="true" aria-controls="list-ul-cat">
+                                    카테고리
+                                    <img src="img/icon_down.png" alt="" aria-hidden="true">
+                                </button>
                             </div>
-                            <ul class="list-ul">
-                                <li class="list-li" name="all">
-                                    <a href="#">모든상품</a>
-                                </li>
-                                <li class="list-li" name="hair">
-                                    <a href="#">헤어케어</a>
-                                </li>
-                                <li class="list-li" name="brush">
-                                    <a href="#">브러쉬</a>
-                                </li>
-                                <li class="list-li" name="sset">
-                                    <a href="#">스페셜 세트</a>
-                                </li>
-                                <li class="list-li" name="chi">
-                                    <a href="#">어린이용</a>
-                                </li>
+                            <ul class="list-ul" id="list-ul-cat">
+                                <li class="list-li active"><a href="shop.html?category=all" data-name="all" aria-current="true">모든상품</a></li>
+                                <li class="list-li"><a href="shop.html?category=hair" data-name="hair">헤어케어</a></li>
+                                <li class="list-li"><a href="shop.html?category=brush" data-name="brush">브러쉬</a></li>
+                                <li class="list-li"><a href="shop.html?category=sset" data-name="sset">스페셜 세트</a></li>
+                                <li class="list-li"><a href="shop.html?category=chi" data-name="chi">어린이용</a></li>
                             </ul>
                         </div>    
                         <!-- 가격 -->
                         <div class="list list2">
                             <div class="box-title pick_">
-                                <h4>가격대</h4>
-                                <img src="img/icon_down.png" alt="여닫기 버튼">
+                                <button type="button" class="filter-toggle pick_" aria-expanded="true" aria-controls="range-price">
+                                    가격대
+                                    <img src="img/icon_down.png" alt="" aria-hidden="true">
+                                </button>
                             </div>
-                            <div class="range-slider">
+                            <div class="range-slider" id="range-price">
                                 <input class="range-slider__range" type="range" value="50000" min="10000" max="50000" step="10000">
                                 <span class="range-slider__value">0</span>
                             </div>
@@ -546,14 +540,14 @@
                     </div>    
                 </div>
                 <div class="shop-right product">
-                    <div class="item all sset brush pick">
+                    <div class="item all sset brush">
                         <a href="shop2.html">
-                            <div class="img-box">
+                            <div class="img-box pick">
                                 <img src="img/shop01.jpg" alt="상품 이미지" loading="lazy" >
                                 <div class="bg"><img src="img/icon_zoom.png" alt="상품보기" loading="lazy"></div>
                             </div>
                         </a>
-                        <div href="shop2.html" class="text-box">
+                        <div class="text-box">
                             <h5>탱글엔젤X무직타이거 트윙클 에디션</h5>
                             <p>탱글엔젤 프로와 뚱랑이의 특별한 만남!</p>
                             <h4><i class="fa-solid fa-won-sign" aria-hidden="true"></i>24,900<span class="none">원</span></h4>
@@ -669,7 +663,7 @@
                     <div class="item fas-box all brush">
                         <a href="#" class="soon">
                             <div class="img-box">
-                                <img src="img/pro.png" alt="img" class="back">
+                                <img src="img/pro.png" alt="상품 이미지" loading="lazy" class="back">
                                 <img src="img/angel_blue.png" alt="상품 이미지" loading="lazy"  class="fas">
                                 <img src="img/angel_mint.png" alt="상품 이미지" loading="lazy"  class="fas">
                                 <img src="img/angel_ravenda.png" alt="상품 이미지" loading="lazy"  class="fas">
@@ -879,7 +873,7 @@
                         </div>
                     </div>
 
-                    <p class="no-result" role="status" style="display:none;">상품을 기다려주세요!</p>
+                    <p class="no-result" role="status">상품을 기다려주세요!</p>
                 </div>
             </div>
             <div class="container cont2">
@@ -1019,11 +1013,10 @@
         });
 
         // 순위 필터
-        $(".shop-top .filter-a").click(function(e){
-            e.preventDefault();
-
+        $(".shop-top .filter-a").click(function(){
             $(".shop-top .fil-ul").stop().slideToggle();
             $(this).toggleClass("active");
+            $(this).attr("aria-expanded", $(this).attr("aria-expanded") === "true" ? "false" : "true");
         });
 
         var originalOrder = $(".cont1 .product").children(".item").get();
@@ -1037,11 +1030,11 @@
             var items;
 
             if (sortType === "인기순위") {
-                items = originalOrder;
+                items = originalOrder.slice();
             } else if (sortType === "신상순위") {
                 items = originalOrder.slice().reverse();
             } else {
-                items = $container.children(".item").get();
+                items = originalOrder.slice();
 
                 items.sort(function (a, b) {
                     var priceA = parsePrice($(a).find(".text-box h4").text());
@@ -1057,8 +1050,11 @@
                 $container.append(item);
             });
 
-            $(".shop-top .filter-a").removeClass("active");
-            $(this).addClass("active");
+            $(".shop-top .fil-li").removeClass("active");
+            $(".shop-top .fil-li a").removeAttr("aria-current");
+            $(this).attr("aria-current", "true").parent().addClass("active");
+
+            $(".shop-top .filter-a").removeClass("active").attr("aria-expanded", "false");
             $(".shop-top .filter-a .filte-text").text(sortType);
             $(".shop-top .fil-ul").slideUp();
         });
@@ -1072,6 +1068,8 @@
         $(".cont1 .box-title").click(function(){
             $(this).siblings().stop().slideToggle();
             $(this).toggleClass("active");
+            var $btn = $(this).find("button");
+            $btn.attr("aria-expanded", $btn.attr("aria-expanded") === "true" ? "false" : "true");
         });
 
         // 카테고리 + 가격 필터
@@ -1108,7 +1106,12 @@
         // 카테고리 클릭 시 필터 적용
         $(".cont1 .list-li a").click(function (e) {
             e.preventDefault();
-            currentCategory = $(this).closest(".list-li").attr("name");
+            currentCategory = $(this).data("name");
+
+            $(".cont1 .list-li").removeClass("active");
+            $(".cont1 .list-li a").removeAttr("aria-current");
+            $(this).attr("aria-current", "true").parent().addClass("active");
+
             applyFilters();
         });
 

@@ -23,6 +23,7 @@
     justify-content: space-between;
     padding: 10px 20px; box-sizing: border-box;
     cursor: pointer;
+    border: none;
     background-color: #ffbbc4;
     font-size: 14px;
     font-weight: 700;
@@ -61,16 +62,20 @@
 .cont1 .shop-left .list{
 }
 
-.cont1 .shop-left .box-title{
+.cont1 .shop-left .box-title .filter-toggle{
     height: 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px; box-sizing: border-box;
     cursor: pointer;
+    border: none;
     background-color: #ffbbc4;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 700;
+    color: #121212;
 }
-.cont1 .shop-left .box-title h4{}
 .cont1 .shop-left .box-title img{
     width: 25px; height: 25px;
     border-radius: 50%;
@@ -190,7 +195,7 @@ input::-moz-focus-inner, input::-moz-focus-outer {
     row-gap: 60px;
     width: 80%;
 }
-.product .item{cursor: pointer;}
+/* .product .item{cursor: pointer;} */
 .product .item.pat-box .img-box .pat,
 .product .item.fas-box .img-box .fas,
 .product .item.por-box .img-box .por,
@@ -391,4 +396,5 @@ input::-moz-focus-inner, input::-moz-focus-outer {
     padding: 60px 0;
     color: #999;
     font-size: 16px;
+    display: none;
 }
