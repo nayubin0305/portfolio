@@ -56,6 +56,7 @@ p{
 
 
 section{text-align: center;}
+section h2{padding: 0 15px 20px;}
 
 .section1{padding-top: 150px;}
 .section2{padding-top: 100px;}
@@ -71,6 +72,25 @@ section{text-align: center;}
 .icon{width: 32px; margin: 0 auto 30px;}
 
 .container-fluid .item{padding: 0;}
+
+@media(max-width:992px){
+    section h2{
+        margin: 0;
+        font-size: 28px;
+    }
+    .section1{
+        padding-top: 100px;
+    }
+    .section2{
+        padding-top: 50px;
+    }
+    .section3{
+        padding: 50px 0;
+    }
+    .section6{
+        padding: 50px 0 100px;
+    }
+}
 
 /* 인풋스타일 */
 input,textarea{
@@ -124,6 +144,13 @@ button:focus, .btn:active{outline: none;}
     font-weight: 900;
     cursor: pointer;
 }
+@media(max-width:800px){
+    .box-btn{
+        height: 40px;
+        font-size: 15px;
+        font-weight: 700;
+    }
+}
 
 /* 탑버튼 */
 .top-btn{
@@ -145,6 +172,16 @@ button:focus, .btn:active{outline: none;}
     50%{transform: rotate(-20deg);}
     100%{transform: rotate(20deg);}
 }
+@media(max-width:992px){
+    .top-btn{
+        width: 40px;
+        bottom: 20px;
+        right: 20px;
+    }
+    .top-btn p{
+        font-size: 12px;
+    }
+}
 
 .sub-title{
     margin-top: 80px;
@@ -161,7 +198,14 @@ button:focus, .btn:active{outline: none;}
     padding: 0;
     margin: 0;
 }
-
+@media(max-width:992px){
+    .sub-title{
+        margin-top: 50px;
+    }
+    .sub-title img{
+        height: 200px;
+    }
+}
 
 /* 스와이퍼 */
 .swiper {
@@ -244,7 +288,8 @@ header .ham-btn:hover{
     top: -100%;
     left: 0; 
     z-index: 101;
-    width: 100%; height: 50vh;
+    width: 100%; 
+    /* height: 50vh; */
     background-color: #fff;
     text-transform: uppercase;
     padding: 50px;
@@ -268,7 +313,19 @@ header .ham-btn:hover{
 }
 
 @media(max-width:992px){
+    header{
+        height: 50px;
+    }
     header .logo {text-align: center;}
+    header .logo a{
+        line-height: 50px;
+    }
+    header .logo img{
+        width: 44px;
+    }
+    header .ham-btn{
+        line-height: 50px;
+    }
 }
 
 /* 하단 스타일 */
@@ -306,7 +363,7 @@ footer .sns-box{
     justify-content: center;
     gap: 20px;
     padding-top: 30px;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 footer input{
     width: 100%;
@@ -342,6 +399,11 @@ footer input:focus::placeholder{color: transparent;}
     transform: translate(-50%,-50%) scale(5);
     background-color: #F05013;
     opacity: 0.5;
+}
+@media(max-width:992px){
+    .cursor{
+        display: none;
+    }
 }
 
 .pick::after{
