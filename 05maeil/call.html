@@ -58,7 +58,7 @@
                             <a href="factory.html">가치체계</a>
                         </li>
                         <li class="sub-li">
-                            <a href="factory.html">인삿말</a>
+                            <a href="factory.html">인사말</a>
                         </li>
                         <li class="sub-li">
                             <a href="factory.html">연구소</a>
@@ -168,7 +168,7 @@
                                 <a href="factory.html">가치체계</a>
                             </li>
                             <li class="sub-li">
-                                <a href="factory.html">인삿말</a>
+                                <a href="factory.html">인사말</a>
                             </li>
                             <li class="sub-li">
                                 <a href="factory.html">연구소</a>
@@ -360,10 +360,10 @@
                         매일Family 회원이시면 로그인 후 편리하게 사용 가능하십니다.<br>
                         고객님이 보내주신 문의에 대한 답변은 등록시 기재하신 이메일로 발송됩니다.
                     </h5>
-                    <p><span class="required">*</span> 표시는 필수 선택 및 입력 항목입니다.</p>
+                    <p><span class="required">*</span>표시는 필수 선택 및 입력 항목입니다.</p>
                 </div>
                 <div class="container">
-                    <div class="box ch-box">
+                    <div class="box ch-box radio-box">
                         <div class="item item1"><span class="required">*</span> 구분</div>
                         <ul class="item item2">
                             <li class="radio">
@@ -539,7 +539,10 @@
                 </div>
                 <div class="check">
                     <input type="checkbox" id="pr-check">
-                    <label for="pr-check">개인정보 수집 및 이용에 동의합니다.</label>
+                    <label for="pr-check">
+                        <div class="ch"></div>
+                        개인정보 수집 및 이용에 동의합니다.
+                    </label>
                 </div>
                 <button type="submit" class="btn">
                     <div>
@@ -579,12 +582,12 @@
             </div>
             <div class="foo foo2">
                 <div class="site-box">
-                    <button type="button" class="site" aria-expanded="false">
+                    <button type="button" class="site" aria-expanded="false" aria-controls="site-ul">
                         FAMILY SITE
                         <i class="fa-solid fa-caret-down down"></i>
                         <i class="fa-solid fa-caret-up up"></i>
                     </button>
-                    <ul class="site-ul">
+                    <ul class="site-ul" id="site-ul">
                         <li><a href="#" class="soon">매일홀딩스</a></li>
                         <li><a href="#" class="soon">매일헬스뉴트리션</a></li>
                         <li><a href="#" class="soon">제로투세븐</a></li>

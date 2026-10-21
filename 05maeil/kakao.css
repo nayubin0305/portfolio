@@ -1,32 +1,49 @@
 html,body{font-family: 'Noto Sans KR', sans-serif; scroll-behavior: smooth;}
 .sub-title .bg{background-image: url(img/sub_title_5.jpg);}
 
-/* 문의안내 */
+/* 페이지 타이틀 구분 탭 */
 .contents .tab{
     display: flex; gap: 20px;
     justify-content: center;
-    padding-top: 50px;
+    /* padding-top: 50px; */
     padding-bottom: 100px;
 }
 .contents .tab-li{
     width: 300px;height: 75px;
-    background-color: white;
+    background-color: #fff;
     color: #666666;
     border: 1px solid #dddddd;
     display: flex; align-items: center; justify-content: center;
     font-size: 18px;
+    line-height: 1em;
     cursor: pointer;
     font-family: 'Jua', sans-serif;
 }
 .contents .tab-li.active{
-    background-color: #004386;
-    color: white;
+    background-color: #194e92;
+    color: #fff;
     font-weight: 500;
+}
+@media(max-width:1024px){
+    .contents .tab{
+        padding-bottom: 50px;
+    }
+}
+@media(max-width:800px){
+    .contents .tab{
+        gap: 10px;
+    }
+    .contents .tab-li{
+        font-size: 16px;
+        width: auto;
+        flex: 1;
+        height: 50px;
+    }
 }
 
 /* 내부메뉴바 */
 @media(max-width:1024px){
-    .sub-nav{height: 60px;}
+    /* .sub-nav{height: 60px;} */
     .sub-nav .container{display: flex;}
     .sub-nav .item1{flex: 1;}
     .sub-nav .item2{flex: 2;}
@@ -36,6 +53,9 @@ html,body{font-family: 'Noto Sans KR', sans-serif; scroll-behavior: smooth;}
 .sub-con .section-title h5{margin-bottom: 50px;}
 .sub-con .section-title img{width: 100%;}
 @media(max-width:1024px){
+    .sub-con .section-title h5{
+        margin-bottom: 20px;
+    }
     .sub-con .section-title img{
         height: 150px; object-fit: cover;
     }
@@ -80,7 +100,7 @@ html,body{font-family: 'Noto Sans KR', sans-serif; scroll-behavior: smooth;}
 }
 @media(max-width:1024px){
     .step{padding-top: 100px;}
-    .step ul{display: block;}
+    .step ul{display: block; margin-top: 0;}
     .step .step-li{
         border-radius: 0;
         width: 100%; height: 155px;
@@ -116,7 +136,7 @@ html,body{font-family: 'Noto Sans KR', sans-serif; scroll-behavior: smooth;}
 .link img{width: 200px;}
 @media(max-width:1024px){
     .link{
-        padding-top: 100px;
+        padding-top: 40px;
         padding-bottom: 100px;
     }
     .link h2{font-size: 18px;}

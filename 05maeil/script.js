@@ -83,6 +83,7 @@ $(window).scroll(function(){
     if(new_page_num !== page_num){   
         page_num = new_page_num;
         indi();
+        if($(window).width() > 1024) header();
     }
 });
 
@@ -134,7 +135,7 @@ function header(){
     
     if(page_num == 0){
         // 투명
-        $(".arrows").stop().fadeIn();
+        $(".arrows").removeClass("off");
     }else if(page_num == 1){
         $("header").addClass("white");
     }else if(page_num == 2){
@@ -143,7 +144,7 @@ function header(){
         $("header").addClass("white");
     }else if(page_num == 4){
         // 투명
-        $(".arrows").stop().fadeOut();
+        $(".arrows").addClass("off");
     }
 }
 

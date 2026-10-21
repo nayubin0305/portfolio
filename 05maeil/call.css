@@ -5,7 +5,7 @@ html,body{scroll-behavior: smooth;}
 .contents .tab{
     display: flex; gap: 20px;
     justify-content: center;
-    padding-top: 50px;
+    /* padding-top: 50px; */
     padding-bottom: 100px;
 }
 .contents .tab-li{
@@ -15,6 +15,7 @@ html,body{scroll-behavior: smooth;}
     border: 1px solid #dddddd;
     display: flex; align-items: center; justify-content: center;
     font-size: 18px;
+    line-height: 1em;
     cursor: pointer;
     font-family: 'Jua', sans-serif;
 }
@@ -23,10 +24,26 @@ html,body{scroll-behavior: smooth;}
     color: #fff;
     font-weight: 500;
 }
+@media(max-width:1024px){
+    .contents .tab{
+        padding-bottom: 50px;
+    }
+}
+@media(max-width:800px){
+    .contents .tab{
+        gap: 10px;
+    }
+    .contents .tab-li{
+        font-size: 16px;
+        width: auto;
+        flex: 1;
+        height: 50px;
+    }
+}
 
 /* 내부메뉴바 */
 @media(max-width:1024px){
-    .sub-nav{height: 60px;}
+    /* .sub-nav{height: 60px;} */
     .sub-nav .container{display: flex;}
     .sub-nav .item1{flex: 1;}
     .sub-nav .item2{flex: 2;}
@@ -36,6 +53,12 @@ html,body{scroll-behavior: smooth;}
 .sub-con .section-title p{
     text-align: right;
     margin: 40px 0 20px;
+}
+@media(max-width:800px){
+    .sub-con .section-title p{
+        margin: 25px 0 10px;
+        font-size: 12px;
+    }
 }
 
 /* 작성표 */
@@ -55,7 +78,7 @@ html,body{scroll-behavior: smooth;}
     border-bottom: 1px solid #dddddd;
 }
 .sub-con .item{
-    padding: 20px;
+    padding: 20px 0;
     display: flex;
     align-items: center;
     box-sizing: border-box;
@@ -67,8 +90,9 @@ html,body{scroll-behavior: smooth;}
 }
 .sub-con .item2{
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
-    width: 100%;
+    width: calc(100% - 200px);
 }
 
 .sub-con .item2 .cla{
@@ -169,21 +193,25 @@ textarea:focus{
     resize: none;
 }
 
-.sub-con .ch-box label{
+.sub-con .ch-box.radio-box label{
     cursor: pointer;
     display: flex;
     gap: 10px;
     align-items: center;
     white-space: nowrap;
 }
-.sub-con .ch-box label .ch{
+.sub-con .ch-box.radio-box label .ch{
     width: 20px; height: 20px;
     border: 1px solid #dddddd;
     border-radius: 50%;
     /*display: flex;
     align-items: center; justify-content: center; */
+    transition: 0.3s;
 }
-.sub-con .ch-box label .ch span{
+.sub-con .ch-box.radio-box label:hover .ch{
+    border-color: #194e92;
+}
+.sub-con .ch-box.radio-box label .ch span{
     display: block;
     width: 10px; height: 10px;
     background-color: #194e92;
@@ -192,15 +220,105 @@ textarea:focus{
     position: absolute; top: 50%; left: 50%;
     transform: translate(-50%,-50%);
 }
-.sub-con .ch-box input:checked+label span{opacity: 1;}
-.sub-con .ch-box input:checked+label .ch{color: #222222; border-color: #194e92;}
-.sub-con .ch-box .radio{position: relative;}
-.sub-con .ch-box input{
+.sub-con .ch-box.radio-box input:checked+label span{opacity: 1;}
+.sub-con .ch-box.radio-box input:checked+label .ch{color: #222222; border-color: #194e92;}
+.sub-con .ch-box.radio-box .radio{position: relative;}
+.sub-con .ch-box.radio-box input{
     position: absolute;
     left: 0; top: 0;
     width: 1px; height: 1px;
     opacity: 0;
     pointer-events: none;
+}
+
+/* 2026-10-21 */
+.pribox .check label{
+    cursor: pointer;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    white-space: nowrap;
+}
+.pribox .check label .ch{
+    width: 20px; height: 20px;
+    box-sizing: border-box;
+    border: 1px solid #dddddd;
+    flex-shrink: 0;
+    transition: 0.3s;
+}
+.pribox .check label:hover .ch{
+    border-color: #194e92;
+}
+.pribox .check label .ch::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 45%; left: 50%;
+    width: 5px; height: 9px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: translate(-50%,-50%) rotate(45deg);
+    opacity: 0;
+    transition: 0.3s;
+}
+.pribox .check input:checked + label .ch{
+    background-color: #194e92;
+    border-color: #194e92;
+}
+.pribox .check input:checked + label .ch::after{
+    opacity: 1;
+}
+.pribox .check input{
+    position: absolute;
+    left: 0; top: 0;
+    width: 1px; height: 1px;
+    opacity: 0;
+    pointer-events: none;
+}
+@media(max-width:800px){
+    .sub-con .item2 input[type="text"],
+    .sub-con .item2 input[type="tel"],
+    .sub-con .item2 input[type="email"],
+    .sub-con .item2 select{
+        height: 50px;
+        font-size: 14px;
+        padding: 0 15px;
+    }
+    .sub-con .item2 textarea{
+        font-size: 14px;
+        padding: 15px;
+        height: 120px;
+    }
+    .sub-con .item2 .cla input[type="text"]{
+        padding-right: 25px;
+    }
+    .sub-con .item2 .arr{
+        line-height: 50px;
+        right: 15px;
+    }
+    .sub-con .item2 .cla-ul, .mail-ul{
+        top: 50px;
+    }
+    .sub-con .item2 .cla-ul li, .mail-ul li{
+        padding: 0 15px;
+    }
+
+    .sub-con .ch-box.radio-box label .ch{
+        width: 16px;
+        height: 16px;
+    }
+    .sub-con .ch-box.radio-box label .ch span{
+        width: 7px;
+        height: 7px;
+    }
+    .pribox .check label .ch{
+        width: 16px;
+        height: 16px;
+    }
+    .pribox .check label .ch::after{
+        width: 3px;
+        height: 7px;
+    }
 }
 
 
@@ -248,7 +366,7 @@ textarea:focus{
     body{overflow-x: hidden;}
     header{width: 100%;}
     .sub-con .container{
-        padding-bottom: 150px;
+        padding-bottom: 50px;
     }
     .sub-con .box{
         display: block;
@@ -257,16 +375,16 @@ textarea:focus{
     .sub-con .item{
         border-bottom: 1px solid #dddddd;
         width: 100%;
-        padding: 15px;
+        padding: 15px 0;
         font-size: 14px;
     }
     .sub-con .ch-box .item2{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
+        /* display: grid;
+        grid-template-columns: repeat(2,1fr); */
     }
     .sub-con .box.mail-e .item2{
-        display: grid;
-        grid-template-columns: repeat(3,auto);
+        /* display: grid;
+        grid-template-columns: repeat(3,auto); */
     }
     .sub-con .item2 input[type="text"]{width: 100%;}
     .sub-con .box.mail-e .item2 input{
@@ -279,9 +397,12 @@ textarea:focus{
         grid-column: span 3;
         width: 100%;
     }
+    .sub-con .file-box{
+        height: auto;
+    }
     .sub-con .file-box .item2{
         display: block !important;
-        padding-bottom: 100px;
+        padding-bottom: 10px;
         border: none;
     }
     .sub-con .file-box input{box-sizing: border-box;}
@@ -292,9 +413,9 @@ textarea:focus{
     }
     .sub-con .file-box .tip{
         position: relative;
-        top: -90px; left: 0;
+        top: 0; left: 0; bottom: 0;
         white-space: normal;
-        font-size: 14px;
+        /* font-size: 14px; */
     }
     .sub-con .ch-box label{
         gap: 5px;
@@ -304,6 +425,9 @@ textarea:focus{
     }
     .sub-con .ch-box label .ch span{
         width: 8px; height: 8px;
+    }
+    .sub-con .btn-del{
+        margin-top: 5px;
     }
 }
 
@@ -328,5 +452,31 @@ textarea:focus{
 .pribox .check{
     padding: 50px 0;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
 }
-.pribox .check label{cursor: pointer;}
+.pribox .check label{
+    cursor: pointer;
+    font-size: 16px;
+}
+@media(max-width:800px){
+    .pribox h2{
+        padding: 50px 0 20px;
+    }
+    .pribox .container{
+        padding: 15px;
+        font-size: 14px;
+    }
+    .pribox .container p {
+        font-size: 14px;
+    }
+    .pribox .check{
+        padding: 10px 0 50px;
+    }
+    .pribox .check label{
+        font-size: 14px;
+        gap: 5px;
+    }
+}
