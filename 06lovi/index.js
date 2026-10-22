@@ -45,6 +45,14 @@ $(".site-map .x-btn").click(function(){
     $(".site-map").css({top:"-100%"});
 });
 
+// 2026-10-22
+$(window).resize(function(){
+    if ($(window).width() > 992) {
+        $(".ham-btn").attr("aria-expanded", "false");
+        $(".site-map").css({top:"-100%"});
+    }
+});
+
 // 2026-10-01 디자인 알럿창 추가
 $(function() {
     if ($(".alert").length === 0) {
