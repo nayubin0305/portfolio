@@ -645,40 +645,34 @@
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
     <script src="com.js"></script>
     <script>
+        // 2026-10-22 코드 통일 정리
         // 상품 카테고리
-        let oldIndex = 0;
-        updateDash(0);
+        var oldIndex = 0;
+        var $squiggle = $(".squiggle");
+        var pathLength = $squiggle[0].getTotalLength();
 
         function updateDash(index) {
-            const squiggle = document.querySelector(".squiggle");
-            const pathLength = squiggle.getTotalLength();
-            const start = pathLength * 0.25 * index;
-            const end = pathLength * 0.25 * (index + 1);
-            squiggle.style.setProperty("--factor", Math.abs(oldIndex - index));
+            var start = pathLength * 0.25 * index;
+            var end = pathLength * 0.25 * (index + 1);
+
+            $squiggle.css("--factor", Math.abs(oldIndex - index));
             oldIndex = index;
-            squiggle.setAttribute(
-                "stroke-dasharray",
-                `1, ${start}, ${end - start}, ${pathLength}`
-            );
+            $squiggle.attr("stroke-dasharray", "1, " + start + ", " + (end - start) + ", " + pathLength);
         }
 
-        const links = document.querySelectorAll(".shop-ul a");
-        links.forEach((link, i) => {
-            link.addEventListener("click", (e) => {
-                e.preventDefault();
-                links.forEach((l) => {
-                    l.classList.remove("active");
-                    l.removeAttribute("aria-current");
-                });
-                link.classList.add("active");
-                link.setAttribute("aria-current", "true");
-                updateDash(i);
-            });
-        });
+        updateDash(0);
 
         // 상품페이지 카테고리
-        $(".section1 .shop-li").click(function(){
+        $(".section1 .shop-li").click(function(e){
+            e.preventDefault();
+
             var _name = $(this).data("name");
+            var $a = $(this).find("a");
+
+            $(".shop-ul a").removeClass("active").removeAttr("aria-current");
+            $a.addClass("active").attr("aria-current", "true");
+            updateDash($(this).index());
+
             $(".section1 .item").hide();
             $(".section1 ."+_name).stop().fadeIn();
         });
