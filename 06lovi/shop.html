@@ -57,15 +57,14 @@
             justify-content: center;
             margin-bottom: 50px;
         }
-        .ka-li{
+        .ka-li a{
             color: #999999;
             cursor: pointer;
             width: 100px;
             padding: 15px 20px; box-sizing: border-box;
-            border-radius: 50px;
             white-space: nowrap;
         }
-        .ka-li::after{
+        .ka-li a::after{
             content: '';
             display: table;
             width: 100%;
@@ -74,15 +73,15 @@
             transform: scaleX(0);
             transition: 0.3s;
         }
-        .ka-li:hover{color: #F05013;}
-        .ka-li:hover::after{transform: scaleX(0.7);}
-        .ka-li.active{
+        .ka-li a:hover{color: #F05013;}
+        .ka-li a:hover::after{transform: scaleX(0.7);}
+        .ka-li.active a{
             color: #F05013;
             font-weight: 900;
         }
-        .ka-li.active::after{transform: scaleX(0.7);}
+        .ka-li.active a::after{transform: scaleX(0.7);}
 
-        .num{
+        .num nav{
             display: flex;
             align-items: center;
             justify-content: center;
@@ -107,8 +106,8 @@
         .num .page_num.active{
             background-color: #dddddd; color: #333333;
         }
-        .item{display: none;}
-        .all{display: block;}
+        .section1 .item{display: none;}
+        .section1 .item.all{display: block;}
         @media(max-width:992px){
             .section1{
                 padding: 100px 0;
@@ -116,7 +115,7 @@
             .ka{
                 gap: 10px;
             }
-            .ka-li{
+            .ka-li a{
                 padding: 0 10px;
                 width: auto;
                 flex: 1;
@@ -180,12 +179,14 @@
     <main>
         <section class="section1">
     
-            <ul class="ka">
-                <li class="ka-li active cur-over" name="all">모두</li>
-                <li class="ka-li cur-over" name="animal">동물</li>
-                <li class="ka-li cur-over" name="wood">식물</li>
-                <li class="ka-li cur-over" name="moomin">무민</li>
-            </ul>
+            <nav aria-label="상품 카테고리">
+                <ul class="ka">
+                    <li class="ka-li active cur-over" data-name="all"><a href="shop.html?category=all" aria-current="true">모두</a></li>
+                    <li class="ka-li cur-over" data-name="animal"><a href="shop.html?category=animal">동물</a></li>
+                    <li class="ka-li cur-over" data-name="wood"><a href="shop.html?category=wood">식물</a></li>
+                    <li class="ka-li cur-over" data-name="moomin"><a href="shop.html?category=moomin">무민</a></li>
+                </ul>
+            </nav>
             
             <div class="container">
                 <div class="item all animal cur-over col-lg-3 col-md-4 col-sm-6 col-xs-12 pick">
@@ -478,14 +479,16 @@
                 </div>
             </div>
             <div class="num">
-                <a href="#" class="page_arr soon"><img src="img/left2.png" alt="첫 페이지로"></a>
-                <a href="#" class="page_arr soon"><img src="img/left1.png" alt="이전 페이지로"></a>
-                <a href="#" class="page_num active">1</a>
-                <a href="#" class="page_num soon">2</a>
-                <a href="#" class="page_num soon">3</a>
-                <a href="#" class="page_num soon">4</a>
-                <a href="#" class="page_arr soon"><img src="img/right1.png" alt="다음 페이지로"></a>
-                <a href="#" class="page_arr soon"><img src="img/right2.png" alt="끝 페이지로"></a>
+                <nav aria-label="페이지 이동">
+                    <a href="#" class="page_arr soon"><img src="img/left2.png" alt="첫 페이지로"></a>
+                    <a href="#" class="page_arr soon"><img src="img/left1.png" alt="이전 페이지로"></a>
+                    <a href="#" class="page_num active" aria-current="page">1</a>
+                    <a href="#" class="page_num soon">2</a>
+                    <a href="#" class="page_num soon">3</a>
+                    <a href="#" class="page_num soon">4</a>
+                    <a href="#" class="page_arr soon"><img src="img/right1.png" alt="다음 페이지로"></a>
+                    <a href="#" class="page_arr soon"><img src="img/right2.png" alt="끝 페이지로"></a>
+                </nav>
             </div>
         </section>
     </main>
@@ -524,13 +527,19 @@
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
     <script src="index.js"></script>
     <script>
-        $(".ka-li").click(function(){
+        $(".ka-li").click(function(e){
+            e.preventDefault();
+
+            var _name = $(this).data("name");
+            var $a = $(this).find("a");
+
             $(".ka-li").removeClass("active");
             $(this).addClass("active");
+             $(".ka-li a").removeAttr("aria-current");
+            $a.attr("aria-current", "true");
 
-            var _name = $(this).attr("name");
-            $(".item").hide();
-            $("."+_name).stop().fadeIn();
+            $(".section1 .item").hide();
+            $(".section1 ." + _name).stop().fadeIn();
         });
     </script>
 </body>

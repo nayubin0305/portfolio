@@ -376,6 +376,13 @@ footer input:focus{
 }
 footer input:focus::placeholder{color: transparent;}
 
+@media(max-width:992px){
+    footer .c{
+        padding-top: 30px;
+        margin-bottom: 30px;
+    }
+}
+
 /* 콜라보레이션 */
 .img-box .ban-bg{
     position: absolute; top: 0; left: 0;
